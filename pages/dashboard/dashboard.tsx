@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { ReactNode, useEffect } from "react";
 import { ThirdwebSDK } from "@thirdweb-dev/sdk";
 import { useLogout, useUser } from "@thirdweb-dev/react";
 import { getUser } from "../../auth.config";
@@ -8,39 +8,45 @@ import { IncomingMessage } from "http";
 import { NextApiRequest } from "next";
 import { NextRequest } from "next/server";
 import Layout from "../../components/Layout";
-import { Fragment, useState } from 'react'
-import { Dialog, Transition } from '@headlessui/react'
+import { Fragment, useState } from "react";
+import { Dialog, Transition } from "@headlessui/react";
 import {
   Bars3Icon,
-  CalendarIcon,
-  ChartPieIcon,
   DocumentDuplicateIcon,
   FolderIcon,
   HomeIcon,
-  UsersIcon,
   XMarkIcon,
-} from '@heroicons/react/24/outline'
+  UsersIcon,
+  QuestionMarkCircleIcon
+} from "@heroicons/react/24/outline";
+import { ChildProcess } from "child_process";
 
 const navigation = [
-  { name: 'Dashboard', href: '#', icon: HomeIcon, current: true },
-  { name: 'Team', href: '#', icon: UsersIcon, current: false },
-  { name: 'Projects', href: '#', icon: FolderIcon, current: false },
-  { name: 'Calendar', href: '#', icon: CalendarIcon, current: false },
-  { name: 'Documents', href: '#', icon: DocumentDuplicateIcon, current: false },
-  { name: 'Reports', href: '#', icon: ChartPieIcon, current: false },
-]
+  { name: "Home", href: "/dashboard/home", icon: HomeIcon, current: true },
+  { name: "Comunidad", href: "https://discord.gg/d6Bp55mY", icon: UsersIcon, current: false },
+  {
+    name: "Preguntas Frecuentes",
+    href: "#",
+    icon: QuestionMarkCircleIcon,
+    current: false,
+  },
+];
 const teams = [
-  { id: 1, name: 'Heroicons', href: '#', initial: 'H', current: false },
-  { id: 2, name: 'Tailwind Labs', href: '#', initial: 'T', current: false },
-  { id: 3, name: 'Workcation', href: '#', initial: 'W', current: false },
-]
+  { id: 1, name: "Chat GPT", href: "/dashboard/chatgpt", initial: "C", current: false },
+  { id: 2, name: "Wallets Digitales", href: "#", initial: "W", current: false },
+  { id: 3, name: "Comunidad", href: "https://discord.gg/d6Bp55mY", initial: "C", current: false },
+];
 
 function classNames(...classes: string[]) {
-  return classes.filter(Boolean).join(' ')
+  return classes.filter(Boolean).join(" ");
 }
 
-export default function Dashboard() {
-  const [sidebarOpen, setSidebarOpen] = useState(false)
+type Props = {
+  children: ReactNode;
+};
+
+export default function Dashboard({ children }: Props) {
+  const [sidebarOpen, setSidebarOpen] = useState(false);
   const { logout } = useLogout();
   const { isLoggedIn, isLoading } = useUser();
   const router = useRouter();
@@ -58,11 +64,13 @@ export default function Dashboard() {
   }, [isLoading, isLoggedIn, router]);
 
   return (
-    <Layout>
-
       <div>
         <Transition.Root show={sidebarOpen} as={Fragment}>
-          <Dialog as="div" className="relative z-50 lg:hidden" onClose={setSidebarOpen}>
+          <Dialog
+            as="div"
+            className="relative z-50 lg:hidden"
+            onClose={setSidebarOpen}
+          >
             <Transition.Child
               as={Fragment}
               enter="transition-opacity ease-linear duration-300"
@@ -96,20 +104,23 @@ export default function Dashboard() {
                     leaveTo="opacity-0"
                   >
                     <div className="absolute left-full top-0 flex w-16 justify-center pt-5">
-                      <button type="button" className="-m-2.5 p-2.5" onClick={() => setSidebarOpen(false)}>
+                      <button
+                        type="button"
+                        className="-m-2.5 p-2.5"
+                        onClick={() => setSidebarOpen(false)}
+                      >
                         <span className="sr-only">Close sidebar</span>
-                        <XMarkIcon className="h-6 w-6 text-white" aria-hidden="true" />
+                        <XMarkIcon
+                          className="h-6 w-6 text-white"
+                          aria-hidden="true"
+                        />
                       </button>
                     </div>
                   </Transition.Child>
                   {/* Sidebar component, swap this element with another sidebar if you like */}
                   <div className="flex grow flex-col gap-y-5 overflow-y-auto bg-gray-900 px-6 pb-2 ring-1 ring-white/10">
                     <div className="flex h-16 shrink-0 items-center">
-                      <img
-                        className="h-8 w-auto"
-                        src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500"
-                        alt="Your Company"
-                      />
+                    🥝
                     </div>
                     <nav className="flex flex-1 flex-col">
                       <ul role="list" className="flex flex-1 flex-col gap-y-7">
@@ -121,12 +132,15 @@ export default function Dashboard() {
                                   href={item.href}
                                   className={classNames(
                                     item.current
-                                      ? 'bg-gray-800 text-white'
-                                      : 'text-gray-400 hover:text-white hover:bg-gray-800',
-                                    'group flex gap-x-3 rounded-md p-2 text-sm leading-6 font-semibold'
+                                      ? "bg-gray-800 text-white"
+                                      : "text-gray-400 hover:text-white hover:bg-gray-800",
+                                    "group flex gap-x-3 rounded-md p-2 text-sm leading-6 font-semibold"
                                   )}
                                 >
-                                  <item.icon className="h-6 w-6 shrink-0" aria-hidden="true" />
+                                  <item.icon
+                                    className="h-6 w-6 shrink-0"
+                                    aria-hidden="true"
+                                  />
                                   {item.name}
                                 </a>
                               </li>
@@ -134,7 +148,9 @@ export default function Dashboard() {
                           </ul>
                         </li>
                         <li>
-                          <div className="text-xs font-semibold leading-6 text-gray-400">Your teams</div>
+                          <div className="text-xs font-semibold leading-6 text-gray-400">
+                            Your Courses
+                          </div>
                           <ul role="list" className="-mx-2 mt-2 space-y-1">
                             {teams.map((team) => (
                               <li key={team.name}>
@@ -142,9 +158,9 @@ export default function Dashboard() {
                                   href={team.href}
                                   className={classNames(
                                     team.current
-                                      ? 'bg-gray-800 text-white'
-                                      : 'text-gray-400 hover:text-white hover:bg-gray-800',
-                                    'group flex gap-x-3 rounded-md p-2 text-sm leading-6 font-semibold'
+                                      ? "bg-gray-800 text-white"
+                                      : "text-gray-400 hover:text-white hover:bg-gray-800",
+                                    "group flex gap-x-3 rounded-md p-2 text-sm leading-6 font-semibold"
                                   )}
                                 >
                                   <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-lg border border-gray-700 bg-gray-800 text-[0.625rem] font-medium text-gray-400 group-hover:text-white">
@@ -170,11 +186,7 @@ export default function Dashboard() {
           {/* Sidebar component, swap this element with another sidebar if you like */}
           <div className="flex grow flex-col gap-y-5 overflow-y-auto bg-gray-900 px-6">
             <div className="flex h-16 shrink-0 items-center">
-              <img
-                className="h-8 w-auto"
-                src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500"
-                alt="Your Company"
-              />
+            🥝
             </div>
             <nav className="flex flex-1 flex-col">
               <ul role="list" className="flex flex-1 flex-col gap-y-7">
@@ -186,12 +198,15 @@ export default function Dashboard() {
                           href={item.href}
                           className={classNames(
                             item.current
-                              ? 'bg-gray-800 text-white'
-                              : 'text-gray-400 hover:text-white hover:bg-gray-800',
-                            'group flex gap-x-3 rounded-md p-2 text-sm leading-6 font-semibold'
+                              ? "bg-gray-800 text-white"
+                              : "text-gray-400 hover:text-white hover:bg-gray-800",
+                            "group flex gap-x-3 rounded-md p-2 text-sm leading-6 font-semibold"
                           )}
                         >
-                          <item.icon className="h-6 w-6 shrink-0" aria-hidden="true" />
+                          <item.icon
+                            className="h-6 w-6 shrink-0"
+                            aria-hidden="true"
+                          />
                           {item.name}
                         </a>
                       </li>
@@ -199,7 +214,9 @@ export default function Dashboard() {
                   </ul>
                 </li>
                 <li>
-                  <div className="text-xs font-semibold leading-6 text-gray-400">Your teams</div>
+                  <div className="text-xs font-semibold leading-6 text-gray-400">
+                    Your courses
+                  </div>
                   <ul role="list" className="-mx-2 mt-2 space-y-1">
                     {teams.map((team) => (
                       <li key={team.name}>
@@ -207,9 +224,9 @@ export default function Dashboard() {
                           href={team.href}
                           className={classNames(
                             team.current
-                              ? 'bg-gray-800 text-white'
-                              : 'text-gray-400 hover:text-white hover:bg-gray-800',
-                            'group flex gap-x-3 rounded-md p-2 text-sm leading-6 font-semibold'
+                              ? "bg-gray-800 text-white"
+                              : "text-gray-400 hover:text-white hover:bg-gray-800",
+                            "group flex gap-x-3 rounded-md p-2 text-sm leading-6 font-semibold"
                           )}
                         >
                           <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-lg border border-gray-700 bg-gray-800 text-[0.625rem] font-medium text-gray-400 group-hover:text-white">
@@ -221,6 +238,13 @@ export default function Dashboard() {
                     ))}
                   </ul>
                 </li>
+                <button
+                  onClick={handleLogout}
+                  type="button"
+                  className="rounded bg-white px-2 py-1 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50"
+                >
+                  Logout
+                </button>
                 <li className="-mx-6 mt-auto">
                   <a
                     href="#"
@@ -228,11 +252,11 @@ export default function Dashboard() {
                   >
                     <img
                       className="h-8 w-8 rounded-full bg-gray-800"
-                      src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                      src="https://img.seadn.io/files/2f76c1d4964b0cb327f0081c48ce14e2.png?fit=max&w=600"
                       alt=""
                     />
                     <span className="sr-only">Your profile</span>
-                    <span aria-hidden="true">Tom Cook</span>
+                    <span aria-hidden="true">Giselle</span>
                   </a>
                 </li>
               </ul>
@@ -241,11 +265,17 @@ export default function Dashboard() {
         </div>
 
         <div className="sticky top-0 z-40 flex items-center gap-x-6 bg-gray-900 px-4 py-4 shadow-sm sm:px-6 lg:hidden">
-          <button type="button" className="-m-2.5 p-2.5 text-gray-400 lg:hidden" onClick={() => setSidebarOpen(true)}>
+          <button
+            type="button"
+            className="-m-2.5 p-2.5 text-gray-400 lg:hidden"
+            onClick={() => setSidebarOpen(true)}
+          >
             <span className="sr-only">Open sidebar</span>
             <Bars3Icon className="h-6 w-6" aria-hidden="true" />
           </button>
-          <div className="flex-1 text-sm font-semibold leading-6 text-white">Dashboard</div>
+          <div className="flex-1 text-sm font-semibold leading-6 text-white">
+            Dashboard
+          </div>
           <a href="#">
             <span className="sr-only">Your profile</span>
             <img
@@ -258,17 +288,12 @@ export default function Dashboard() {
 
         <main className="py-10 lg:pl-72">
           <div className="px-4 sm:px-6 lg:px-8">
-          <div>
-        <h1>Restricted Access Page</h1>
-        <p>Thanks for being a member of our NFT community!</p>
-
-        <button onClick={handleLogout}>Logout</button>
-      </div>
+            <div>
+              {children}
+            </div>
           </div>
         </main>
       </div>
-
-    </Layout>
   );
 }
 

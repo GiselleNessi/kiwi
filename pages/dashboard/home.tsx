@@ -8,8 +8,9 @@ import { IncomingMessage } from "http";
 import { NextApiRequest } from "next";
 import { NextRequest } from "next/server";
 import Layout from "../../components/Layout";
+import Dashboard from "./dashboard";
 
-export default function Profile() {
+export default function Home() {
   const { logout } = useLogout();
   const { isLoggedIn, isLoading } = useUser();
   const router = useRouter();
@@ -27,12 +28,12 @@ export default function Profile() {
   }, [isLoading, isLoggedIn, router]);
 
   return (
-    <Layout>
+    <Dashboard>
       <div>
         <h1>Restricted Access Page</h1>
-        <p>Profile</p>
+        <p>Home</p>
       </div>
-    </Layout>
+    </Dashboard>
   );
 }
 
