@@ -35,6 +35,9 @@ const pages = [
   {
     title: "2.Introducción 📖",
   },
+  {
+    title: "3.¿Qué es ChatGPT y cómo funciona? 🤖",
+  },
 ];
 
 export default function ChatGPT({ subtitle, title, body, text }: PageProps) {
@@ -62,11 +65,11 @@ export default function ChatGPT({ subtitle, title, body, text }: PageProps) {
       <div className="bg-white px-6 py-32 lg:px-8">
         <div className="mx-auto max-w-3xl text-base leading-7 text-gray-700">
           <p className="text-base font-semibold leading-7 text-indigo-600">
-            {pages[currentPage].subtitle}
+            {pages[currentPage]?.subtitle || ""}
           </p>
           <br />
           <h1 className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-            {pages[currentPage].title}
+            {pages[currentPage]?.title ?? ""}
           </h1>
           <br />
           {currentPage === 0 ? (
@@ -163,6 +166,160 @@ export default function ChatGPT({ subtitle, title, body, text }: PageProps) {
                 Sabiendo esto, estuvimos trabajando con ChatGPT y aprendimos a
                 interactuar con él de manera productiva para traerte los mejores
                 tips y le saques el jugo a esta maravilla de la tecnología. 🚀
+              </p>
+              <p className="mt-6 text-xl leading-8">
+                Antes de empezar, ¿sabes qué es ChatGPT? No te preocupes si no
+                lo tienes muy claro, te lo contamos: ChatGPT (Generative
+                Pre-trained Transformer) es un chatbot lanzado por OpenAI en
+                noviembre de 2022 🗓️. Está construido sobre la familia GPT-3.5
+                de OpenAI de grandes modelos de lenguaje y se ajusta con
+                técnicas de aprendizaje supervisado y de refuerzo.
+              </p>
+              <p className="mt-6 text-xl leading-8">
+                Desde su lanzamiento como prototipo, ChatGPT ha sido muy popular
+                por sus respuestas detalladas y articuladas en muchos campos del
+                conocimiento. Sin embargo, también ha sido criticado por su
+                escasa precisión en los hechos. 🫤
+              </p>
+              <p className="mt-6 text-xl leading-8">
+                Pero no te preocupes, ¡nosotros te enseñaremos cómo sacarle el
+                máximo provecho! 🤩
+              </p>
+              <p className="mt-6 text-xl leading-8">
+                Para tener conversaciones exitosas con ChatGPT, es clave
+                utilizar prompts de alta calidad que guíen la conversación en la
+                dirección correcta y cubran los temas de interés para el
+                usuario. Unos prompts bien definidos pueden hacer la diferencia
+                entre una conversación informativa y atractiva, y una
+                conversación aburrida y desenfocada.
+              </p>
+              <p className="mt-6 text-xl leading-8">
+                Pero ¿qué es un prompt? 🤔
+              </p>
+              <p className="mt-6 text-xl leading-8">
+                Un prompt es básicamente una sugerencia o instrucción que le das
+                a una IA como ChatGPT para que te proporcione una respuesta o te
+                genere un texto. Es como darle una tarea a tu asistente virtual,
+                pero en lugar de pedirle que te traiga un café ☕, le pides que
+                escriba un ensayo sobre la importancia del café en la vida
+                moderna. ¡Sí, es así de poderoso! 💪 Es como tener un robot con
+                un cerebro gigante 🤖 que puede ayudarte a crear contenido,
+                responder preguntas o incluso a jugar a juegos de rol 🎲.
+              </p>
+              <p className="mt-6 text-xl leading-8">
+                Además de su capacidad para comprender y responder al lenguaje
+                natural, ChatGPT también tiene muchas otras características que
+                lo convierten en una herramienta poderosa para conducir
+                conversaciones. Por ejemplo, puede personalizarse para adaptarse
+                a las necesidades y preferencias del usuario, y puede utilizar
+                algoritmos de aprendizaje automático para personalizar sus
+                respuestas basándose en las interacciones y preferencias
+                anteriores del usuario. ¡Increíble! 😍
+              </p>
+              <p className="mt-6 text-xl leading-8">
+                Y eso no es todo, ChatGPT también es capaz de entender y
+                responder a entradas en varios idiomas y puede manejar grandes
+                volúmenes de tráfico. ¡Es la herramienta perfecta para el
+                servicio de atención al cliente o las comunidades en línea! 🌎💬
+              </p>
+              <p className="mt-6 text-xl leading-8">
+                En este curso, aprenderás los principios de la comunicación
+                clara y cómo aplicarlos a los prompts de ChatGPT. También te
+                daremos una guía paso a paso sobre cómo hacerlos más eficaces
+                para que conduzcan a conversaciones atractivas e informativas. Y
+                si ya eres un usuario experimentado, te enseñaremos algunos
+                trucos para llevar tus habilidades al siguiente nivel. 🚀
+              </p>
+              <p className="mt-6 text-xl leading-8">
+                ¿Estás listo para empezar? ¡Vamos! 💪
+              </p>
+              <p className="mt-6 text-xl leading-8">
+                Tarea 1: Entra a la plataforma de ChatGPT. Dale clic a este link
+                👉 https://chat.openai.com/chat
+              </p>
+            </>
+          ) : null}
+
+          {currentPage === 4 ? (
+            <>
+              <p className="mt-6 text-xl leading-8">
+              Ahora que ya tienes una idea general de ChatGPT y sus posibilidades, vamos a profundizar un poco más en qué es ChatGPT y cómo funciona.
+              </p>
+              <br />
+              <p className="mt-6 text-xl leading-8">
+                Sabiendo esto, estuvimos trabajando con ChatGPT y aprendimos a
+                interactuar con él de manera productiva para traerte los mejores
+                tips y le saques el jugo a esta maravilla de la tecnología. 🚀
+              </p>
+              <p className="mt-6 text-xl leading-8">
+                Antes de empezar, ¿sabes qué es ChatGPT? No te preocupes si no
+                lo tienes muy claro, te lo contamos: ChatGPT (Generative
+                Pre-trained Transformer) es un chatbot lanzado por OpenAI en
+                noviembre de 2022 🗓️. Está construido sobre la familia GPT-3.5
+                de OpenAI de grandes modelos de lenguaje y se ajusta con
+                técnicas de aprendizaje supervisado y de refuerzo.
+              </p>
+              <p className="mt-6 text-xl leading-8">
+                Desde su lanzamiento como prototipo, ChatGPT ha sido muy popular
+                por sus respuestas detalladas y articuladas en muchos campos del
+                conocimiento. Sin embargo, también ha sido criticado por su
+                escasa precisión en los hechos. 🫤
+              </p>
+              <p className="mt-6 text-xl leading-8">
+                Pero no te preocupes, ¡nosotros te enseñaremos cómo sacarle el
+                máximo provecho! 🤩
+              </p>
+              <p className="mt-6 text-xl leading-8">
+                Para tener conversaciones exitosas con ChatGPT, es clave
+                utilizar prompts de alta calidad que guíen la conversación en la
+                dirección correcta y cubran los temas de interés para el
+                usuario. Unos prompts bien definidos pueden hacer la diferencia
+                entre una conversación informativa y atractiva, y una
+                conversación aburrida y desenfocada.
+              </p>
+              <p className="mt-6 text-xl leading-8">
+                Pero ¿qué es un prompt? 🤔
+              </p>
+              <p className="mt-6 text-xl leading-8">
+                Un prompt es básicamente una sugerencia o instrucción que le das
+                a una IA como ChatGPT para que te proporcione una respuesta o te
+                genere un texto. Es como darle una tarea a tu asistente virtual,
+                pero en lugar de pedirle que te traiga un café ☕, le pides que
+                escriba un ensayo sobre la importancia del café en la vida
+                moderna. ¡Sí, es así de poderoso! 💪 Es como tener un robot con
+                un cerebro gigante 🤖 que puede ayudarte a crear contenido,
+                responder preguntas o incluso a jugar a juegos de rol 🎲.
+              </p>
+              <p className="mt-6 text-xl leading-8">
+                Además de su capacidad para comprender y responder al lenguaje
+                natural, ChatGPT también tiene muchas otras características que
+                lo convierten en una herramienta poderosa para conducir
+                conversaciones. Por ejemplo, puede personalizarse para adaptarse
+                a las necesidades y preferencias del usuario, y puede utilizar
+                algoritmos de aprendizaje automático para personalizar sus
+                respuestas basándose en las interacciones y preferencias
+                anteriores del usuario. ¡Increíble! 😍
+              </p>
+              <p className="mt-6 text-xl leading-8">
+                Y eso no es todo, ChatGPT también es capaz de entender y
+                responder a entradas en varios idiomas y puede manejar grandes
+                volúmenes de tráfico. ¡Es la herramienta perfecta para el
+                servicio de atención al cliente o las comunidades en línea! 🌎💬
+              </p>
+              <p className="mt-6 text-xl leading-8">
+                En este curso, aprenderás los principios de la comunicación
+                clara y cómo aplicarlos a los prompts de ChatGPT. También te
+                daremos una guía paso a paso sobre cómo hacerlos más eficaces
+                para que conduzcan a conversaciones atractivas e informativas. Y
+                si ya eres un usuario experimentado, te enseñaremos algunos
+                trucos para llevar tus habilidades al siguiente nivel. 🚀
+              </p>
+              <p className="mt-6 text-xl leading-8">
+                ¿Estás listo para empezar? ¡Vamos! 💪
+              </p>
+              <p className="mt-6 text-xl leading-8">
+                Tarea 1: Entra a la plataforma de ChatGPT. Dale clic a este link
+                👉 https://chat.openai.com/chat
               </p>
             </>
           ) : null}
