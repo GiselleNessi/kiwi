@@ -2,9 +2,10 @@ import { ConnectWallet, useAddress, Web3Button } from "@thirdweb-dev/react";
 import { isFeatureEnabled } from "@thirdweb-dev/sdk";
 import Link from "next/link";
 import { contractAddress } from "../const/yourDetails";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Dialog } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
+import { useRouter } from "next/router";
 
 const navigation = [
   { name: "Product", href: "#" },
@@ -16,12 +17,24 @@ const navigation = [
 export default function Login() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const address = useAddress(); // Get the user's address
+  const router = useRouter();
+  const missingNft = router.query.missingNft === "true";
+
+  useEffect(() => {
+    // Check if the wallet is connected and the required NFT is not missing
+    if (address && !missingNft) {
+      // Store the user's address in local storage or set a cookie to indicate that they are logged in
+      localStorage.setItem("userAddress", address);
+
+      // Navigate to the Beta dApp automatically
+      router.push("/");
+    }
+  }, [address, missingNft, router]);
 
   return (
     <>
       <div className="bg-gray-900">
         <header className="absolute inset-x-0 top-0 z-50">
-         
           <Dialog
             as="div"
             className="lg:hidden"
@@ -92,35 +105,42 @@ export default function Login() {
             <div className="mx-auto max-w-7xl px-6 lg:px-8">
               <div className="mx-auto max-w-2xl text-center">
                 <h1 className="text-4xl font-bold tracking-tight text-white sm:text-6xl">
-                Herramienta para creadores “enseña-para-ganar”
+                  Herramienta para creadores
+                  <br /> “enseña-para-ganar”
                 </h1>
-                <p className="mt-6 text-lg leading-8 text-gray-300">Crea, comparte y gana</p>
                 <p className="mt-6 text-lg leading-8 text-gray-300">
-                  You cannot access the{" "}
-                  <Link href="/">
-                    <strong>main page</strong>
-                  </Link>{" "}
-                  unless you own an NFT from our collection!
+                  Crea, comparte y gana
                 </p>
+                <p className="mt-6 text-lg leading-8 text-gray-300">
+                  You cannot access the <strong>main page</strong> unless you
+                  own an NFT from our collection!
+                </p>
+
                 <hr />
 
+                <div className="mt-10 flex items-center justify-center gap-x-6">
+                  <ConnectWallet />
+                </div>
                 <>
                   {address ? (
                     <p className="text-white">
-                      Welcome, {address?.slice(0, 6)}...{address?.slice(-4)}
+                      Bienvenidxs 🛸 , {address?.slice(0, 6)}...
+                      {address?.slice(-4)}
                     </p>
                   ) : (
                     <p className="text-white">
-                      Please connect your wallet to continue.
+                      Please connect your wallet and sign in to continue.
                     </p>
                   )}
 
-                  <br />
-
-                  <ConnectWallet />
+                  {missingNft && address && (
+                    <p className="text-red-500 mt-2">
+                      No se encontró el NFT requerido. Por favor, asegúrese de
+                      tener el NFT en su billetera.
+                    </p>
+                  )}
                 </>
               </div>
-              
             </div>
           </div>
           <div
