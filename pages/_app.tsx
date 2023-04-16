@@ -23,6 +23,8 @@ function MyApp({ Component, pageProps }: AppProps) {
           name="description"
           content="Learn how to use the thirdweb Auth SDK to create an NFT Gated Website"
         />
+         <script src="//embed.typeform.com/next/embed.js" async></script>
+
       </Head>
      
       <Component {...pageProps} />

@@ -28,7 +28,9 @@ export default function Home() {
   }, [isLoading, isLoggedIn, router]);
 
   return (
-    <Dashboard children={undefined} />
+    <Dashboard>
+  {/* children */}
+</Dashboard>
   );
 }
 
