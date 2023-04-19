@@ -30,8 +30,8 @@ const navigation = [
     current: false,
   },
   {
-    name: "Preguntas Frecuentes",
-    href: "#",
+    name: "Video",
+    href: "/dashboard/asset",
     icon: QuestionMarkCircleIcon,
     current: false,
   },
@@ -44,7 +44,7 @@ const teams = [
     initial: "C",
     current: false,
   },
-  { id: 2, name: "Wallets Digitales", href: "#", initial: "W", current: false },
+  { id: 2, name: "Wallets Digitales", href: "/dashboard/wallets", initial: "W", current: false },
   {
     id: 3,
     name: "Comunidad",
@@ -304,6 +304,7 @@ export default function Dashboard({ children }: Props) {
           <div>
             {children ? <div>{children}</div> : <p>Welcome to Kiwi 🥝 </p>}
           </div>
+
         </div>
       </main>
     </div>
