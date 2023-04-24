@@ -191,16 +191,14 @@ export default function ChatGPT({ subtitle, title, body, text }: PageProps) {
           {currentPage === 3 ? (
             <>
           
-            <Image
-      src={chatgptOne}
-      alt="Logo"
-      width={500}
-      height={500}
+           {/*  <Image
+              src={chatgptOne}
+              alt="Logo"
+              width={600}
+              height={600}
+              style={{ objectFit: "cover", objectPosition: "center" }}
+            /> */}
 
-    />
-
-
-          
               <p className="text-xl leading-8">
                 ¡Hola tripulante! 👋 Cuando usamos ChatGPT por primera vez, ¡nos
                 enamoramos como un adolescente en una cita a ciegas! 😍
