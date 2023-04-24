@@ -13,6 +13,8 @@ import {
   ArrowLongRightIcon,
 } from "@heroicons/react/20/solid";
 import TypeformWidget from "../../components/TypeformWidget";
+import chatgptOne from "../../public/chatgpt1.png"
+import Image from "next/image";
 
 interface PageProps {
   subtitle: string;
@@ -100,21 +102,26 @@ export default function ChatGPT({ subtitle, title, body, text }: PageProps) {
             {pages[currentPage]?.subtitle || ""}
           </p>
           <br />
+          {currentPage === 0 ? (
+            <div>
+              <br />
+              <iframe
+                src="https://lvpr.tv?v=bb696iluhg7rdync"
+                allowFullScreen
+                allow="autoplay; encrypted-media; picture-in-picture"
+                sandbox="allow-scripts"
+                width="720"
+                height="400"
+              ></iframe>
+              <br />
+            </div>
+          ) : null}
           <h1 className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
             {pages[currentPage]?.title ?? ""}
           </h1>
           <br />
           {currentPage === 0 ? (
             <div>
-              <iframe
-                width="560"
-                height="315"
-                src="https://www.youtube.com/embed/AYq76B_7Irk"
-                title="YouTube video player"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowFullScreen
-              ></iframe>
-              <br />
               <p className="mt-6 text-xl leading-8">
                 ¿Quieres aprender cómo ser un ninja en la redacción de prompts
                 para Chat GPT? 🤖 ¡Entonces tienes que hacer este curso! 🎉 ¡No
@@ -183,7 +190,18 @@ export default function ChatGPT({ subtitle, title, body, text }: PageProps) {
 
           {currentPage === 3 ? (
             <>
-              <p className="mt-6 text-xl leading-8">
+          
+            <Image
+      src={chatgptOne}
+      alt="Logo"
+      width={500}
+      height={500}
+
+    />
+
+
+          
+              <p className="text-xl leading-8">
                 ¡Hola tripulante! 👋 Cuando usamos ChatGPT por primera vez, ¡nos
                 enamoramos como un adolescente en una cita a ciegas! 😍
                 Estuvimos jugando con la herramienta de todas las formas
@@ -199,6 +217,19 @@ export default function ChatGPT({ subtitle, title, body, text }: PageProps) {
                 interactuar con él de manera productiva para traerte los mejores
                 tips y le saques el jugo a esta maravilla de la tecnología. 🚀
               </p>
+
+              <div>
+                <br />
+                <iframe
+                  src="https://lvpr.tv?v=f96c3fqqjz5iqll3"
+                  allowFullScreen
+                  allow="autoplay; encrypted-media; picture-in-picture"
+                  sandbox="allow-scripts"
+                  width="600"
+                  height="400"
+                ></iframe>
+                <br />
+              </div>
               <p className="mt-6 text-xl leading-8">
                 Antes de empezar, ¿sabes qué es ChatGPT? No te preocupes si no
                 lo tienes muy claro, te lo contamos: ChatGPT (Generative
@@ -266,8 +297,15 @@ export default function ChatGPT({ subtitle, title, body, text }: PageProps) {
                 ¿Estás listo para empezar? ¡Vamos! 💪
               </p>
               <p className="mt-6 text-xl leading-8">
-                Tarea 1: Entra a la plataforma de ChatGPT. Dale clic a este link
-                👉 https://chat.openai.com/chat
+                <strong>Tarea 1: </strong> Entra a la plataforma de ChatGPT.
+                Dale clic a este link 👉{" "}
+                <a
+                  href="https://chat.openai.com/chat"
+                  target="_blank"
+                  className="font-medium text-blue-600 dark:text-blue-500 hover:underline"
+                >
+                  https://chat.openai.com/chat
+                </a>
               </p>
             </>
           ) : null}
@@ -279,7 +317,6 @@ export default function ChatGPT({ subtitle, title, body, text }: PageProps) {
                 posibilidades, vamos a profundizar un poco más en qué es ChatGPT
                 y cómo funciona.
               </p>
-              <br />
               <p className="mt-6 text-xl leading-8">
                 Para empezar, ChatGPT es una herramienta súper chévere que
                 utiliza algoritmos de aprendizaje automático para generar
@@ -318,6 +355,18 @@ export default function ChatGPT({ subtitle, title, body, text }: PageProps) {
                 Te contamos algunos de los usos más divertidos y útiles de esta
                 herramienta 🔍🤖
               </p>
+              <div>
+                <br />
+                <iframe
+                  src="https://lvpr.tv?v=5470w5nt8fr31mii"
+                  allowFullScreen
+                  allow="autoplay; encrypted-media; picture-in-picture"
+                  sandbox="allow-scripts"
+                  width="600"
+                  height="400"
+                ></iframe>
+                <br />
+              </div>
               <p className="mt-6 text-xl leading-8">
                 📞 Atención al cliente: ¿Necesitas ayuda para comprar esos
                 zapatos que tanto quieres en la tienda en línea a altas horas de
@@ -326,7 +375,7 @@ export default function ChatGPT({ subtitle, title, body, text }: PageProps) {
                 cualquier problema que tengas.
               </p>
               <p className="mt-6 text-xl leading-8">
-                🎓E ducación: ¿No entiendes un tema en la escuela o necesitas
+                🎓Educación: ¿No entiendes un tema en la escuela o necesitas
                 ayuda para estudiar para un examen? ¡ChatGPT es tu tutor
                 personal! Pregúntale lo que quieras sobre matemáticas, historia
                 o cualquier otra materia y te ayudará a comprender todo.
@@ -371,6 +420,18 @@ export default function ChatGPT({ subtitle, title, body, text }: PageProps) {
                 que conduzcan a conversaciones interesantes?
               </p>
               <br />
+              <div>
+                <br />
+                <iframe
+                  src="https://lvpr.tv?v=f02543829ml8u8zz"
+                  allowFullScreen
+                  allow="autoplay; encrypted-media; picture-in-picture"
+                  sandbox="allow-scripts"
+                  width="600"
+                  height="400"
+                ></iframe>
+                <br />
+              </div>
               <p className="mt-6 text-xl leading-8">
                 Pues bien, hay algunos principios clave que debes tener en
                 cuenta. Primero, ¡la claridad es fundamental! Asegúrate de que
@@ -479,6 +540,24 @@ export default function ChatGPT({ subtitle, title, body, text }: PageProps) {
                 aplicar estos principios para crear prompts efectivos y lograr
                 tus objetivos.
               </p>
+              <div>
+                <br />
+                <iframe
+                  src="https://lvpr.tv?v=a508pzq661okvwmp"
+                  allowFullScreen
+                  allow="autoplay; encrypted-media; picture-in-picture"
+                  sandbox="allow-scripts"
+                  width="600"
+                  height="400"
+                ></iframe>
+                <br />
+              </div>
+              <p className="mt-6 text-xl leading-8">
+                🎯 Define el propósito y el enfoque de la conversación. ¿Quieres
+                responder una pregunta, proporcionar información o simplemente
+                charlar? ¡Define tu objetivo y enfoque antes de empezar a
+                escribir para que tu prompt sea específico y relevante!
+              </p>
               <p className="mt-6 text-xl leading-8">
                 💬 Utiliza un lenguaje claro y coherente. Usa palabras que
                 ChatGPT pueda entender fácilmente y evita el lenguaje ambiguo o
@@ -522,11 +601,23 @@ export default function ChatGPT({ subtitle, title, body, text }: PageProps) {
                   nítidos como la imagen en un día soleado:{" "}
                 </strong>
               </p>
+              <div>
+                <br />
+                <iframe
+                  src="https://lvpr.tv?v=4b78phhz6cp1ac96"
+                  allowFullScreen
+                  allow="autoplay; encrypted-media; picture-in-picture"
+                  sandbox="allow-scripts"
+                  width="600"
+                  height="400"
+                ></iframe>
+                <br />
+              </div>
               <p className="mt-6 text-xl leading-8">
                 👉 Define la jerga o términos técnicos que necesitas utilizar.
                 ¡No des por hecho que todos saben lo que significan tus palabras
-                &rdquo;fancy&rdquo;! Proporciona definiciones claras y explicaciones para
-                que todo el mundo esté en la misma página.
+                &rdquo;fancy&rdquo;! Proporciona definiciones claras y
+                explicaciones para que todo el mundo esté en la misma página.
               </p>
               <p className="mt-6 text-xl leading-8">
                 👉 Evita el lenguaje ambiguo. Si tus palabras pueden ser
@@ -549,8 +640,8 @@ export default function ChatGPT({ subtitle, title, body, text }: PageProps) {
               <p className="mt-6 text-xl leading-8">
                 Este mensaje es una mezcla de jerga y ambigüedad. Palabras como
                 &rdquo;hype&rdquo; o &rdquo;chismes de la web&rdquo; pueden ser
-                confusas para algunos usuarios, y el término &rdquo;últimos chismes&rdquo;
-                es demasiado vago. Así que, ¡a reescribir!
+                confusas para algunos usuarios, y el término &rdquo;últimos
+                chismes&rdquo; es demasiado vago. Así que, ¡a reescribir!
               </p>
               <p className="mt-6 text-xl leading-8">
                 <strong>Por ejemplo, qué tal si dices algo como: </strong>
@@ -575,8 +666,8 @@ export default function ChatGPT({ subtitle, title, body, text }: PageProps) {
                 compleja a ChatGPT, algo que lo ponga a reflexionar. Recuerda
                 usar palabras que el bot entienda, guarda tu vocabulario lujoso
                 para la cena con tus suegros 🤣. ¡Sé creativo!. Cuando termines,
-                haz un screenshot y guárdalo como &rdquo;Tarea 3&rdquo;, al final del curso
-                te pediremos subirla.{" "}
+                haz un screenshot y guárdalo como &rdquo;Tarea 3&rdquo;, al
+                final del curso te pediremos subirla.{" "}
               </p>
             </>
           ) : null}
@@ -593,6 +684,7 @@ export default function ChatGPT({ subtitle, title, body, text }: PageProps) {
               <p className="mt-6 text-xl leading-8">
                 <strong>Un ejemplo:</strong>
               </p>
+
               <p className="mt-6 text-xl leading-8">
                 Define el propósito y el enfoque de la conversación:{" "}
                 <strong>
@@ -670,6 +762,18 @@ export default function ChatGPT({ subtitle, title, body, text }: PageProps) {
               <p className="mt-6 text-xl leading-8">
                 <strong>El truco &rdquo;Actúa como...&rdquo; </strong>
               </p>
+              <div>
+                <br />
+                <iframe
+                  src="https://lvpr.tv?v=9fealiajlt0dxsd6"
+                  allowFullScreen
+                  allow="autoplay; encrypted-media; picture-in-picture"
+                  sandbox="allow-scripts"
+                  width="600"
+                  height="400"
+                ></iframe>
+                <br />
+              </div>
               <p className="mt-6 text-xl leading-8">
                 ¡Aquí te presento un truco que te encantará! Se llama
                 &rdquo;Actúa como&rdquo; y te permite indicar al ChatGPT que
@@ -803,35 +907,55 @@ export default function ChatGPT({ subtitle, title, body, text }: PageProps) {
                 consejos para que logres este objetivo.
               </p>
               <br />
-              <p className="mt-6 text-xl leading-8">
-                No te emociones y no te pases con la información. Proporciona la
-                cantidad justa de detalles para que ChatGPT comprenda el
-                contexto y propósito de la conversación. ¡No lo satures! 😵
-              </p>
-              <p className="mt-6 text-xl leading-8">
-                Usa un lenguaje claro y fácil de entender, ¡no seas un pesado
-                usando jerga o lenguaje ambiguo! 💬😒
-              </p>
-              <p className="mt-6 text-xl leading-8">
-                ¡Nada de vaguedades! Si quieres respuestas concretas, asegúrate
-                de proporcionar suficiente contexto y orientación para que
-                ChatGPT no se pierda en la conversación. 🤔🔍
-              </p>
-              <p className="mt-6 text-xl leading-8">
-                No olvides ser consciente de las capacidades y limitaciones de
-                ChatGPT. No le pidas que haga cosas fuera de su alcance y
-                prepárate para ajustar tus indicaciones si es necesario.
-              </p>
-              <p className="mt-6 text-xl leading-8">
-                No te olvides de dar instrucciones claras y especificar las
-                restricciones si las hay. Si quieres que ChatGPT interprete un
-                personaje específico, ¡díselo de una vez! 🎭📚
-              </p>
-              <p className="mt-6 text-xl leading-8">
-                Por último, prueba y depura tus instrucciones para asegurarte de
-                que sean claras y eficaces 🧹. Si algo no funciona, reinicia el
-                hilo y empieza de nuevo.
-              </p>
+              <div>
+                <br />
+                <iframe
+                  src="https://lvpr.tv?v=cb79lhw05qt06cn3"
+                  allowFullScreen
+                  allow="autoplay; encrypted-media; picture-in-picture"
+                  sandbox="allow-scripts"
+                  width="600"
+                  height="400"
+                ></iframe>
+                <br />
+              </div>
+              <ul className="list-disc">
+                <li className="mt-6 text-xl leading-8">
+                  No te emociones y no te pases con la información. Proporciona
+                  la cantidad justa de detalles para que ChatGPT comprenda el
+                  contexto y propósito de la conversación. ¡No lo satures! 😵
+                </li>
+                <li className="mt-6 text-xl leading-8">
+                  Usa un lenguaje claro y fácil de entender, ¡no seas un pesado
+                  usando jerga o lenguaje ambiguo! 💬😒
+                </li>
+                <li className="mt-6 text-xl leading-8">
+                  ¡Nada de vaguedades! Si quieres respuestas concretas,
+                  asegúrate de proporcionar suficiente contexto y orientación
+                  para que ChatGPT no se pierda en la conversación. 🤔🔍
+                </li>
+                <li className="mt-6 text-xl leading-8">
+                  No olvides ser consciente de las capacidades y limitaciones de
+                  ChatGPT. No le pidas que haga cosas fuera de su alcance y
+                  prepárate para ajustar tus indicaciones si es necesario.
+                </li>
+                <li className="mt-6 text-xl leading-8">
+                  No te olvides de dar instrucciones claras y especificar las
+                  restricciones si las hay. Si quieres que ChatGPT interprete un
+                  personaje específico, ¡díselo de una vez! 🎭📚
+                </li>
+                <li className="mt-6 text-xl leading-8">
+                  Por último, prueba y depura tus instrucciones para asegurarte
+                  de que sean claras y eficaces 🧹. Si algo no funciona,
+                  reinicia el hilo y empieza de nuevo.
+                </li>
+                <li className="mt-6 text-xl leading-8">
+                  Por último, prueba y depura tus instrucciones para asegurarte
+                  de que sean claras y eficaces 🧹. Si algo no funciona,
+                  reinicia el hilo y empieza de nuevo.
+                </li>
+              </ul>
+
               <p className="mt-6 text-xl leading-8">
                 <strong>
                   ¿Cómo evitar las preguntas abiertas y la sobrecarga de
@@ -883,31 +1007,47 @@ export default function ChatGPT({ subtitle, title, body, text }: PageProps) {
                 para que tu conversación fluya de manera natural y sin problemas
                 👍
               </p>
-              <p className="mt-6 text-xl leading-8">
-                El ChatGPT no entiende tu solicitud o te da una respuesta poco
-                relacionada o inapropiada 🤷‍♂️- Esto puede suceder si no eres
-                claro en tu solicitud, usas jerga o lenguaje que ChatGPT no
-                conoce o no proporcionas suficiente contexto. ¡Recuerda que
-                ChatGPT no es adivino!
-              </p>
-              <p className="mt-6 text-xl leading-8">
-                El ChatGPT te da una respuesta genérica o poco informativa 😕-
-                Esto puede suceder si tu pregunta es demasiado amplia o no
-                proporcionas suficiente información sobre el tema. ¡Sé
-                específico y detallado en tu solicitud!
-              </p>
-              <p className="mt-6 text-xl leading-8">
-                El ChatGPT no sigue las instrucciones o restricciones de tu
-                solicitud 🤔- Esto puede suceder si no eres claro en tus
-                instrucciones o si son inconsistentes con la conversación en
-                general. ¡Asegúrate de ser claro y consistente!
-              </p>
-              <p className="mt-6 text-xl leading-8">
-                El ChatGPT te da respuestas repetitivas o poco relacionadas 🤯-
-                Esto puede suceder si la conversación carece de dirección o si
-                no le das suficiente orientación a ChatGPT. ¡Ayuda a guiar la
-                conversación y a mantener el enfoque!
-              </p>
+              <br />
+              <div>
+                <br />
+                <iframe
+                  src="https://lvpr.tv?v=7ddddoszmu8yfmrs"
+                  allowFullScreen
+                  allow="autoplay; encrypted-media; picture-in-picture"
+                  sandbox="allow-scripts"
+                  width="600"
+                  height="400"
+                ></iframe>
+                <br />
+              </div>
+              <ul className="list-disc">
+                <li className="mt-6 text-xl leading-8">
+                  El ChatGPT no entiende tu solicitud o te da una respuesta poco
+                  relacionada o inapropiada 🤷‍♂️- Esto puede suceder si no eres
+                  claro en tu solicitud, usas jerga o lenguaje que ChatGPT no
+                  conoce o no proporcionas suficiente contexto. ¡Recuerda que
+                  ChatGPT no es adivino!
+                </li>
+                <li className="mt-6 text-xl leading-8">
+                  El ChatGPT te da una respuesta genérica o poco informativa 😕-
+                  Esto puede suceder si tu pregunta es demasiado amplia o no
+                  proporcionas suficiente información sobre el tema. ¡Sé
+                  específico y detallado en tu solicitud!
+                </li>
+                <li className="mt-6 text-xl leading-8">
+                  El ChatGPT no sigue las instrucciones o restricciones de tu
+                  solicitud 🤔- Esto puede suceder si no eres claro en tus
+                  instrucciones o si son inconsistentes con la conversación en
+                  general. ¡Asegúrate de ser claro y consistente!
+                </li>
+                <li className="mt-6 text-xl leading-8">
+                  El ChatGPT te da respuestas repetitivas o poco relacionadas
+                  🤯- Esto puede suceder si la conversación carece de dirección
+                  o si no le das suficiente orientación a ChatGPT. ¡Ayuda a
+                  guiar la conversación y a mantener el enfoque!
+                </li>
+              </ul>
+
               <p className="mt-6 text-xl leading-8">
                 <strong>Problemas técnicos</strong>
               </p>
@@ -992,13 +1132,14 @@ export default function ChatGPT({ subtitle, title, body, text }: PageProps) {
                 es &rdquo;Quiero comer McDonald&rdquo;s&rdquo;.
               </p>
               <p className="mt-6 text-xl leading-8 italic">
-              &rdquo;Quiero que actúes como ayudante de pronunciación en inglés para
-                personas de habla hispana. Te escribiré frases y tú sólo
-                responderás a sus pronunciaciones, y nada más. Las respuestas no
-                deben ser traducciones de mi frase, sino sólo pronunciaciones.
-                Las pronunciaciones deben utilizar letras latinas hispanas para
-                la fonética. No escribas explicaciones en las respuestas. Mi
-                primera frase es &rdquo;¿What is the weather in Fort Lauderdale?&rdquo;.
+                &rdquo;Quiero que actúes como ayudante de pronunciación en
+                inglés para personas de habla hispana. Te escribiré frases y tú
+                sólo responderás a sus pronunciaciones, y nada más. Las
+                respuestas no deben ser traducciones de mi frase, sino sólo
+                pronunciaciones. Las pronunciaciones deben utilizar letras
+                latinas hispanas para la fonética. No escribas explicaciones en
+                las respuestas. Mi primera frase es &rdquo;¿What is the weather
+                in Fort Lauderdale?&rdquo;.
               </p>
               <p className="mt-6 text-xl leading-8">
                 <strong>
@@ -1018,9 +1159,9 @@ export default function ChatGPT({ subtitle, title, body, text }: PageProps) {
                 contenido para varias plataformas, como Instagram, Twitter o
                 YouTube, y te relacionarás con tus seguidores para aumentar el
                 conocimiento de la marca y promocionar productos o servicios. Mi
-                primera solicitud de sugerencia es &rdquo;Necesito ayuda para crear
-                una campaña atractiva en Instagram para promocionar una nueva
-                línea de ropa deportiva&rdquo;.
+                primera solicitud de sugerencia es &rdquo;Necesito ayuda para
+                crear una campaña atractiva en Instagram para promocionar una
+                nueva línea de ropa deportiva&rdquo;.
               </p>
               <p className="mt-6 text-xl leading-8 italic">
                 Quiero que actúes como publicista. Crearás una campaña para
@@ -1055,8 +1196,8 @@ export default function ChatGPT({ subtitle, title, body, text }: PageProps) {
                 específicos para tu sesión de cuentacuentos; por ejemplo, si son
                 niños, puedes hablarles de animales; si son adultos, los cuentos
                 basados en la historia podrían engancharles mejor, etc. Mi
-                primera petición es: &rdquo;Necesito un cuento interesante sobre los
-                ninjas que aprender a usar prompts para chatGPT&rdquo;.
+                primera petición es: &rdquo;Necesito un cuento interesante sobre
+                los ninjas que aprender a usar prompts para chatGPT&rdquo;.
               </p>
               <p className="mt-6 text-xl leading-8">
                 <strong>
@@ -1129,7 +1270,8 @@ export default function ChatGPT({ subtitle, title, body, text }: PageProps) {
                 Primero, respóndeme la hoja vacía.
               </p>
               <p className="mt-6 text-xl leading-8">
-                Para ver más ejemplos, basta con visitar https://prompts.chat.
+                Para ver más ejemplos, basta con visitar <a href="https://prompts.chat" target="_blank" className="font-medium text-blue-600 dark:text-blue-500 hover:underline">https://prompts.chat.</a>
+
               </p>
             </>
           ) : null}
@@ -1179,6 +1321,18 @@ export default function ChatGPT({ subtitle, title, body, text }: PageProps) {
                 Te dejamos los próximos pasos que debes seguir para seguir
                 mejorando tus habilidades:
               </p>
+              <div>
+                <br />
+                <iframe
+                  src="https://lvpr.tv?v=b368bgk0x37a13tv"
+                  allowFullScreen
+                  allow="autoplay; encrypted-media; picture-in-picture"
+                  sandbox="allow-scripts"
+                  width="600"
+                  height="400"
+                ></iframe>
+                <br />
+              </div>
               <p className="mt-6 text-xl leading-8">
                 Primero y más importante, ¡practica! Cuanto más uses ChatGPT y
                 experimentes con diferentes tipos de mensajes, más fácil será
@@ -1223,41 +1377,46 @@ export default function ChatGPT({ subtitle, title, body, text }: PageProps) {
               </p>
               <br />
               <p className="mt-6 text-xl leading-8">
-                Escribe un hilo de tweet sobre un tema de actualidad.
+                <strong>
+                1. Escribe un hilo de tweet sobre un tema de actualidad.
+                </strong>
               </p>
-              <p className="mt-6 text-xl leading-8">
+              <ul className="list-disc">
+                <li className="mt-6 text-xl leading-8">
                 Comienza con una pregunta clara y sencilla para ChatGPT, como
                 &rdquo;¿Puedes decirme cuál es el tema de actualidad más
                 importante de hoy?&rdquo; (recuerda que ChatGPT está alimentado
                 hasta el 2021)
-              </p>
-              <p className="mt-6 text-xl leading-8">
+                </li>
+                <li className="mt-6 text-xl leading-8">
                 Utiliza preguntas de seguimiento para obtener detalles
                 específicos sobre el tema, como &rdquo;¿Cuáles son los
                 principales aspectos de este tema que la gente necesita
                 saber?&rdquo;, o &rdquo;¿Cuál es la postura oficial de los
                 líderes en relación a este tema?&rdquo;
-              </p>
-              <p className="mt-6 text-xl leading-8">
+                </li>
+                <li className="mt-6 text-xl leading-8">
                 Mantén un tono respetuoso y coherente en todo momento para
                 asegurarte de que ChatGPT no se desvíe de la conversación. Si se
                 desvía, usa preguntas de seguimiento para que vuelva al tema
                 original.
-              </p>
-              <p className="mt-6 text-xl leading-8">
-                Utiliza el truco &rdquo;actúa como&rdquo; para hacer que ChatGPT se comporte
-                como un periodista o experto en el tema. Por ejemplo, puedes
-                preguntar: &rdquo;¿Qué crees que las personas deben hacer para
-                abordar este problema?&rdquo; o &rdquo;¿Puedes compartir algún recurso útil
-                para que las personas puedan profundizar en este tema?&rdquo;.
-              </p>
-              <p className="mt-6 text-xl leading-8">
+                </li>
+                <li className="mt-6 text-xl leading-8">
+                Utiliza el truco &rdquo;actúa como&rdquo; para hacer que ChatGPT
+                se comporte como un periodista o experto en el tema. Por
+                ejemplo, puedes preguntar: &rdquo;¿Qué crees que las personas
+                deben hacer para abordar este problema?&rdquo; o &rdquo;¿Puedes
+                compartir algún recurso útil para que las personas puedan
+                profundizar en este tema?&rdquo;.
+                </li>
+                <li className="mt-6 text-xl leading-8">
                 Utiliza la limitación de caracteres de Twitter para ayudar a los
                 estudiantes a ser precisos y concisos en su escritura. Usa un
                 hilo de 3 o 4 tweets sobre el tema y utiliza preguntas y
                 respuestas para hacer que la conversación fluya de manera
                 natural.
-              </p>
+                </li>
+              </ul>
             </>
           ) : null}
 
@@ -1269,31 +1428,15 @@ export default function ChatGPT({ subtitle, title, body, text }: PageProps) {
                   formulario. 🎉
                 </strong>
               </p>
-              <br />
               <p className="mt-6 text-xl leading-8">
-                Wallet conectada {address?.slice(0, 6)}...{address?.slice(-4)}
+                Wallet conectada <strong> {address?.slice(0, 6)}...{address?.slice(-4)} </strong>
               </p>
+             
               <p className="mt-6 text-xl leading-8">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Phasellus vel porta quam, vitae imperdiet dolor. Donec in leo
-                eget ipsum feugiat aliquet. Donec venenatis eros nec magna
-                facilisis, non pellentesque augue ornare. Nam gravida purus
-                nisl. Suspendisse tincidunt tortor ut lacus luctus, sed
-                tincidunt leo ultricies. Vivamus ut nunc quis est vehicula
-                dictum non sed eros. Ut tincidunt sapien vel imperdiet molestie.
-                Pellentesque habitant morbi tristique senectus et netus et
-                malesuada fames ac turpis egestas. Vestibulum ultrices dictum
-                dui non sollicitudin. Integer fermentum interdum elit non
-                gravida. Fusce eros velit, porta vel ex nec, maximus vehicula
-                velit. Cras id feugiat dolor. Etiam luctus dolor ex, ut
-                consequat turpis pharetra vitae. Fusce fringilla ante est, vel
-                bibendum urna dictum vel.
+                Haz un tweet celebrando que ya terminaste y eres un ninja de Chat GPT.
               </p>
-              <p className="mt-6 text-xl leading-8">
-                Upload a screenhot of yoour homework and Copy and paste the
-                following into your twitter:
-                <br />
-                #kiwi #web3 finished ChatGPT course in Kiwi. (photo)
+              <p>
+                ejemplo de tweet  #kiwi #web3 finished ChatGPT course in Kiwi. (photo)
               </p>
               <div>
                 <TypeformWidget />
