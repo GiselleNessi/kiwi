@@ -44,12 +44,11 @@ const teams = [
     initial: "C",
     current: false,
   },
-  { id: 2, name: "Wallets Digitales", href: "/dashboard/wallets", initial: "W", current: false },
   {
-    id: 3,
-    name: "Comunidad",
-    href: "https://discord.gg/d6Bp55mY",
-    initial: "C",
+    id: 2,
+    name: "Wallets Digitales",
+    href: "/dashboard/wallets",
+    initial: "W",
     current: false,
   },
 ];
@@ -140,29 +139,6 @@ export default function Dashboard({ children }: Props) {
                   <nav className="flex flex-1 flex-col">
                     <ul role="list" className="flex flex-1 flex-col gap-y-7">
                       <li>
-                        <ul role="list" className="-mx-2 space-y-1">
-                          {navigation.map((item) => (
-                            <li key={item.name}>
-                              <a
-                                href={item.href}
-                                className={classNames(
-                                  item.current
-                                    ? "bg-gray-800 text-white"
-                                    : "text-gray-400 hover:text-white hover:bg-gray-800",
-                                  "group flex gap-x-3 rounded-md p-2 text-sm leading-6 font-semibold"
-                                )}
-                              >
-                                <item.icon
-                                  className="h-6 w-6 shrink-0"
-                                  aria-hidden="true"
-                                />
-                                {item.name}
-                              </a>
-                            </li>
-                          ))}
-                        </ul>
-                      </li>
-                      <li>
                         <div className="text-xs font-semibold leading-6 text-gray-400">
                           Your Courses
                         </div>
@@ -204,27 +180,18 @@ export default function Dashboard({ children }: Props) {
           <nav className="flex flex-1 flex-col">
             <ul role="list" className="flex flex-1 flex-col gap-y-7">
               <li>
-                <ul role="list" className="-mx-2 space-y-1">
-                  {navigation.map((item) => (
-                    <li key={item.name}>
-                      <a
-                        href={item.href}
-                        className={classNames(
-                          item.current
-                            ? "bg-gray-800 text-white"
-                            : "text-gray-400 hover:text-white hover:bg-gray-800",
-                          "group flex gap-x-3 rounded-md p-2 text-sm leading-6 font-semibold"
-                        )}
-                      >
-                        <item.icon
-                          className="h-6 w-6 shrink-0"
-                          aria-hidden="true"
-                        />
-                        {item.name}
-                      </a>
-                    </li>
-                  ))}
-                </ul>
+                <a
+                  href="#"
+                  className="flex items-center gap-x-4 py-3 text-sm font-semibold leading-6 text-white hover:bg-gray-800"
+                >
+                  <img
+                    className="h-8 w-8 rounded-full bg-gray-800"
+                    src="https://img.seadn.io/files/2f76c1d4964b0cb327f0081c48ce14e2.png?fit=max&w=600"
+                    alt=""
+                  />
+                  <span className="sr-only">Your profile</span>
+                  <span aria-hidden="true">Giselle</span>
+                </a>
               </li>
               <li>
                 <div className="text-xs font-semibold leading-6 text-gray-400">
@@ -251,26 +218,37 @@ export default function Dashboard({ children }: Props) {
                   ))}
                 </ul>
               </li>
-              <button
-                onClick={handleLogout}
-                type="button"
-                className="rounded bg-white px-2 py-1 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50"
-              >
-                Logout
-              </button>
-              <li className="-mx-6 mt-auto">
-                <a
-                  href="#"
-                  className="flex items-center gap-x-4 px-6 py-3 text-sm font-semibold leading-6 text-white hover:bg-gray-800"
+
+              <ul role="list" className="-mx-6 mt-auto">
+                {navigation.map((item) => (
+                  <li key={item.name} className="ml-4">
+                    <a
+                      href={item.href}
+                      className={classNames(
+                        item.current
+                          ? "bg-gray-800 text-white"
+                          : "text-gray-400 hover:text-white hover:bg-gray-800",
+                        "group flex gap-x-3 rounded-md p-2 text-sm leading-6 font-semibold"
+                      )}
+                    >
+                      <item.icon
+                        className="h-6 w-6 shrink-0"
+                        aria-hidden="true"
+                      />
+                      {item.name}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+
+              <li className="mb-6">
+                <button
+                  onClick={handleLogout}
+                  type="button"
+                  className="rounded bg-white px-2 py-1 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50"
                 >
-                  <img
-                    className="h-8 w-8 rounded-full bg-gray-800"
-                    src="https://img.seadn.io/files/2f76c1d4964b0cb327f0081c48ce14e2.png?fit=max&w=600"
-                    alt=""
-                  />
-                  <span className="sr-only">Your profile</span>
-                  <span aria-hidden="true">Giselle</span>
-                </a>
+                  Logout
+                </button>
               </li>
             </ul>
           </nav>
@@ -304,7 +282,6 @@ export default function Dashboard({ children }: Props) {
           <div>
             {children ? <div>{children}</div> : <p>Welcome to Kiwi 🥝 </p>}
           </div>
-
         </div>
       </main>
     </div>
