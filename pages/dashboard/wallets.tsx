@@ -23,51 +23,49 @@ interface PageProps {
 
 const pages = [
   {
-    subtitle: "Introduction",
+    subtitle: "Billeteras Digitales 🔐",
     title:
-      "¿Quieres aprender cómo ser un ninja en la redacción de prompts para Chat GPT?",
+      "Domina La Seguridad De Tus Criptomonedas Con Nuestro Divertido Curso De Billeteras Digitales",
   },
   {
-    title: "¿Por qué tomar este curso? 🧐",
+    title: "¿Cómo funciona una wallet de criptomonedas? 🧐",
   },
   {
-    title: "1.¡Bienvenidos! 🤩",
+    title: "1.👉 ¿Qué es Metamask?",
   },
   {
-    title: "2.Introducción 📖",
-  },
-  {
-    title: "3.¿Qué es ChatGPT y cómo funciona? 🤖",
-  },
-  {
-    title: "4.¿Cómo los prompts impulsan tus chats con Chat GPT? 🚀💬",
+    title: "👉 ¿Cómo instalar Metamask en tu dispositivo móvil Iphone/Android?",
   },
   {
     title:
-      "5.Consejos para evitar la confusión y el lenguaje técnico en ChatGPT",
+      "¿Listos para aprender sobre las operaciones principales que puedes realizar con tu billetera? ¡Vamos allá! 🚀",
   },
   {
     title:
-      "6.¡Haz que ChatGPT te entienda! Aprende a crear mensajes efectivos con estos consejos 🤖💬",
+      "Ahora que estás listo para hacer malabares con tu billetera MetaMask, es importante que tomes medidas de seguridad para proteger tus activos criptográficos. 🛡️",
+  },
+  {
+    title: "Desconectar sitios conectados en la aplicación móvil MetaMask! 📱",
+  },
+  {
+    title: "¡¿Cuál es la diferencia entre Mainnet y Testnets? 🤔",
   },
   {
     title:
-      "7. ¡No te equivoques! Evita estos errores al crear mensajes con ChatGPT 🚫🤖 ",
+      "2. 🎉 Aquí te presentamos a Phantom, la billetera digital estrella de la red Solana que no te defraudará. 💪",
   },
   {
-    title: "8. ¿Algo no funciona en ChatGPT? 🤖🕵️‍♂️💻",
+    title:
+      "👉 ¿Cómo abrir tu propia billetera digital en Phantom? ¡Te guiaremos paso a paso para que lo hagas sin esfuerzo!",
+  },
+  {
+    title: "3. ¡Exodus, la billetera digital que lo tiene todo!",
   },
   {
     title: "9. Ejercicios",
   },
   {
     title: "10. ¡Felicidades, completaste el curso! 🥳",
-  },
-  {
-    title: "11. Tarea final 🤓",
-  },
-  {
-    title: "¡Felicidades! Has terminado el curso de ChatGPT.",
   },
 ];
 
@@ -106,21 +104,36 @@ export default function Wallets({ subtitle, title, body, text }: PageProps) {
           <br />
           {currentPage === 0 ? (
             <div>
-             <div>
-             <iframe src="https://lvpr.tv?v=ebafl18bf6o0pseo" allowFullScreen allow="autoplay; encrypted-media; picture-in-picture" sandbox="allow-scripts" width="600" height="400"></iframe>
-          </div>
+              <div>
+                <iframe
+                  src="https://lvpr.tv?v=ebafl18bf6o0pseo"
+                  allowFullScreen
+                  allow="autoplay; encrypted-media; picture-in-picture"
+                  sandbox="allow-scripts"
+                  width="600"
+                  height="400"
+                ></iframe>
+              </div>
               <br />
               <p className="mt-6 text-xl leading-8">
-                ¿Quieres aprender cómo ser un ninja en la redacción de prompts
-                para Chat GPT? 🤖 ¡Entonces tienes que hacer este curso! 🎉 ¡No
-                te preocupes, te enseñaremos todo lo que necesitas saber para
-                dominar esta tecnología impresionante! 🚀 Con nuestro curso,
-                aprenderás a escribir prompts claros y eficaces como un
-                verdadero ninja de la inteligencia artificial. 👨‍💻 Te enseñaremos
-                cómo hablar con Chat GPT para obtener las respuestas que
-                necesitas y cómo hacer que tu IA favorita trabaje para ti. 💬
-                ¡Así que saca tu libreta 📝, prepara tus dedos 👌 y comencemos a
-                crear prompts increíbles juntos! 💪
+                Las billeteras de criptomonedas son la clave para desbloquear el
+                mundo de las monedas digitales. Son una forma segura de
+                almacenar, enviar y recibir criptomonedas como por ejemplo:
+                Bitcoin y Ethereum. Hay diferentes tipos de billeteras de
+                criptomonedas disponibles en la actualidad, cada una con sus
+                propias características y beneficios únicos. Si tienes
+                criptomonedas, seguramente has oído hablar de ellas, pero si
+                eres nuevo en el mundo de las criptomonedas, es posible que te
+                preguntes: ¿Qué son las wallets? Las wallets son dispositivos
+                diseñados para almacenar y gestionar tus criptomonedas. A
+                diferencia de las monedas físicas, que llevamos en nuestro
+                bolsillo, las criptomonedas no tienen una forma física, por lo
+                que necesitamos un lugar seguro para almacenarlas. Aquí es donde
+                entran las wallets. Es importante destacar que las wallets son
+                una pieza fundamental de la seguridad en el mundo de las
+                criptomonedas. Algunas te permiten configurar medidas de
+                seguridad adicionales, como la autenticación de dos factores,
+                que te protegen aún más contra el riesgo de robo de tus activos.
               </p>
               <br />
             </div>
@@ -129,19 +142,41 @@ export default function Wallets({ subtitle, title, body, text }: PageProps) {
           {currentPage === 1 ? (
             <>
               <p className="mt-6 text-xl leading-8">
-                Al aprender a utilizar ChatGPT de manera efectiva, puedes
-                automatizar tareas, personalizar interacciones y manejar grandes
-                volúmenes de usuarios con facilidad. Además, puedes obtener
-                información valiosa de análisis para mejorar el rendimiento de
-                tu negocio y aumentar tus beneficios. 💰💻
+                ¿Cómo funciona una wallet de criptomonedas? 🧐
               </p>
               <br />
               <p className="mt-6 text-xl leading-8">
-                No subestimes el poder de un buen prompt de ChatGPT. Con la
-                ayuda de este curso, podrás mejorar significativamente la
-                eficacia de tus interacciones con los usuarios y ofrecer una
-                experiencia increíblemente satisfactoria. ¡Tus clientes te lo
-                agradecerán y tu proyecto lo notará! 🙌
+                - En primer lugar <strong>La Dirección:</strong>
+              </p>
+              <p className="mt-6 text-xl leading-8">
+                Como toda cuenta bancaria, cada wallet de criptomonedas tiene
+                una dirección única que identifica el lugar de almacenamiento de
+                tus activos digitales. Si quieres recibir una transacción de
+                criptomonedas o tokens, deberás enviar tu dirección al
+                remitente. Y si quieres enviar dinero a otro usuario, deberás
+                utilizar la dirección del destinatario.
+              </p>
+              <p className="mt-6 text-xl leading-8">
+                - En segundo lugar La <strong>llave pública</strong> y la{" "}
+                <strong>llave privada</strong>
+              </p>
+              <p className="mt-6 text-xl leading-8">
+                La <strong>llave pública</strong> permite la creación de la
+                dirección y sirve para verificar que efectivamente tú has
+                firmado una transacción como propietario de tus activos. La{" "}
+                <strong>llave privada </strong>es el código criptográfico que te
+                permite gastar, transferir, retirar, cambiar o enviar tus
+                criptomonedas y esta es fundamental para garantizar la seguridad
+                de tus activos. Además de estas claves, existen otros elementos
+                que te serán útiles, como el <strong>PIN</strong> o{" "}
+                <strong>contraseña</strong>.
+              </p>
+              <p className="mt-6 text-xl leading-8">
+                - Por último, está la{" "}
+                <strong>frase de recuperación o semilla</strong>. Este es un
+                conjunto de palabras que respaldan tu monedero de criptomonedas,
+                y que te permiten recuperar tus activos en caso de pérdida de
+                acceso al dispositivo en el que tienes instalada tu wallet.
               </p>
             </>
           ) : null}
@@ -149,29 +184,73 @@ export default function Wallets({ subtitle, title, body, text }: PageProps) {
           {currentPage === 2 ? (
             <>
               <p className="mt-6 text-xl leading-8">
-                ¡Bienvenido tripulante! Ya vemos que quieres ser el ninja máximo
-                de ChatGPT e impresionar a tus amigos con tus habilidades en la
-                creación de prompts en esta maravillosa herramienta.
+                Metamask es el todopoderoso monedero digital que te permite
+                interactuar con aplicaciones descentralizadas en la red
+                Ethereum. Pero no te preocupes, no necesitas ser un genio de la
+                tecnología para entender cómo funciona 🤓💃
               </p>
               <br />
               <p className="mt-6 text-xl leading-8">
-                No importa si eres un novato o un maestro en el uso de ChatGPT,
-                este curso tiene todo lo que necesitas para mejorar tus
-                habilidades en la comunicación con IA. Aprenderás desde los
-                principios más básicos hasta las técnicas avanzadas para crear
-                prompts increíbles. Te enseñaremos todo lo que necesitas saber
-                para llevar tu contenido a un nivel completamente nuevo.
+                👉{" "}
+                <strong>
+                  ¿Cómo abrir tu propia billetera digital en Metamask?
+                </strong>
               </p>
               <br />
-              <p className="mt-6 text-xl leading-8">
-                En las próximas lecciones, cubriremos todos los aspectos, desde
-                la A hasta la Z, ¡e incluso te proporcionaremos ejemplos del
-                mundo real y consejos para que puedas convertirte en un ninja de
-                los prompts de ChatGPT!
-              </p>
+              <p className="mt-6 text-xl leading-8">¡Te lo explicamos todo!</p>
               <br />
               <p className="mt-6 text-xl leading-8">
-                ¡Así que empecemos! 🤖💬💻📚
+                <strong>
+                  Abre tu navegador Chrome y busca la extensión de Metamask en
+                  la Chrome Web Store.
+                </strong>
+                <p className="mt-6 text-xl leading-8">
+                  <strong>1-</strong> Haz clic en{" "}
+                  <strong>&rdquo;Agregar a Chrome</strong> y confirma que deseas
+                  agregar la extensión.
+                </p>
+                <p className="mt-6 text-xl leading-8">
+                  <strong>2-</strong> Haz clic en el icono de Metamask que
+                  aparecerá en la esquina superior derecha de tu navegador y
+                  sigue las instrucciones para crear una nueva cuenta o importar
+                  una existente.
+                </p>
+                <p className="mt-6 text-xl leading-8">
+                  <strong>
+                    👉 ¿Cómo asegurar tu billetera digital en Metamask?
+                  </strong>
+                </p>
+                <p className="mt-6 text-xl leading-8">
+                  Una vez que hayas creado tu cuenta, asegúrate de guardar bien
+                  la frase de recuperación que te proporciona Metamask. ¡Es tu
+                  llave maestra para acceder a tus criptomonedas!
+                </p>
+                <p className="mt-6 text-xl leading-8">
+                  <strong>-SI NO SON TUS LLAVES, NO ES TU CRIPTO-</strong>
+                </p>
+                <p className="mt-6 text-xl leading-8">
+                  Primero, asegúrate de tener una contraseña segura y única para
+                  tu billetera. ¡Nada de usar &rdquo;123456&rdquo; o
+                  &rdquo;contraseña&rdquo;! 🤨 Utiliza una combinación de
+                  letras, números y símbolos para crear una clave que sea
+                  difícil de adivinar. Otro consejo importante es realizar
+                  copias de seguridad de tu billetera. Guarda tu semilla (seed
+                  phrase) en un lugar seguro (Un screenshot no es seguro) y
+                  nunca compartas esta información con nadie. ¡Es la llave
+                  maestra para acceder a tu billetera! 🔑
+                </p>
+                <p className="mt-6 text-xl leading-8">
+                  Además, es importante tener en cuenta que nunca debes
+                  compartir tu información personal o tus claves privadas en
+                  línea. Las estafas de phishing son comunes en el mundo cripto,
+                  así que siempre verifica que estás en la página correcta antes
+                  de ingresar tus datos. Por último, mantén tu software
+                  actualizado y utiliza extensiones de seguridad como MetaMask
+                  Defender para proteger tu billetera de posibles ataques.{" "}
+                </p>
+                <p className="mt-6 text-xl leading-8">
+                  <strong>¡Tu seguridad es lo primero! 🔒</strong>
+                </p>
               </p>
             </>
           ) : null}
@@ -179,178 +258,177 @@ export default function Wallets({ subtitle, title, body, text }: PageProps) {
           {currentPage === 3 ? (
             <>
               <p className="mt-6 text-xl leading-8">
-                ¡Hola tripulante! 👋 Cuando usamos ChatGPT por primera vez, ¡nos
-                enamoramos como un adolescente en una cita a ciegas! 😍
-                Estuvimos jugando con la herramienta de todas las formas
-                posibles, y cada vez nos sorprendía más y más. Vimos cómo otros
-                usuarios utilizaban la IA de forma creativa y descubrimos
-                algunos trucos para mejorar la eficacia de los prompts: usar un
-                lenguaje claro y específico 🗣️, definir objetivos claros y
-                centrar la conversación 🎯.
+                <strong>
+                  Descarga la aplicación móvil desde Play Store o AppStore
+                </strong>
               </p>
               <br />
               <p className="mt-6 text-xl leading-8">
-                Sabiendo esto, estuvimos trabajando con ChatGPT y aprendimos a
-                interactuar con él de manera productiva para traerte los mejores
-                tips y le saques el jugo a esta maravilla de la tecnología. 🚀
+                Después de descargar la aplicación y hojear la pantalla, se le
+                presentan tres opciones:
+              </p>
+
+              <ul className="list-decimal ml-6 mt-6 text-xl leading-8">
+                <li>Al importar usando la frase de recuperación secreta</li>
+                <li>Sincronizar con la extensión MetaMask</li>
+                <li>Crea una nueva billetera</li>
+              </ul>
+
+              <p className="mt-6 text-xl leading-8">
+                <strong>Crear una billetera nueva</strong> desde tu teléfono
+                móvil es idéntico al proceso que detallamos anteriormente, en
+                lugar de repetir los mismos pasos te ilustraremos las dos formas
+                de importar su billetera MetaMask en su dispositivo.
               </p>
               <p className="mt-6 text-xl leading-8">
-                Antes de empezar, ¿sabes qué es ChatGPT? No te preocupes si no
-                lo tienes muy claro, te lo contamos: ChatGPT (Generative
-                Pre-trained Transformer) es un chatbot lanzado por OpenAI en
-                noviembre de 2022 🗓️. Está construido sobre la familia GPT-3.5
-                de OpenAI de grandes modelos de lenguaje y se ajusta con
-                técnicas de aprendizaje supervisado y de refuerzo.
+                <strong>Sincronizar con la extensión MetaMask</strong>
               </p>
               <p className="mt-6 text-xl leading-8">
-                Desde su lanzamiento como prototipo, ChatGPT ha sido muy popular
-                por sus respuestas detalladas y articuladas en muchos campos del
-                conocimiento. Sin embargo, también ha sido criticado por su
-                escasa precisión en los hechos. 🫤
+                <strong>Tenemos noticias:</strong>¡esta función ha sido
+                temporalmente desactivada! 😱 Pero no te preocupes, ¡no todo
+                está perdido!
               </p>
               <p className="mt-6 text-xl leading-8">
-                Pero no te preocupes, ¡nosotros te enseñaremos cómo sacarle el
-                máximo provecho! 🤩
+                Solo para tu información, si quisieras obtener el código QR
+                necesario para sincronizar, simplemente tienes que hacer clic en
+                tu avatar en la extensión MetaMask y selecciona
+                &rdquo;Ajustes&rdquo;👤⚙️.
               </p>
               <p className="mt-6 text-xl leading-8">
-                Para tener conversaciones exitosas con ChatGPT, es clave
-                utilizar prompts de alta calidad que guíen la conversación en la
-                dirección correcta y cubran los temas de interés para el
-                usuario. Unos prompts bien definidos pueden hacer la diferencia
-                entre una conversación informativa y atractiva, y una
-                conversación aburrida y desenfocada.
+                Desde allí, dirígete a &rdquo;Configuración&rdquo; y finalmente
+                selecciona &rdquo;Sincronizar con el móvil&rdquo;. 📱💻
               </p>
               <p className="mt-6 text-xl leading-8">
-                Pero ¿qué es un prompt? 🤔
+                Y recibirá este mensaje de MetaMask deshabilitando esta función.
               </p>
               <p className="mt-6 text-xl leading-8">
-                Un prompt es básicamente una sugerencia o instrucción que le das
-                a una IA como ChatGPT para que te proporcione una respuesta o te
-                genere un texto. Es como darle una tarea a tu asistente virtual,
-                pero en lugar de pedirle que te traiga un café ☕, le pides que
-                escriba un ensayo sobre la importancia del café en la vida
-                moderna. ¡Sí, es así de poderoso! 💪 Es como tener un robot con
-                un cerebro gigante 🤖 que puede ayudarte a crear contenido,
-                responder preguntas o incluso a jugar a juegos de rol 🎲.
+                <strong>
+                  Importar usando la frase de recuperación secreta
+                </strong>
               </p>
               <p className="mt-6 text-xl leading-8">
-                Además de su capacidad para comprender y responder al lenguaje
-                natural, ChatGPT también tiene muchas otras características que
-                lo convierten en una herramienta poderosa para conducir
-                conversaciones. Por ejemplo, puede personalizarse para adaptarse
-                a las necesidades y preferencias del usuario, y puede utilizar
-                algoritmos de aprendizaje automático para personalizar sus
-                respuestas basándose en las interacciones y preferencias
-                anteriores del usuario. ¡Increíble! 😍
+                ¡Muy bien! Así que si te has quedado sin opciones, la mejor
+                manera de importar tu billetera es usando la frase secreta de
+                recuperación de 12 palabras. Solo tienes que ingresar junto con
+                una nueva contraseña y hacer clic en el botón{" "}
+                <strong>IMPORTAR</strong> en la parte inferior. 💻💥👍
               </p>
               <p className="mt-6 text-xl leading-8">
-                Y eso no es todo, ChatGPT también es capaz de entender y
-                responder a entradas en varios idiomas y puede manejar grandes
-                volúmenes de tráfico. ¡Es la herramienta perfecta para el
-                servicio de atención al cliente o las comunidades en línea! 🌎💬
+                Sé que puede ser un dolor de cabeza recordar otra contraseña,
+                pero hey, ¿qué son unas pocas contraseñas más en tu vida? 😂
+                Pero si quieres simplificar las cosas, te recomiendo usar un
+                administrador de contraseñas o usar la misma contraseña para
+                MetaMask en todas las plataformas. Además, esto demuestra que
+                MetaMask es una billetera sin custodia, lo que significa que
+                todo está almacenado en tu dispositivo local y no en la nube.
+                🔒📱 Una vez que hayas completado todo el proceso, verás la
+                pantalla de felicitaciones y finalmente podrás tener tu panel de
+                control de usuario móvil MetaMask.
               </p>
               <p className="mt-6 text-xl leading-8">
-                En este curso, aprenderás los principios de la comunicación
-                clara y cómo aplicarlos a los prompts de ChatGPT. También te
-                daremos una guía paso a paso sobre cómo hacerlos más eficaces
-                para que conduzcan a conversaciones atractivas e informativas. Y
-                si ya eres un usuario experimentado, te enseñaremos algunos
-                trucos para llevar tus habilidades al siguiente nivel. 🚀
+                ¡Hora de hacer negocios! 💰💳💸
               </p>
               <p className="mt-6 text-xl leading-8">
-                ¿Estás listo para empezar? ¡Vamos! 💪
+                ¡Tenemos una gran noticia! ¡Ya tenemos una billetera! 🎉 Pero
+                espera, no es solo una billetera, es una billetera MetaMask, y
+                eso significa que podemos hacer mucho más que simplemente
+                guardar nuestros activos digitales. 👀
               </p>
               <p className="mt-6 text-xl leading-8">
-                Tarea 1: Entra a la plataforma de ChatGPT. Dale clic a este link
-                👉 https://chat.openai.com/chat
+                Con MetaMask, podemos tener{" "}
+                <strong>varias cuentas dentro de una sola cuenta</strong>. ¿Por
+                qué querríamos hacer eso? ¡Porque podemos tener cuentas
+                separadas para diferentes casos de uso! Podríamos tener una
+                cuenta NFT para todas nuestras obras de arte digitales, y una
+                cuenta comercial separada para nuestros negocios. ¿No es genial?
+                😎
               </p>
+              <p className="mt-6 text-xl leading-8">
+                Cada cuenta tiene su propio par de claves público-privadas,
+                ¡pero aquí viene lo divertido! La frase de recuperación secreta
+                es como la clave maestra de todas tus cuentas. Puedes usarla
+                para acceder a todas tus cuentas al mismo tiempo, lo cual es muy
+                práctico. Pero asegúrate de mantenerla segura, ¡es la clave para
+                todas tus cuentas! 🔑
+              </p>
+              <p className="mt-6 text-xl leading-8">
+                Si quieres agregar una nueva cuenta, simplemente haz clic en tu
+                avatar en la ventana emergente de MetaMask y selecciona{" "}
+                <strong>&rdquo;Crear cuenta&rdquo;</strong>.
+              </p>
+              <p className="mt-6 text-xl leading-8">
+                Asígnele un nombre, y ¡listo! 🙌
+              </p>
+              <p className="mt-6 text-xl leading-8">
+                Ah, y una cosa importante que debes saber: cada cuenta es un
+                registro en la cadena de bloques, lo que significa que{" "}
+                <strong>no se puede borrar completamente</strong>. Pero no te
+                preocupes, puedes hacer que una cuenta no sea visible en
+                MetaMask si sigues unos pasos especiales. Solo asegúrate de
+                tener tu frase de recuperación secreta segura,
+              </p>
+              <p className="mt-6 text-xl leading-8">
+                ¡porque sin ella, no podrás volver a instalar la cuenta! 😉
+              </p>
+              <p className="mt-6 text-xl leading-8">Pasos especiales 👇</p>
             </>
           ) : null}
 
           {currentPage === 4 ? (
             <>
               <p className="mt-6 text-xl leading-8">
-                Ahora que ya tienes una idea general de ChatGPT y sus
-                posibilidades, vamos a profundizar un poco más en qué es ChatGPT
-                y cómo funciona.
+                Primero, tenemos el botón <strong>&rdquo;Comprar&rdquo;</strong>{" "}
+                que te conecta con proveedores de servicios que MetaMask
+                considera los mejores en tu área. ¡Así que no te preocupes por
+                buscar dónde comprar tus tokens y criptomonedas favoritas! 💰
+                Aunque, sin ofender a MetaMask, podríamos recomendarte usar una
+                plataforma de exchange para depositar tus fondos.
+              </p>
+              <p className="mt-6 text-xl leading-8">
+                <strong>
+                  ¡Ojo! Que todo depende de tu ubicación geográfica, así que
+                  asegúrate de investigar bien tus opciones.🔍
+                </strong>
               </p>
               <br />
               <p className="mt-6 text-xl leading-8">
-                Para empezar, ChatGPT es una herramienta súper chévere que
-                utiliza algoritmos de aprendizaje automático para generar
-                respuestas a partir de texto introducido por el usuario. 🤖
+                ¡Pero eso no es todo! También puedes{" "}
+                <strong>&rdquo;Enviar&rdquo;</strong> tus criptomonedas con
+                MetaMask. Solo necesitas tener la clave pública del destinatario
+                y ¡listo! 👉💰👈
               </p>
               <p className="mt-6 text-xl leading-8">
-                El proceso es muy sencillo: tú introduces tu texto, ChatGPT lo
-                analiza, genera una respuesta y te la devuelve en forma de
-                texto. Y si tú quieres seguir conversando, puedes introducir más
-                texto y ChatGPT te seguirá respondiendo. 🤗
+                Aunque debes tener en cuenta que las transacciones con propinas
+                para los mineros pueden retrasarse o incluso fallar según las
+                condiciones de la red. Pero no te preocupes si eres nuevo en
+                esto, deja el botón de &rdquo;<strong>edición</strong>&rdquo;
+                intacto y ¡confirma tu transacción! ✅
               </p>
               <p className="mt-6 text-xl leading-8">
-                Pero ojo, no todo depende del chatbot. También es importante que
-                las indicaciones que uses para iniciar y guiar la conversación
-                sean claras y efectivas. ¡Así nos aseguramos de que la
-                conversación sea interesante y útil! 😎
+                Después de verificar la transacción, puedes ver el historial en
+                el área de actividad. Y si alguna vez necesitas practicar,
+                recuerda que puedes hacerlo con los activos de las redes de
+                prueba, que no valen ni un centavo.
               </p>
               <p className="mt-6 text-xl leading-8">
-                Ahora bien, ¿en qué se diferencia ChatGPT de otros chatbots?
-                ¡Aquí viene lo bueno! 😏 ChatGPT tiene una capacidad de
-                aprendizaje súper impresionante gracias a los algoritmos de
-                aprendizaje automático. Esto significa que puede mejorar sus
-                respuestas basándose en conversaciones anteriores, ¡como si
-                fuera un humano! 💪
+                ¡Genial para experimentar sin preocupaciones! 🧪
               </p>
               <p className="mt-6 text-xl leading-8">
-                Además, puede entender el contexto y responder a conversaciones
-                más complejas o abiertas, lo que lo hace una herramienta súper
-                poderosa para mantener conversaciones interesantes e
-                informativas. 💬
+                En particular, solicitamos 5 ETH en Goerli Test Network (arriba
+                a la derecha, además del avatar puedes ver la red) para ilustrar
+                cómo enviar usando MetaMask.
               </p>
               <p className="mt-6 text-xl leading-8">
-                <strong>¿Para qué puedes usar ChatGPT?</strong>
+                Los activos de{" "}
+                <strong>las redes de prueba no valen un centavo</strong>. Estas
+                redes de prueba se utilizan para las pruebas de los
+                desarrolladores antes de lanzar sus productos en la red
+                principal de Ethereum.
               </p>
               <p className="mt-6 text-xl leading-8">
-                Te contamos algunos de los usos más divertidos y útiles de esta
-                herramienta 🔍🤖
-              </p>
-              <p className="mt-6 text-xl leading-8">
-                📞 Atención al cliente: ¿Necesitas ayuda para comprar esos
-                zapatos que tanto quieres en la tienda en línea a altas horas de
-                la noche? ¡No hay problema! ChatGPT está disponible las 24 horas
-                del día, los 7 días de la semana para ayudarte a resolver
-                cualquier problema que tengas.
-              </p>
-              <p className="mt-6 text-xl leading-8">
-                🎓E ducación: ¿No entiendes un tema en la escuela o necesitas
-                ayuda para estudiar para un examen? ¡ChatGPT es tu tutor
-                personal! Pregúntale lo que quieras sobre matemáticas, historia
-                o cualquier otra materia y te ayudará a comprender todo.
-              </p>
-              <p className="mt-6 text-xl leading-8">
-                📺 Suministro de información: ¿Necesitas definir una teoría o
-                saber las estadísticas de población de un país? ¡Pregúntale a
-                ChatGPT! Él siempre está listo para darte la información que
-                necesitas. 🌞🌎 Sólo ten en cuenta que ChatGPT ha sido
-                alimentado con hechos hasta el año 2021. Así que si necesitas
-                saber lo que pasó ayer, mejor ve a Google.
-              </p>
-              <p className="mt-6 text-xl leading-8">
-                📅 Asistente personal: ¿Te sientes abrumado/a con tu lista de
-                tareas pendientes? ¡No te preocupes! ChatGPT puede ayudarte a
-                organizar tus citas, recordarte tus reuniones importantes y más.
-                Es como tener un asistente personal a tu disposición.
-              </p>
-              <p className="mt-6 text-xl leading-8">
-                🗣 Interacción social: ¿Te sientes solo/a y necesitas alguien con
-                quien hablar? ChatGPT está aquí para hacer que tu día sea más
-                entretenido y emocionante. Puedes preguntarle sobre películas,
-                chistes o simplemente charlar sobre la vida. ¡Seguro que no te
-                aburrirás! 😊
-              </p>
-              <p className="mt-6 text-xl leading-8">
-                Así que, ¿estás listo para sacarle el máximo provecho a ChatGPT?
-                ¡En los próximos capítulos exploraremos cómo elaborar mensajes
-                claros y eficaces para tener las mejores conversaciones! 😎
+                <strong>
+                  TAREA* Muestran que lograron obtener cripto de test GOERLI
+                </strong>
               </p>
             </>
           ) : null}
@@ -358,104 +436,88 @@ export default function Wallets({ subtitle, title, body, text }: PageProps) {
           {currentPage === 5 ? (
             <>
               <p className="mt-6 text-xl leading-8">
-                💬 Como ya hemos explicado, los prompts son la clave para tener
-                una conversación exitosa con Chat GPT. Si les das una buena
-                indicación, el chat fluirá como la seda y tendrás una
-                experiencia divertida y súper informativa. Pero, ¿qué es un buen
-                prompt de ChatGPT y cómo se pueden crear indicaciones efectivas
-                que conduzcan a conversaciones interesantes?
+                Aunque MetaMask es una billetera caliente, lo que significa que
+                no es la forma más confiable de almacenar tus criptomonedas, ¡no
+                te preocupes! ¡Tenemos algunos consejos para mantener tu
+                billetera a salvo! 🤗
               </p>
               <br />
+              <ul className="list-disc ml-6 mt-6 text-xl leading-8">
+                <li>
+                  Primero, ¡asegúrate de que MetaMask sea la única pestaña
+                  abierta en tu navegador y ciérrala después de usarla!
+                </li>
+                <li>
+                  Nunca compartas tu frase secreta de recuperación, claves
+                  privadas y contraseña con nadie
+                </li>
+                <li>
+                  Si no puedes dedicar un navegador separado solo para MetaMask,
+                  entonces no uses las redes sociales o cuentas de Google en el
+                  mismo navegador. 🔒
+                </li>
+              </ul>
+
               <p className="mt-6 text-xl leading-8">
-                Pues bien, hay algunos principios clave que debes tener en
-                cuenta. Primero, ¡la claridad es fundamental! Asegúrate de que
-                tus indicaciones sean claras y concisas para que ChatGPT
-                entienda lo que quieres. No uses lenguaje complejo o ambiguo y
-                sé específico en tus preguntas.{" "}
+                Si tienes criptomonedas valiosas, considera obtener una
+                billetera de hardware <strong>(billeteras frías)</strong> para
+                mayor seguridad.{" "}
               </p>
               <p className="mt-6 text-xl leading-8">
-                En segundo lugar, ¡enfócate! Tu pregunta debe tener un propósito
-                claro que guíe la conversación en la dirección correcta. Evita
-                las preguntas demasiado amplias o abiertas que puedan llevarte
-                por un camino sin rumbo fijo.
+                Y recuerda, ¡manténte al día con las mejores prácticas para
+                almacenar tus activos de forma segura!
               </p>
               <p className="mt-6 text-xl leading-8">
-                Y por último, ¡asegúrate de que tus preguntas sean relevantes!
-                No te salgas del tema y evita hablar de cosas que no tienen nada
-                que ver con la conversación. ¡No queremos distraer a ChatGPT de
-                lo importante!{" "}
+                ¡La lista de consejos de seguridad puede continuar, así que
+                manténte informado! 📚{" "}
               </p>
               <p className="mt-6 text-xl leading-8">
                 <strong>
-                  Descubre ejemplos de mensajes de ChatGPT que funcionan 👍 (y
-                  los que no 👎)
+                  ¿Cómo ver y desconectar sitios conectados en MetaMask?
                 </strong>
               </p>
               <p className="mt-6 text-xl leading-8">
-                ¡Prepárate para descubrir los mejores y peores mensajes de
-                ChatGPT! 👀👋
+                Vamos a aprender cómo ver y desconectar sitios conectados en
+                nuestra billetera MetaMask. No queremos que esos sitios web
+                malintencionados husmeen en nuestra billetera, ¿verdad? 😱
               </p>
               <p className="mt-6 text-xl leading-8">
-                Vamos a empezar con los buenos. ¿Quieres conocer algunos
-                mensajes que funcionan como un cohete 🚀? Aquí tienes algunos
-                ejemplos:
+                La verdad es que desconectar MetaMask de las dApps es tan
+                importante como conectarlas. Pero, ¡oh no!, muchos usuarios no
+                lo hacen porque no es una tarea fácil. La mayoría de las dApps
+                no tienen el botón mágico de{" "}
+                <strong> &rdquo;Desconectar&rdquo; </strong> que necesitamos.
               </p>
               <p className="mt-6 text-xl leading-8">
-                <strong>
-                  &rdquo;¿Puedes resumir los beneficios del yoga para la
-                  salud?&rdquo;
-                </strong>{" "}
-                - Una pregunta específica y centrada que permite al ChatGPT
-                proporcionar una respuesta útil y precisa.
+                <strong>¿Qué hacer entonces?</strong>{" "}
               </p>
               <p className="mt-6 text-xl leading-8">
-                <strong>
-                  &rdquo;¿Cómo puedo mejorar mi habilidad para hacer
-                  malabares?&rdquo;{" "}
-                </strong>{" "}
-                - Una pregunta bien definida y relevante que permite al ChatGPT
-                ofrecer consejos y técnicas útiles para mejorar la habilidad en
-                esta divertida actividad.
+                Primero, recordemos que conectarse a una dApp solo permite que
+                ese sitio web vea la dirección y el saldo de nuestra billetera
+                MetaMask y envíe solicitudes de aprobación de transacciones.
+                Pero, ¡cuidado! Algunos contratos inteligentes utilizados por
+                dApps tienen control total sobre nuestra billetera MetaMask sin
+                nuestra autorización. 😱
               </p>
 
               <p className="mt-6 text-xl leading-8">
-                ¡Pero cuidado! 👀 No todos los mensajes son iguales de
-                efectivos. Aquí tienes algunos ejemplos de mensajes ineficaces:
+                Pero no se preocupen, amigos, tenemos la solución. Para ver y
+                desconectar sitios conectados en MetaMask, solo necesitamos
+                hacer clic en los tres puntos verticales (Sí, esos puntitos
+                curiosos en la esquina superior derecha)
+              </p>
+              <p className="mt-6 text-xl leading-8">
+                Luego seleccionamos{" "}
+                <strong>&rdquo;Sitios conectados&rdquo;</strong>
+              </p>
+              <p className="mt-6 text-xl leading-8">
+                Y finalmente clic en <strong>&rdquo;Desconectar&rdquo;</strong>
               </p>
               <p className="mt-6 text-xl leading-8">
                 <strong>
-                  &rdquo;¿Qué me puedes decir sobre el universo?&rdquo;{" "}
-                </strong>{" "}
-                - Una pregunta demasiado amplia y abierta que dificulta al
-                ChatGPT proporcionar una respuesta útil y específica.
-              </p>
-              <p className="mt-6 text-xl leading-8">
-                <strong>&rdquo;¿Puedes ayudarme con mi tarea?&rdquo;</strong> -
-                Una pregunta demasiado abierta que no especifica qué tarea es,
-                lo que dificulta al ChatGPT proporcionar una respuesta precisa y
-                útil. Una mejor pregunta sería especificar el tema o la tarea en
-                cuestión.
-              </p>
-              <p className="mt-6 text-xl leading-8">
-                <strong>&rdquo;¿Cómo estás?&rdquo;</strong> - Aunque es una
-                pregunta amable, no tiene un propósito claro y no ofrece una
-                dirección específica para la conversación.
-              </p>
-              <p className="mt-6 text-xl leading-8">
-                Con estos ejemplos, puedes ver claramente cómo los principios de
-                claridad, enfoque y relevancia son importantes para crear
-                mensajes de ChatGPT eficaces. Si sigues estos principios, podrás
-                crear prompts efectivos que lleven a conversaciones divertidas e
-                informativas. En los próximos capítulos, profundizaremos más
-                sobre este tema y exploraremos técnicas específicas para crear
-                prompts claros y concisos. ¡A chatear se ha dicho! 💬💪{" "}
-              </p>
-              <p className="mt-6 text-xl leading-8">
-                Tarea 2: Escribe 2 preguntas a ChatGPT siguiendo los principios
-                de claridad, enfoque y relevancia. Sé creativo y original 🤪,
-                queremos que te diviertas haciéndolo. Cuando termines, haz un
-                screenshot a tu pantalla y guárdala como &rdquo;Tarea 2&rdquo;,
-                al final del curso te pediremos subirla.{" "}
+                  Recuerda siempre estar atento y tomar medidas para mantener tu
+                  billetera MetaMask segura. 🔒
+                </strong>
               </p>
             </>
           ) : null}
@@ -463,115 +525,30 @@ export default function Wallets({ subtitle, title, body, text }: PageProps) {
           {currentPage === 6 ? (
             <>
               <p className="mt-6 text-xl leading-8">
-                Como ya vimos en la lección anterior, si quieres crear mensajes
-                ChatGPT que causen impacto y generen conversaciones interesantes
-                e informativas, tienes que conocer estos principios de
-                comunicación clara: Claridad, Enfoque y Relevancia.
+                Primero, aterrizamos en el tablero y buscamos tres líneas
+                paralelas en la esquina superior izquierda. ¡Tócalas! 👆
               </p>
               <br />
               <p className="mt-6 text-xl leading-8">
-                En esta lección te enseñaremos técnicas que te ayudarán a
-                aplicar estos principios para crear prompts efectivos y lograr
-                tus objetivos.
+                Después, navegamos a{" "}
+                <strong>&rdquo;Configuración&rdquo;</strong> y tocamos{" "}
+                <strong>&rdquo;Seguridad y privacidad&rdquo;</strong>.
               </p>
               <p className="mt-6 text-xl leading-8">
-                💬 Utiliza un lenguaje claro y coherente. Usa palabras que
-                ChatGPT pueda entender fácilmente y evita el lenguaje ambiguo o
-                la jerga que puedan causar confusiones o malentendidos. Sé claro
-                y conciso en tu mensaje.
+                ¡Mantengámoslo seguro! 🔒
               </p>
               <p className="mt-6 text-xl leading-8">
-                ❌ Evita preguntas abiertas o demasiado amplias. Aunque puedes
-                sentir la tentación de hacer preguntas abiertas para obtener
-                respuestas más completas, esto puede desencadenar conversaciones
-                caóticas y sin rumbo. En cambio, trata de ser lo más específico
-                posible en tus preguntas, definiendo claramente un objetivo y
-                centro de atención para la conversación.
+                Luego, desplácese hacia abajo hasta la sección{" "}
+                <strong>&rdquo;Privacidad&rdquo;</strong> y toca &rdquo;
+                <strong>Borrar datos de privacidad</strong>&rdquo;.
               </p>
               <p className="mt-6 text-xl leading-8">
-                🧵 Mantén el hilo de la conversación. Evita introducir temas no
-                relacionados y enfócate en el tema principal de la conversación.
-                Si sigues el hilo de la conversación, estarás seguro de cubrir
-                los temas que interesan al usuario y brindar información útil y
-                relevante.
+                Aparecerá una ventana emergente, ¡no te asustes! Sólo toca{" "}
+                <strong>&rdquo;Borrar&rdquo;</strong> y estarás listo para
+                desconectar sitios conectados en MetaMask. 💥
               </p>
               <p className="mt-6 text-xl leading-8">
-                ¡Prepárate para descubrir los mejores y peores mensajes de
-                ChatGPT! 👀👋
-              </p>
-              <p className="mt-6 text-xl leading-8">
-                <strong>
-                  Consejos para evitar la confusión y el lenguaje técnico en
-                  ChatGPT
-                </strong>
-              </p>
-              <p className="mt-6 text-xl leading-8">
-                Si quieres que tus mensajes ChatGPT sean tan claros como el
-                agua, evita la jerga y la ambigüedad. La jerga puede ser como un
-                enigma para algunos usuarios, mientras que la ambigüedad puede
-                desatar una tormenta de malentendidos.
-              </p>
-              <p className="mt-6 text-xl leading-8">
-                <strong>
-                  Aquí te van unos consejos para que tus mensajes sean tan
-                  nítidos como la imagen en un día soleado:{" "}
-                </strong>
-              </p>
-              <p className="mt-6 text-xl leading-8">
-                👉 Define la jerga o términos técnicos que necesitas utilizar.
-                ¡No des por hecho que todos saben lo que significan tus palabras
-                &rdquo;fancy&rdquo;! Proporciona definiciones claras y explicaciones para
-                que todo el mundo esté en la misma página.
-              </p>
-              <p className="mt-6 text-xl leading-8">
-                👉 Evita el lenguaje ambiguo. Si tus palabras pueden ser
-                interpretadas de varias maneras, es mejor que las reescribas
-                para evitar confusiones. Sé lo más específico posible y evita
-                las palabras o frases que tengan múltiples significados.
-              </p>
-              <p className="mt-6 text-xl leading-8">
-                👉 Habla claro y conciso. No te andes con rodeos y ve al grano.
-                Usa palabras y frases sencillas y fáciles de entender para que
-                tus mensajes sean claros y no se desvíen del tema principal.
-              </p>
-              <p className="mt-6 text-xl leading-8">
-                <strong>
-                  &rdquo;Hey ChatGPT, ¿me puedes explicar los últimos chismes de
-                  la web? Estoy tratando de estar al día con el
-                  &rdquo;hype&rdquo;.{" "}
-                </strong>
-              </p>
-              <p className="mt-6 text-xl leading-8">
-                Este mensaje es una mezcla de jerga y ambigüedad. Palabras como
-                &rdquo;hype&rdquo; o &rdquo;chismes de la web&rdquo; pueden ser
-                confusas para algunos usuarios, y el término &rdquo;últimos chismes&rdquo;
-                es demasiado vago. Así que, ¡a reescribir!
-              </p>
-              <p className="mt-6 text-xl leading-8">
-                <strong>Por ejemplo, qué tal si dices algo como: </strong>
-              </p>
-              <p className="mt-6 text-xl leading-8">
-                <strong>
-                  &rdquo;¡Hola ChatGPT! ¿Podrías decirme cuál es el último
-                  gadget tecnológico que ha causado revuelo en la web? ¡Estoy
-                  emocionado por conocer las novedades!&rdquo;{" "}
-                </strong>
-              </p>
-              <p className="mt-6 text-xl leading-8">
-                Este mensaje es claro y conciso, sin jerga ni ambigüedad. Se
-                solicita una información específica y se usa un lenguaje
-                sencillo y fácil de entender. Recuerda que la claridad en tus
-                mensajes es fundamental para que tus ideas lleguen de forma
-                efectiva a tus interlocutores y se eviten confusiones o
-                malentendidos.
-              </p>
-              <p className="mt-6 text-xl leading-8">
-                Tarea 3: Pongámonos filosóficos. Escribe una pregunta más
-                compleja a ChatGPT, algo que lo ponga a reflexionar. Recuerda
-                usar palabras que el bot entienda, guarda tu vocabulario lujoso
-                para la cena con tus suegros 🤣. ¡Sé creativo!. Cuando termines,
-                haz un screenshot y guárdalo como &rdquo;Tarea 3&rdquo;, al final del curso
-                te pediremos subirla.{" "}
+                <strong>¡Haz limpiado la casa! 🧹</strong>
               </p>
             </>
           ) : null}
@@ -579,209 +556,77 @@ export default function Wallets({ subtitle, title, body, text }: PageProps) {
           {currentPage === 7 ? (
             <>
               <p className="mt-6 text-xl leading-8">
-                Ya que hemos explorado los principios de la elaboración de
-                mensajes de ChatGPT claros y concisos y la importancia de evitar
-                la jerga y la ambigüedad, vamos a profundizar en un proceso
-                específico para la elaboración de mensajes eficaces.
+                Mainnet es donde los tokens tienen valor real. Testnets son
+                lugares donde los desarrolladores prueben sus contratos
+                inteligentes.{" "}
+                <strong>El token de Testnet no tiene valor. 🚀</strong>
               </p>
               <br />
               <p className="mt-6 text-xl leading-8">
-                <strong>Un ejemplo:</strong>
+                Los tokens de Testnet se entregan de forma gratuita a través de
+                faucets. Sin embargo, se distribuyen en pequeñas cantidades para
+                evitar la concentración en unas pocas personas, lo que limita su
+                uso para probar el código de proyectos. 🧐
               </p>
               <p className="mt-6 text-xl leading-8">
-                Define el propósito y el enfoque de la conversación:{" "}
-                <strong>
-                  ¡Quiero hacer una fiesta épica de cumpleaños virtual para mi
-                  mejor amiga! ¿Qué puedo hacer para que sea la mejor fiesta
-                  virtual de todos los tiempos?
-                </strong>
+                ¡Evita que te engañen pensando que tus tokens de testnet se
+                convertirán en tokens de mainnet y pagar una tarifa! 😱
               </p>
               <p className="mt-6 text-xl leading-8">
-                Elige un lenguaje específico y pertinente:{" "}
-                <strong>
-                  &rdquo;Hola, ChatGPT, necesito ayuda para planear una fiesta
-                  virtual increíble de cumpleaños para mi mejor amiga. ¿Podrías
-                  recomendarme algunas ideas divertidas para juegos en línea,
-                  decoraciones virtuales y actividades para hacer con amigos de
-                  forma remota?&rdquo;.
-                </strong>
+                <strong>Agregar una red personalizada a Metamask </strong>
               </p>
               <p className="mt-6 text-xl leading-8">
-                Evita preguntas abiertas o demasiado amplias: Esta pregunta es
-                específica y limita el tema de la conversación a una fiesta
-                virtual de cumpleaños. De esta manera, se evita cualquier
-                conversación aleatoria o desenfocada.
+                Para efectos de este tutorial, usaremos como ejemplo la red de
+                CELO. 🤓
               </p>
               <p className="mt-6 text-xl leading-8">
-                Repasa y revisa tu pregunta: Una vez revisada, si la pregunta es
-                clara y fácil de entender, y se centra en el tema específico de
-                la fiesta virtual de cumpleaños, ¡Está lista para ser enviada a
-                ChatGPT!
+                En primer lugar, selecciona el menú desplegable que dice{" "}
+                <strong>Ethereum Main Network.</strong>{" "}
               </p>
               <p className="mt-6 text-xl leading-8">
-                <strong>Tarea 4:</strong>Con estos pasos, estamos seguros de que
-                podrás crear mensajes efectivos y obtener la respuesta que
-                necesitas de ChatGPT. ¡Es hora de planear una fiesta increíble!
-                🥳🎉. Usa el prompt del ejemplo para que veas las respuestas
-                increíbles que te dará nuestro amigo inteligente. No es
-                necesario que tomes un screenshot, sólo diviértete.
+                Aquí aparecerán las redes personalizadas más populares
+                actualmente como:
+              </p>
+              <br />
+              <ul className="list-disc ml-6 mt-6 text-xl leading-8">
+                <li>Polygon</li>
+                <li>Binance smart Chain</li>
+                <li>Avalanche</li>
+                <li>xDAI</li>
+              </ul>
+              <p className="mt-6 text-xl leading-8">
+                Estas redes puedes agregarla de forma automática en el buscador
               </p>
               <p className="mt-6 text-xl leading-8">
-                <strong>
-                  Aprende cómo dirigir tus conversaciones en la dirección
-                  correcta con estas buenas prácticas 🗣️💬{" "}
-                </strong>
+                Ahora, si quieres agregar otro selecciona{" "}
+                <strong> Token personalizado. 📱 </strong>
               </p>
               <p className="mt-6 text-xl leading-8">
-                Te presentamos las mejores prácticas para llevar tus charlas con
-                CahtGPT al siguiente nivel para que tengas conversaciones
-                épicas:
+                ⚠️Hay <strong>redes que no son compatibles con Ethereum</strong>
+                , como por ejemplo Bitcoin, Dogecoin o Cardano, por lo que no se
+                pueden agregar a MetaMask y requieren su propia billetera⚠️
               </p>
               <p className="mt-6 text-xl leading-8">
-                Comencemos con una pregunta clara y sencilla. ¡Nada de rodeos!
-                Una buena pregunta es la clave para que la conversación se
-                mantenga en el camino correcto. No queremos que ChatGPT se
-                desvíe y empiece a hablar de la vida extraterrestre, ¿verdad? 👽
+                Y a continuación, introduce la información en el formulario tal
+                y como aparece aquí:
               </p>
+              <br />
+              <ul className="list-disc ml-6 mt-6 text-xl leading-8">
+                <li>
+                  Network Name: <strong>Celo (Mainnet)</strong>
+                </li>
+                <li>New RPC URL: https://forno.celo.org</li>
+                <li>
+                  ChainID: <strong>42220</strong>
+                </li>
+                <li>
+                  Symbol: <strong>CELO</strong>
+                </li>
+                <li>Block Explorer URL: https://explorer.celo.org</li>
+              </ul>
               <p className="mt-6 text-xl leading-8">
-                Anima a ChatGPT a que nos cuente más. Aunque él ya sabe mucho,
-                nunca está de más preguntarle por detalles específicos.
-                Pregúntale cosas como &rdquo;¿y luego qué pasó?&rdquo; o
-                &rdquo;¿me lo puedes explicar más detalladamente?&rdquo;. Seguro
-                que su respuesta será ¡increíble! 🤩
-              </p>
-              <p className="mt-6 text-xl leading-8">
-                ¡Cuidado con el tono y el lenguaje! No queremos ofender a
-                ChatGPT con un lenguaje vulgar o despectivo. Tampoco queremos
-                que se aburra con un lenguaje muy formal. ¡Mantengamos el
-                equilibrio perfecto! 🤝
-              </p>
-              <p className="mt-6 text-xl leading-8">
-                Si la conversación se va por las ramas, no hay problema.
-                ¡Estamos aquí para solucionarlo! Si ChatGPT se sale del tema,
-                podemos utilizar preguntas de seguimiento o ejemplos para que
-                vuelva al camino correcto. ¡El rumbo lo marcamos nosotros! 🙌
-              </p>
-              <p className="mt-6 text-xl leading-8">
-                <strong>El truco &rdquo;Actúa como...&rdquo; </strong>
-              </p>
-              <p className="mt-6 text-xl leading-8">
-                ¡Aquí te presento un truco que te encantará! Se llama
-                &rdquo;Actúa como&rdquo; y te permite indicar al ChatGPT que
-                asuma un papel o personaje específico en la conversación. ¿No es
-                eso genial? 🤩
-              </p>
-              <p className="mt-6 text-xl leading-8">
-                Por ejemplo, ¿quieres que el ChatGPT actúe como un agente de
-                viajes y te recomiende algunos destinos de vacaciones
-                impresionantes? ¡Solo díselo! ¿O prefieres que actúe como un
-                detective y resuelva un crimen ficticio contigo? ¡Las
-                posibilidades son infinitas! 🕵️‍♀️🌴
-              </p>
-              <p className="mt-6 text-xl leading-8">
-                Para usar este truco, solo necesitas incluir la frase
-                &rdquo;actuar como&rdquo; seguida de una descripción del papel o
-                personaje que quieres que el ChatGPT asuma en la conversación.
-              </p>
-              <p className="mt-6 text-xl leading-8">
-                Por ejemplo:{" "}
-                <strong>
-                  &rdquo;Actúa como una consola javascript. Yo te escribiré
-                  comandos y tú responderás con lo que la consola javascript
-                  debería mostrar. ¡Solo quiero ver la salida del terminal
-                  dentro de un bloque de código único, nada de explicaciones ni
-                  comandos extras!&rdquo;
-                </strong>
-              </p>
-              <p className="mt-6 text-xl leading-8">
-                En este ejemplo,{" "}
-                <strong>
-                  &rdquo;actuar como una consola javascript&rdquo;
-                </strong>{" "}
-                indica al ChatGPT que asuma el papel de una consola javascript
-                en la conversación. Luego, las instrucciones indican que el
-                usuario escribirá comandos y el ChatGPT responderá con la salida
-                del terminal en un bloque de código único, sin explicaciones ni
-                comandos adicionales. ¡Así de fácil! 👌
-              </p>
-              <p className="mt-6 text-xl leading-8">
-                Te damos otro ejemplo para que prepares una rica comida:{" "}
-                <strong>
-                  &rdquo;Quiero que actúes como un chef de cocina. Quiero que me
-                  des una receta original de un plato que tenga como ingrediente
-                  principal la 🥦. Asegúrate de incluir todos los pasos
-                  necesarios y los ingredientes adicionales que sean necesarios.
-                  No te olvides de decorar el plato para que sea vistoso. Cuando
-                  necesites que te proporcione una cantidad específica de un
-                  ingrediente, simplemente dímelo. ¡A cocinar se ha dicho!
-                  👨‍🍳🍴&rdquo;
-                </strong>
-              </p>
-              <p className="mt-6 text-xl leading-8">
-                Ahora, te explicamos cada instrucción de forma detallada:
-              </p>
-              <p className="mt-6 text-xl leading-8">
-                &rdquo;Quiero que actúes como un chef de cocina&rdquo;: Esta es
-                la instrucción principal que indica al ChatGPT que asuma el
-                papel de un chef de cocina en la conversación.
-              </p>
-              <p className="mt-6 text-xl leading-8">
-                &rdquo;Quiero que me des una receta original de un plato que
-                tenga como ingrediente principal el 🥦&rdquo;: Esta instrucción
-                especifica que el usuario desea recibir una receta de cocina
-                original que contenga el 🥦 como ingrediente principal. La
-                inclusión de emojis agrega un toque divertido y visual a la
-                conversación.
-              </p>
-              <p className="mt-6 text-xl leading-8">
-                &rdquo;Asegúrate de incluir todos los pasos necesarios y los
-                ingredientes adicionales que sean necesarios&rdquo;: Esta
-                instrucción proporciona una guía para el ChatGPT de lo que se
-                espera en la respuesta, que es una receta completa que incluya
-                todos los pasos necesarios y los ingredientes adicionales
-                necesarios para el plato.
-              </p>
-              <p className="mt-6 text-xl leading-8">
-                &rdquo;No te olvides de decorar el plato para que sea
-                vistoso&rdquo;: Esta instrucción indica que el usuario desea que
-                el ChatGPT proporcione instrucciones sobre cómo decorar el plato
-                para que sea visualmente atractivo.
-              </p>
-              <p className="mt-6 text-xl leading-8">
-                &rdquo;Cuando necesites que te proporcione una cantidad
-                específica de un ingrediente, simplemente dímelo&rdquo;: Esta
-                instrucción proporciona al ChatGPT la libertad de solicitar más
-                información al usuario en caso de que sea necesario, en caso de
-                que se necesite una cantidad específica de un ingrediente y no
-                esté explícitamente indicado en la pregunta original.
-              </p>
-              <p className="mt-6 text-xl leading-8">
-                &rdquo;¡A cocinar se ha dicho! 👨‍🍳🍴&rdquo;: Esta es una
-                declaración divertida y animada que transmite entusiasmo y
-                energía para comenzar a cocinar.
-              </p>
-              <p className="mt-6 text-xl leading-8">
-                Recuerda que también puedes usar el truco{" "}
-                <strong>
-                  &rdquo;Actúa como&rdquo; en combinación con otros trucos y
-                  técnicas para hacer que tus conversaciones en ChatGPT sean aún
-                  más divertidas y efectivas. ¡Atrévete a probarlo y diviértete!
-                  🤗.
-                </strong>
-              </p>
-              <p className="mt-6 text-xl leading-8">
-                En los siguientes capítulos, exploraremos algunas técnicas
-                avanzadas para crear mensajes eficaces y solucionar problemas
-                comunes.
-              </p>
-              <p className="mt-6 text-xl leading-8">
-                <strong>Tarea 5: </strong>Usa el truco &rdquo;actúa como&rdquo;
-                en ChatGPT. Puedes pedirle que te responda como un personaje
-                ficticio o que te responda como un profesional en cualquier
-                área. Las posibilidades son infinitas, pero queremos ver qué tan
-                creativo puedes ser. Cuando termines, haz un screenshot y
-                guárdalo como &rdquo;Tarea 5&rdquo;, al final del curso te
-                pediremos subirla.
+                Y con cuando esté, le damos a{" "}
+                <strong>&rdquo;Guardar&rdquo;. 💾</strong>
               </p>
             </>
           ) : null}
@@ -789,79 +634,26 @@ export default function Wallets({ subtitle, title, body, text }: PageProps) {
           {currentPage === 8 ? (
             <>
               <p className="mt-6 text-xl leading-8">
-                Sabemos que no es fácil crear prompts efectivos en ChatGPT,
-                después de todo, estamos hablando de enseñar a una inteligencia
-                artificial cómo comunicarse con los humanos. Aunque es una
-                herramienta poderosa, hay algunos errores comunes que debes
-                evitar para asegurarte de que tus prompts sean claros, concisos
-                y efectivos. ¡No te preocupes! En esta clase, te daremos algunos
-                consejos para que logres este objetivo.
+                <strong>👉 ¿Qué es Phantom? ¡Te lo contamos! </strong>
               </p>
               <br />
               <p className="mt-6 text-xl leading-8">
-                No te emociones y no te pases con la información. Proporciona la
-                cantidad justa de detalles para que ChatGPT comprenda el
-                contexto y propósito de la conversación. ¡No lo satures! 😵
-              </p>
-              <p className="mt-6 text-xl leading-8">
-                Usa un lenguaje claro y fácil de entender, ¡no seas un pesado
-                usando jerga o lenguaje ambiguo! 💬😒
-              </p>
-              <p className="mt-6 text-xl leading-8">
-                ¡Nada de vaguedades! Si quieres respuestas concretas, asegúrate
-                de proporcionar suficiente contexto y orientación para que
-                ChatGPT no se pierda en la conversación. 🤔🔍
-              </p>
-              <p className="mt-6 text-xl leading-8">
-                No olvides ser consciente de las capacidades y limitaciones de
-                ChatGPT. No le pidas que haga cosas fuera de su alcance y
-                prepárate para ajustar tus indicaciones si es necesario.
-              </p>
-              <p className="mt-6 text-xl leading-8">
-                No te olvides de dar instrucciones claras y especificar las
-                restricciones si las hay. Si quieres que ChatGPT interprete un
-                personaje específico, ¡díselo de una vez! 🎭📚
-              </p>
-              <p className="mt-6 text-xl leading-8">
-                Por último, prueba y depura tus instrucciones para asegurarte de
-                que sean claras y eficaces 🧹. Si algo no funciona, reinicia el
-                hilo y empieza de nuevo.
-              </p>
-              <p className="mt-6 text-xl leading-8">
-                <strong>
-                  ¿Cómo evitar las preguntas abiertas y la sobrecarga de
-                  información en ChatGPT? 🤔🙅‍♀️
-                </strong>
-              </p>
-              <p className="mt-6 text-xl leading-8">
-                ¡No te sientas abrumado al crear preguntas para ChatGPT! Sabemos
-                que es fácil perderse en los detalles y terminar con una
-                pregunta demasiado larga o compleja, ¡pero no temas! Aquí te
-                dejamos algunas técnicas divertidas para evitar preguntas
-                abiertas y proporcionar la información necesaria de manera clara
-                y concisa. 🤖👌
-              </p>
-              <p className="mt-6 text-xl leading-8">
-                En lugar de preguntar &rdquo;¿Qué piensas de los
-                unicornios?&rdquo;, intenta ser más específico y preguntar
-                &rdquo;¿Crees que los unicornios podrían ser una buena
-                mascota?&rdquo;. De esta manera, obtendrás una respuesta más
-                concreta y podrás seguir avanzando en la conversación.
-              </p>
-              <p className="mt-6 text-xl leading-8">
-                Además, no te pierdas en la información superflua y cíñete a lo
-                esencial. A nadie le gusta un discurso interminable, ¡ni
-                siquiera a ChatGPT! 😅
-              </p>
-              <p className="mt-6 text-xl leading-8">
-                Finalmente, utiliza un lenguaje claro y sencillo. ¡Evita la
-                jerga y los tecnicismos! Piensa en ChatGPT como tu amigo más
-                joven o tu abuelita, a quienes siempre debes explicar las cosas
-                de manera simple y fácil de entender.🧑👵
-              </p>
-              <p className="mt-6 text-xl leading-8">
-                Con estos consejos no perderás el hilo de tus conversaciones con
-                esta increíble herramienta.
+                Con Phantom, puedes almacenar, enviar, recibir, apostar e
+                intercambiar tokens en la cadena de bloques Solana. Además,
+                puedes interactuar con aplicaciones de finanzas descentralizadas
+                (DeFi), intercambios, plataformas de tokens no fungibles (NFT) y
+                juegos en la cadena de bloques Solana. ¡Todo en una sola
+                cartera! 😎 Y no te preocupes por la compatibilidad, Phantom
+                está disponible como una extensión de navegador que puedes
+                instalar en Firefox, Microsoft Edge, Google Chrome y Brave. Con
+                una interfaz de usuario suave y moderna, que es muy similar a la
+                alternativa Metamask de la cartera web3, puedes convertir
+                cualquiera de tus navegadores favoritos en una cartera
+                criptográfica habilitada para Web3. 🌐 ¿Y sabes qué? Al
+                principio, Phantom solo estaba disponible como una extensión de
+                navegador, pero ahora también está disponible para iPhone.
+                ¡Descárgala en la App Store y lleva tus activos digitales
+                contigo donde quiera que vayas! 📱
               </p>
             </>
           ) : null}
@@ -869,76 +661,100 @@ export default function Wallets({ subtitle, title, body, text }: PageProps) {
           {currentPage === 9 ? (
             <>
               <p className="mt-6 text-xl leading-8">
-                <strong>Problemas más comunes</strong>
+                <strong>
+                  👉 ¿Cómo abrir tu propia billetera digital en Phantom? ¡Te
+                  guiaremos paso a paso para que lo hagas sin esfuerzo!
+                </strong>
               </p>
               <br />
+              <ul className="list-disc ml-6 mt-6 text-xl leading-8">
+                <li>
+                  Haz clic en <strong>añadir a Chrome</strong> y añade la
+                  extensión. Los pasos también son los mismos para otros
+                  navegadores. Después de hacer clic en añadir extensión,
+                  descarga el complemento en su PC y lo instalará en su
+                  navegador. En este caso, es Chrome.
+                </li>
+                <li>
+                  Después de que la extensión Phantom se instale en su
+                  navegador, se abrirá automáticamente. Ahora, antes de crear
+                  una nueva cartera, así es como puedes acceder a Phantom en tu
+                  navegador. En la mayoría de los navegadores populares verás la
+                  extensión en la esquina superior derecha.
+                </li>
+                <li>
+                  También puede mirar en la barra de herramientas de su
+                  navegador y en la sección de <strong>complementos</strong>. En
+                  Chrome, en la esquina superior derecha, verás un icono de
+                  rompecabezas.
+                </li>
+                <li>
+                  Haz clic en él y verás la lista de extensiones instaladas.
+                  Encuentra la extensión Phantom y haz clic en el &rdquo;icono de
+                  pin&rdquo;. Se fijará la extensión en la parte superior y esto
+                  debería facilitar la búsqueda y el acceso a Phantom en el
+                  futuro. Ahora <strong>haz clic en el icono de Phantom</strong>{" "}
+                  e inicia la configuración de la cartera.
+                </li>
+                <li>
+                  La aplicación Phantom se iniciará en una nueva pestaña y
+                  encontrarás dos opciones.
+                  <strong>Crea una nueva billetera nueva</strong> y ya{" "}
+                  <strong>tengo una billetera</strong>
+                </li>
+                <li>
+                  Dado que estamos configurando una cartera nueva, elija{" "}
+                  <strong>&rdquo;crear una cartera nueva</strong>&rdquo;. Si
+                  usted es un usuario existente de Solana y anteriormente estaba
+                  usando carteras como Sollet o Solflare, entonces puede usar su
+                  frase de recuperación secreta para{" "}
+                  <strong>
+                    &rdquo;importar su billetera existente a Phantom&rdquo;
+                  </strong>
+                  , una billetera criptográfica reimaginada para DeFi y NFT e la
+                  opción <strong>&rdquo;Ya tengo una billetera&rdquo;</strong>
+                </li>
+              </ul>
               <p className="mt-6 text-xl leading-8">
-                Es normal que surjan problemas con esta herramienta, por eso te
-                dejamos una lista de los problemas más comunes y cómo evitarlos
-                para que tu conversación fluya de manera natural y sin problemas
-                👍
+                <strong>NUEVA CARTERA</strong>
               </p>
               <p className="mt-6 text-xl leading-8">
-                El ChatGPT no entiende tu solicitud o te da una respuesta poco
-                relacionada o inapropiada 🤷‍♂️- Esto puede suceder si no eres
-                claro en tu solicitud, usas jerga o lenguaje que ChatGPT no
-                conoce o no proporcionas suficiente contexto. ¡Recuerda que
-                ChatGPT no es adivino!
+                Haz clic en <strong>crear una nueva cartera 🔑</strong> y en la
+                siguiente pantalla la cartera te pedirá que{" "}
+                <strong>crees una contraseña 🔒 </strong>que se utilizará para
+                bloquear y desbloquear tu cartera.
               </p>
               <p className="mt-6 text-xl leading-8">
-                El ChatGPT te da una respuesta genérica o poco informativa 😕-
-                Esto puede suceder si tu pregunta es demasiado amplia o no
-                proporcionas suficiente información sobre el tema. ¡Sé
-                específico y detallado en tu solicitud!
+                <strong>🔐Establezca una contraseña segura 🔐.</strong>
               </p>
               <p className="mt-6 text-xl leading-8">
-                El ChatGPT no sigue las instrucciones o restricciones de tu
-                solicitud 🤔- Esto puede suceder si no eres claro en tus
-                instrucciones o si son inconsistentes con la conversación en
-                general. ¡Asegúrate de ser claro y consistente!
+                A continuación, lea y elija Acepto los{" "}
+                <strong>Términos de Servicio 📜 </strong>y luego haga clic en{" "}
+                <strong>Continuar ➡️</strong>.
               </p>
               <p className="mt-6 text-xl leading-8">
-                El ChatGPT te da respuestas repetitivas o poco relacionadas 🤯-
-                Esto puede suceder si la conversación carece de dirección o si
-                no le das suficiente orientación a ChatGPT. ¡Ayuda a guiar la
-                conversación y a mantener el enfoque!
+                Luego mostrará la frase de recuperación secreta 🔍 de 12
+                palabras para usted. Para <strong>restaurar</strong> tu cartera
+                Phantom en el futuro, necesitarás esta frase de recuperación. En
+                caso de que alguien tenga acceso a esto o si lo pierdes,
+                potencialmente perderás todos los fondos 💰 que tienes en tu
+                Phantom.
               </p>
               <p className="mt-6 text-xl leading-8">
-                <strong>Problemas técnicos</strong>
+                Una vez que tengas las palabras iniciales aseguradas, haz clic
+                en <strong>&rdquo;Continuar&rdquo; ➡️</strong>.
               </p>
               <p className="mt-6 text-xl leading-8">
-                A veces pueden surgir problemas técnicos al usar ChatGPT, ¡pero
-                no te preocupes! Aquí te dejamos algunos consejos para
-                solucionarlos. 🤖💻👨‍💻
+                En la siguiente pantalla se te pedirá que crees una contraseña
+                🔒 que se utilizará para bloquear y desbloquear tu cartera.
+                Establezca una contraseña segura 🔐. A continuación, lea y elija{" "}
+                <strong>Acepto los Términos de Servicio 📜</strong> y luego haga
+                clic en <strong>Continuar ➡️</strong>.
               </p>
               <p className="mt-6 text-xl leading-8">
-                ¿Tu dispositivo o navegador no están cooperando? 🤔📱🖥️
-                Asegúrate de que ChatGPT sea compatible con tu dispositivo y
-                navegador y de que tengas una conexión a Internet estable. ¡No
-                te quedes sin conexión en medio de una conversación interesante!
-              </p>
-              <p className="mt-6 text-xl leading-8">
-                ¿Sigue sin funcionar? 🤷‍♂ Prueba el modelo ChatGPT con una
-                variedad de indicaciones para ver si el problema persiste.
-                ¡Intenta ser creativo con tus preguntas y sorprende al bot! ¡A
-                lo mejor descubres algo nuevo y divertido!
-              </p>
-              <p className="mt-6 text-xl leading-8">
-                ¿Aún sin suerte? 🤯 Echa un vistazo a los registros o mensajes
-                de error. A menudo pueden proporcionar pistas sobre la causa del
-                problema. ¡Investiga un poco y conviértete en un detective de la
-                tecnología!
-              </p>
-              <p className="mt-6 text-xl leading-8">
-                ¿Necesitas más ayuda? 🤔 Busca consejos o ayuda en foros o
-                comunidades en línea. Es posible que haya otras personas que
-                hayan tenido problemas similares y hayan encontrado soluciones.{" "}
-                <strong>¡Nunca subestimes el poder de la comunidad!</strong>
-              </p>
-              <p className="mt-6 text-xl leading-8">
-                Siguiendo estos consejos, ¡podrás solucionar problemas técnicos
-                con ChatGPT en línea y hacer que vuelva a funcionar sin
-                problemas en un santiamén! 🚀👨‍🚀
+                ¡Todo ha terminado! Tu cartera Phantom está lista para usar.
+                Haga clic en <strong>&rdquo;Terminar&rdquo;</strong> para
+                completar la configuración de la cartera.
               </p>
             </>
           ) : null}
@@ -946,185 +762,65 @@ export default function Wallets({ subtitle, title, body, text }: PageProps) {
           {currentPage === 10 ? (
             <>
               <p className="mt-6 text-xl leading-8">
-                <strong>Ya terminamos toda la teoría 🥳</strong>
+                <strong>
+                  👉 ¿Qué es Exodus? ¡Descubre las características que hacen de
+                  esta billetera digital una de las mejores!
+                </strong>
               </p>
               <br />
               <p className="mt-6 text-xl leading-8">
-                En este capítulo vamos a hacer algunos ejercicios para que
-                puedas entrenarte usando ChatGPT de manera efectiva, úsalos para
-                ver cómo funcionan 🤺.
+                Exodus está disponible de forma gratuita como una aplicación de
+                escritorio para Linux, Windows y Mac OS, o como una aplicación
+                móvil descargable en la Play Store de Google o en la App Store
+                de Apple 📱.
               </p>
               <p className="mt-6 text-xl leading-8">
-                Es importante que cada ejercicio lo hagas en un chat diferente
-                para que no responda en base a las respuestas anteriores, o si
-                quieres usar el mismo chat puedes escribir &rdquo;Olvida todo lo
-                que escribimos en este chat&rdquo; seguido del ejercicio, esto
-                hará que se reinicie el chat.
-              </p>
-              <p className="mt-6 text-xl leading-8">¡Empecemos!</p>
-              <p className="mt-6 text-xl leading-8">
-                <strong>
-                  Ejercicio 1: Uso de ChatGPT para mejorar las competencias
-                  lingüísticas 🗣️🌍
-                </strong>
+                Esta billetera no escatima en seguridad ¡Y eso es música para
+                nuestros oídos criptográficos!
               </p>
               <p className="mt-6 text-xl leading-8">
-                ¿Quieres aprender un nuevo idioma o mejorar tus habilidades
-                lingüísticas? ¡ChatGPT puede ser tu nuevo mejor amigo!. Te
-                dejamos varios prompts que puedes usar para pulir tu nuevo
-                idioma:
-              </p>
-              <p className="mt-6 text-xl leading-8 italic">
-                Quiero que actúes como traductor, corrector ortográfico y
-                perfeccionista de inglés. Te hablaré en cualquier idioma y tú
-                detectarás el idioma, lo traducirás y responderás con la versión
-                corregida y mejorada de mi texto, en inglés. Quiero que
-                sustituyas mis palabras y frases simplificadas de nivel A0 por
-                palabras y frases inglesas de nivel superior, más bellas y
-                elegantes. Mantén el mismo significado, pero hazlas más
-                literarias. Quiero que sólo respondas a la corrección, a las
-                mejoras y nada más, no escribas explicaciones. Mi primera frase
-                es &rdquo;Quiero comer McDonald&rdquo;s&rdquo;.
-              </p>
-              <p className="mt-6 text-xl leading-8 italic">
-              &rdquo;Quiero que actúes como ayudante de pronunciación en inglés para
-                personas de habla hispana. Te escribiré frases y tú sólo
-                responderás a sus pronunciaciones, y nada más. Las respuestas no
-                deben ser traducciones de mi frase, sino sólo pronunciaciones.
-                Las pronunciaciones deben utilizar letras latinas hispanas para
-                la fonética. No escribas explicaciones en las respuestas. Mi
-                primera frase es &rdquo;¿What is the weather in Fort Lauderdale?&rdquo;.
+                🔒 Con autenticación de doble factor, una frase-contraseña de
+                doce palabras 🗝️, una función de bloqueo 🔐 y una copia de
+                seguridad online 💾, podemos dormir tranquilos sabiendo que
+                nuestras inversiones están seguras.
               </p>
               <p className="mt-6 text-xl leading-8">
                 <strong>
-                  Ejercicio 2: Uso de ChatGPT para generar contenido 🤳📱
-                </strong>
-                E
-              </p>
-              <p className="mt-6 text-xl leading-8">
-                ¿Estás buscando una forma divertida y eficaz de generar
-                contenidos de calidad? En este ejercicio vamos a mostrar cómo
-                puedes utilizar ChatGPT para crear contenidos sorprendentes para
-                tus publicaciones en redes sociales, artículos de blog o
-                materiales de marketing.
-              </p>
-              <p className="mt-6 text-xl leading-8 italic">
-                Quiero que actúes como influencer en las redes sociales. Crearás
-                contenido para varias plataformas, como Instagram, Twitter o
-                YouTube, y te relacionarás con tus seguidores para aumentar el
-                conocimiento de la marca y promocionar productos o servicios. Mi
-                primera solicitud de sugerencia es &rdquo;Necesito ayuda para crear
-                una campaña atractiva en Instagram para promocionar una nueva
-                línea de ropa deportiva&rdquo;.
-              </p>
-              <p className="mt-6 text-xl leading-8 italic">
-                Quiero que actúes como publicista. Crearás una campaña para
-                promocionar un producto o servicio de tu elección. Elegirás un
-                público objetivo, desarrollarás mensajes clave y slogans,
-                seleccionarás los canales de comunicación para la promoción y
-                decidirás las actividades adicionales necesarias para alcanzar
-                tus objetivos. Mi primera solicitud de sugerencia es
-                &rdquo;Necesito ayuda para crear una campaña publicitaria para
-                un nuevo tipo de bebida energética dirigida a adultos jóvenes de
-                entre 18 y 30 años&rdquo;.
-              </p>
-              <p className="mt-6 text-xl leading-8">
-                <strong>
-                  Ejercicio 3: Uso de ChatGPT para crear historias de ficción
-                  👽🥷
+                  👉 ¿Cómo abrir tu propia billetera digital en Exodus? ¡Te
+                  mostramos cómo hacerlo sin perder tiempo!
                 </strong>
               </p>
               <p className="mt-6 text-xl leading-8">
-                En este ejercicio, veremos cómo se puede utilizar ChatGPT para
-                crear historias de ficción. Al proporcionar indicaciones claras
-                y específicas, ésta herramienta puede ser eficaz para estimular
-                la creatividad y generar tramas interesantes y únicas.
-              </p>
-              <p className="mt-6 text-xl leading-8 italic">
-                Quiero que actúes como cuentacuentos. Idearás historias
-                entretenidas, atractivas, imaginativas y cautivadoras para el
-                público. Pueden ser cuentos de hadas, historias educativas o
-                cualquier otro tipo de historias que tengan el potencial de
-                captar la atención y la imaginación de la gente. Dependiendo del
-                público al que te dirijas, puedes elegir temas o asuntos
-                específicos para tu sesión de cuentacuentos; por ejemplo, si son
-                niños, puedes hablarles de animales; si son adultos, los cuentos
-                basados en la historia podrían engancharles mejor, etc. Mi
-                primera petición es: &rdquo;Necesito un cuento interesante sobre los
-                ninjas que aprender a usar prompts para chatGPT&rdquo;.
+                Primero, cuando abras la aplicación móvil, serás guiado con un
+                tutorial paso a paso, así que no te preocupes si eres un novato
+                en criptomonedas 🤓. Una vez que hayas completado el tutorial,
+                haz clic en <strong>&rdquo;Create a new wallet</strong>&rdquo; y
+                asegúrate de activar la copia de seguridad de tu monedero para
+                que puedas dormir tranquilo sabiendo que tus criptos están a
+                salvo.
               </p>
               <p className="mt-6 text-xl leading-8">
-                <strong>
-                  Ejercicio 4: Uso de ChatGPT como entrevistador 🧑‍💼💻
-                </strong>
+                Luego, dirígete a la sección de seguridad y haz clic en{" "}
+                <strong>&rdquo;Backup&rdquo; 🛡️</strong>.
               </p>
               <p className="mt-6 text-xl leading-8">
-                Con este ejercicio puedes hacer todas las preguntas que quieras
-                sin tener que preocuparte por la ansiedad de la entrevista, y lo
-                mejor de todo, no tendrás que preocuparte por las respuestas
-                equivocadas porque, hey, eres el que controla todo el proceso.
-                Además, si tienes un sentido del humor un poco peculiar, puedes
-                incluso hacer preguntas divertidas y ver cómo responde el
-                chatbot. ¡Incluso podrías conseguir una risa o dos!
-              </p>
-              <p className="mt-6 text-xl leading-8 italic">
-                Quiero que actúes como un entrevistador. Yo seré el candidato y
-                tú me harás las preguntas de la entrevista para el puesto.
-                Quiero que sólo respondas como el entrevistador. No escribas
-                toda la conservación a la vez. Quiero que sólo hagas la
-                entrevista conmigo. Hazme las preguntas y espera mis respuestas.
-                No escribas explicaciones. Hazme las preguntas una a una como
-                hace un entrevistador y espera mis respuestas. Mi primera frase
-                es &rdquo;Hola&rdquo;.
+                Aquí te darán 12 palabras de seguridad que debes guardar como
+                oro en paño. Te recomendamos que las escribas en un papel y las
+                guardes en un lugar seguro, lejos de cualquier mirada indiscreta
+                👀.
               </p>
               <p className="mt-6 text-xl leading-8">
-                <strong>
-                  Ejercicio 5: Uso de ChatGPT como consola JavaScript
-                </strong>
+                Te saldrá este aviso en donde te recomiendan resguardar bien las{" "}
+                <strong>frases semillas</strong> que aparecerán a continuación
               </p>
               <p className="mt-6 text-xl leading-8">
-                Con este ejercicio puedes programar todo lo que puedas imaginar,
-                desde juegos hasta aplicaciones web completas. Es como tener un
-                amigo programador siempre disponible para darte una mano. ¡Así
-                que siéntete como un verdadero ninja de la programación y
-                diviértete experimentando con este ejercicio!
-              </p>
-              <p className="mt-6 text-xl leading-8 italic">
-                Quiero que actúes como una consola javascript. Yo escribiré los
-                comandos y tú responderás con lo que debería mostrar la consola
-                javascript. Quiero que sólo respondas con la salida del terminal
-                dentro de un único bloque de código, y nada más. no escribas
-                explicaciones. no escribas comandos a menos que yo te lo
-                indique. cuando necesite decirte algo en español, lo haré
-                poniendo texto dentro de llaves {"{"}como esto{"}"}. mi primer
-                comando es console.log (&rdquo;Hola Mundo&rdquo;);
+                <strong>¡Y voilà!</strong> Ya estás listo para empezar a guardar
+                tus Bitcoin y más de 200 criptomonedas en una de las mejores
+                billeteras del mercado.
               </p>
               <p className="mt-6 text-xl leading-8">
-                <strong>Ejercicio 6: Hoja de Excel</strong>
-              </p>
-              <p className="mt-6 text-xl leading-8">
-                ¡Nunca volverás a tener que preocuparte por esas tediosas y
-                aburridas hojas de cálculo de nuevo! Con este ejercicio podrás
-                hacer todos tus cálculos y analizar tus datos con una
-                herramienta que no solo es increíblemente eficiente, ¡sino que
-                también es divertida de usar! ¡Es como tener un compañero de
-                oficina que nunca se quejará del aburrimiento o de que el café
-                está frío!
-              </p>
-              <p className="mt-6 text-xl leading-8 italic">
-                Quiero que actúes como un Excel basado en texto. Sólo me
-                responderás la hoja Excel basada en texto de 10 filas con
-                números de fila y letras de celda como columnas (A a L). El
-                encabezado de la primera columna debe estar vacío para hacer
-                referencia al número de fila. Te diré lo que tienes que escribir
-                en las celdas y me contestarás sólo con el resultado de la tabla
-                excel como texto, y nada más. No escribas explicaciones. Yo te
-                escribiré fórmulas y tú ejecutarás las fórmulas y sólo
-                responderás el resultado de la tabla de Excel como texto.
-                Primero, respóndeme la hoja vacía.
-              </p>
-              <p className="mt-6 text-xl leading-8">
-                Para ver más ejemplos, basta con visitar https://prompts.chat.
+                ¡No te preocupes por nada más, deja que Exodus se encargue del
+                resto! 💰💻
               </p>
             </>
           ) : null}
@@ -1240,11 +936,12 @@ export default function Wallets({ subtitle, title, body, text }: PageProps) {
                 original.
               </p>
               <p className="mt-6 text-xl leading-8">
-                Utiliza el truco &rdquo;actúa como&rdquo; para hacer que ChatGPT se comporte
-                como un periodista o experto en el tema. Por ejemplo, puedes
-                preguntar: &rdquo;¿Qué crees que las personas deben hacer para
-                abordar este problema?&rdquo; o &rdquo;¿Puedes compartir algún recurso útil
-                para que las personas puedan profundizar en este tema?&rdquo;.
+                Utiliza el truco &rdquo;actúa como&rdquo; para hacer que ChatGPT
+                se comporte como un periodista o experto en el tema. Por
+                ejemplo, puedes preguntar: &rdquo;¿Qué crees que las personas
+                deben hacer para abordar este problema?&rdquo; o &rdquo;¿Puedes
+                compartir algún recurso útil para que las personas puedan
+                profundizar en este tema?&rdquo;.
               </p>
               <p className="mt-6 text-xl leading-8">
                 Utiliza la limitación de caracteres de Twitter para ayudar a los
@@ -1253,46 +950,6 @@ export default function Wallets({ subtitle, title, body, text }: PageProps) {
                 respuestas para hacer que la conversación fluya de manera
                 natural.
               </p>
-            </>
-          ) : null}
-
-          {currentPage === 13 ? (
-            <>
-              <p className="mt-6 text-xl leading-8">
-                <strong>
-                  Para poder recibir tu certificado, debes llenar el siguiente
-                  formulario. 🎉
-                </strong>
-              </p>
-              <br />
-              <p className="mt-6 text-xl leading-8">
-                Wallet conectada {address?.slice(0, 6)}...{address?.slice(-4)}
-              </p>
-              <p className="mt-6 text-xl leading-8">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Phasellus vel porta quam, vitae imperdiet dolor. Donec in leo
-                eget ipsum feugiat aliquet. Donec venenatis eros nec magna
-                facilisis, non pellentesque augue ornare. Nam gravida purus
-                nisl. Suspendisse tincidunt tortor ut lacus luctus, sed
-                tincidunt leo ultricies. Vivamus ut nunc quis est vehicula
-                dictum non sed eros. Ut tincidunt sapien vel imperdiet molestie.
-                Pellentesque habitant morbi tristique senectus et netus et
-                malesuada fames ac turpis egestas. Vestibulum ultrices dictum
-                dui non sollicitudin. Integer fermentum interdum elit non
-                gravida. Fusce eros velit, porta vel ex nec, maximus vehicula
-                velit. Cras id feugiat dolor. Etiam luctus dolor ex, ut
-                consequat turpis pharetra vitae. Fusce fringilla ante est, vel
-                bibendum urna dictum vel.
-              </p>
-              <p className="mt-6 text-xl leading-8">
-                Upload a screenhot of yoour homework and Copy and paste the
-                following into your twitter:
-                <br />
-                #kiwi #web3 finished ChatGPT course in Kiwi. (photo)
-              </p>
-              <div>
-                <TypeformWidget />
-              </div>
             </>
           ) : null}
         </div>
