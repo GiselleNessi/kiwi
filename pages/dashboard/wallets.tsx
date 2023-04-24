@@ -205,8 +205,9 @@ export default function Wallets({ subtitle, title, body, text }: PageProps) {
                   la Chrome Web Store.
                 </strong>
                 <p className="mt-6 text-xl leading-8">
-                  <strong>1-</strong> Haz clic en <strong>&rdquo;Agregar a Chrome</strong> y confirma
-                  que deseas agregar la extensión.
+                  <strong>1-</strong> Haz clic en{" "}
+                  <strong>&rdquo;Agregar a Chrome</strong> y confirma que deseas
+                  agregar la extensión.
                 </p>
                 <p className="mt-6 text-xl leading-8">
                   <strong>2-</strong> Haz clic en el icono de Metamask que
@@ -229,14 +230,14 @@ export default function Wallets({ subtitle, title, body, text }: PageProps) {
                 </p>
                 <p className="mt-6 text-xl leading-8">
                   Primero, asegúrate de tener una contraseña segura y única para
-                  tu billetera. ¡Nada de usar &rdquo;123456&rdquo; o &rdquo;contraseña&rdquo;! 🤨
-                  Utiliza una combinación de letras, números y símbolos para
-                  crear una clave que sea difícil de adivinar. Otro consejo
-                  importante es realizar copias de seguridad de tu billetera.
-                  Guarda tu semilla (seed phrase) en un lugar seguro (Un
-                  screenshot no es seguro) y nunca compartas esta información
-                  con nadie. ¡Es la llave maestra para acceder a tu billetera!
-                  🔑
+                  tu billetera. ¡Nada de usar &rdquo;123456&rdquo; o
+                  &rdquo;contraseña&rdquo;! 🤨 Utiliza una combinación de
+                  letras, números y símbolos para crear una clave que sea
+                  difícil de adivinar. Otro consejo importante es realizar
+                  copias de seguridad de tu billetera. Guarda tu semilla (seed
+                  phrase) en un lugar seguro (Un screenshot no es seguro) y
+                  nunca compartas esta información con nadie. ¡Es la llave
+                  maestra para acceder a tu billetera! 🔑
                 </p>
                 <p className="mt-6 text-xl leading-8">
                   Además, es importante tener en cuenta que nunca debes
@@ -290,11 +291,12 @@ export default function Wallets({ subtitle, title, body, text }: PageProps) {
               <p className="mt-6 text-xl leading-8">
                 Solo para tu información, si quisieras obtener el código QR
                 necesario para sincronizar, simplemente tienes que hacer clic en
-                tu avatar en la extensión MetaMask y selecciona &rdquo;Ajustes&rdquo;👤⚙️.
+                tu avatar en la extensión MetaMask y selecciona
+                &rdquo;Ajustes&rdquo;👤⚙️.
               </p>
               <p className="mt-6 text-xl leading-8">
-                Desde allí, dirígete a "Configuración" y finalmente selecciona
-                &rdquo;Sincronizar con el móvil&rdquo;. 📱💻
+                Desde allí, dirígete a &rdquo;Configuración&rdquo; y finalmente
+                selecciona &rdquo;Sincronizar con el móvil&rdquo;. 📱💻
               </p>
               <p className="mt-6 text-xl leading-8">
                 Y recibirá este mensaje de MetaMask deshabilitando esta función.
@@ -308,8 +310,8 @@ export default function Wallets({ subtitle, title, body, text }: PageProps) {
                 ¡Muy bien! Así que si te has quedado sin opciones, la mejor
                 manera de importar tu billetera es usando la frase secreta de
                 recuperación de 12 palabras. Solo tienes que ingresar junto con
-                una nueva contraseña y hacer clic en el botón <strong>IMPORTAR</strong> en la
-                parte inferior. 💻💥👍
+                una nueva contraseña y hacer clic en el botón{" "}
+                <strong>IMPORTAR</strong> en la parte inferior. 💻💥👍
               </p>
               <p className="mt-6 text-xl leading-8">
                 Sé que puede ser un dolor de cabeza recordar otra contraseña,
@@ -351,23 +353,22 @@ export default function Wallets({ subtitle, title, body, text }: PageProps) {
               </p>
               <p className="mt-6 text-xl leading-8">
                 Si quieres agregar una nueva cuenta, simplemente haz clic en tu
-                avatar en la ventana emergente de MetaMask y selecciona <strong>&rdquo;Crear
-                cuenta&rdquo;</strong>.
+                avatar en la ventana emergente de MetaMask y selecciona{" "}
+                <strong>&rdquo;Crear cuenta&rdquo;</strong>.
               </p>
               <p className="mt-6 text-xl leading-8">
-               Asígnele un nombre, y ¡listo! 🙌
+                Asígnele un nombre, y ¡listo! 🙌
               </p>
               <p className="mt-6 text-xl leading-8">
                 Ah, y una cosa importante que debes saber: cada cuenta es un
-                registro en la cadena de bloques, lo que significa que <strong>no se
-                puede borrar completamente</strong>. Pero no te preocupes, puedes hacer
-                que una cuenta no sea visible en MetaMask si sigues unos pasos
-                especiales. Solo asegúrate de tener tu frase de recuperación
-                secreta segura,
+                registro en la cadena de bloques, lo que significa que{" "}
+                <strong>no se puede borrar completamente</strong>. Pero no te
+                preocupes, puedes hacer que una cuenta no sea visible en
+                MetaMask si sigues unos pasos especiales. Solo asegúrate de
+                tener tu frase de recuperación secreta segura,
               </p>
               <p className="mt-6 text-xl leading-8">
-                ¡porque sin ella, no podrás volver a instalar la
-                cuenta! 😉
+                ¡porque sin ella, no podrás volver a instalar la cuenta! 😉
               </p>
               <p className="mt-6 text-xl leading-8">Pasos especiales 👇</p>
             </>
@@ -376,12 +377,12 @@ export default function Wallets({ subtitle, title, body, text }: PageProps) {
           {currentPage === 4 ? (
             <>
               <p className="mt-6 text-xl leading-8">
-                Primero, tenemos el botón <strong>"Comprar"</strong> que te
-                conecta con proveedores de servicios que MetaMask considera los
-                mejores en tu área. ¡Así que no te preocupes por buscar dónde
-                comprar tus tokens y criptomonedas favoritas! 💰 Aunque, sin
-                ofender a MetaMask, podríamos recomendarte usar una plataforma
-                de exchange para depositar tus fondos.
+                Primero, tenemos el botón <strong>&rdquo;Comprar&rdquo;</strong>{" "}
+                que te conecta con proveedores de servicios que MetaMask
+                considera los mejores en tu área. ¡Así que no te preocupes por
+                buscar dónde comprar tus tokens y criptomonedas favoritas! 💰
+                Aunque, sin ofender a MetaMask, podríamos recomendarte usar una
+                plataforma de exchange para depositar tus fondos.
               </p>
               <p className="mt-6 text-xl leading-8">
                 <strong>
@@ -391,26 +392,26 @@ export default function Wallets({ subtitle, title, body, text }: PageProps) {
               </p>
               <br />
               <p className="mt-6 text-xl leading-8">
-                ¡Pero eso no es todo! También puedes <strong>&rdquo;Enviar&rdquo;</strong>{" "}
-                tus criptomonedas con MetaMask. Solo necesitas tener la clave
-                pública del destinatario y ¡listo! 👉💰👈
+                ¡Pero eso no es todo! También puedes{" "}
+                <strong>&rdquo;Enviar&rdquo;</strong> tus criptomonedas con
+                MetaMask. Solo necesitas tener la clave pública del destinatario
+                y ¡listo! 👉💰👈
               </p>
               <p className="mt-6 text-xl leading-8">
                 Aunque debes tener en cuenta que las transacciones con propinas
                 para los mineros pueden retrasarse o incluso fallar según las
                 condiciones de la red. Pero no te preocupes si eres nuevo en
-                esto, deja el botón de &rdquo;<strong>edición</strong>&rdquo; intacto y ¡confirma tu
-                transacción! ✅
+                esto, deja el botón de &rdquo;<strong>edición</strong>&rdquo;
+                intacto y ¡confirma tu transacción! ✅
               </p>
               <p className="mt-6 text-xl leading-8">
                 Después de verificar la transacción, puedes ver el historial en
                 el área de actividad. Y si alguna vez necesitas practicar,
                 recuerda que puedes hacerlo con los activos de las redes de
-                prueba, que no valen ni un centavo. 
+                prueba, que no valen ni un centavo.
               </p>
               <p className="mt-6 text-xl leading-8">
-                ¡Genial para experimentar
-                sin preocupaciones! 🧪
+                ¡Genial para experimentar sin preocupaciones! 🧪
               </p>
               <p className="mt-6 text-xl leading-8">
                 En particular, solicitamos 5 ETH en Goerli Test Network (arriba
@@ -418,7 +419,8 @@ export default function Wallets({ subtitle, title, body, text }: PageProps) {
                 cómo enviar usando MetaMask.
               </p>
               <p className="mt-6 text-xl leading-8">
-                Los activos de <strong>las redes de prueba no valen un centavo</strong>. Estas
+                Los activos de{" "}
+                <strong>las redes de prueba no valen un centavo</strong>. Estas
                 redes de prueba se utilizan para las pruebas de los
                 desarrolladores antes de lanzar sus productos en la red
                 principal de Ethereum.
@@ -658,55 +660,101 @@ export default function Wallets({ subtitle, title, body, text }: PageProps) {
 
           {currentPage === 9 ? (
             <>
-            <p className="mt-6 text-xl leading-8">
-              <strong>👉 ¿Cómo abrir tu propia billetera digital en Phantom? ¡Te guiaremos paso a paso para que lo hagas sin esfuerzo!</strong>
+              <p className="mt-6 text-xl leading-8">
+                <strong>
+                  👉 ¿Cómo abrir tu propia billetera digital en Phantom? ¡Te
+                  guiaremos paso a paso para que lo hagas sin esfuerzo!
+                </strong>
               </p>
               <br />
               <ul className="list-disc ml-6 mt-6 text-xl leading-8">
                 <li>
-                Haz clic en <strong>añadir a Chrome</strong> y añade la extensión. Los pasos también son los mismos para otros navegadores. Después de hacer clic en añadir extensión, descarga el complemento en su PC y lo instalará en su navegador. En este caso, es Chrome.
-                </li>
-                <li>Después de que la extensión Phantom se instale en su navegador, se abrirá automáticamente. Ahora, antes de crear una nueva cartera, así es como puedes acceder a Phantom en tu navegador.
-En la mayoría de los navegadores populares verás la extensión en la esquina superior derecha.
-</li>
-                <li>
-                También puede mirar en la barra de herramientas de su navegador y en la sección de <strong>complementos</strong>. En Chrome, en la esquina superior derecha, verás un icono de rompecabezas.
+                  Haz clic en <strong>añadir a Chrome</strong> y añade la
+                  extensión. Los pasos también son los mismos para otros
+                  navegadores. Después de hacer clic en añadir extensión,
+                  descarga el complemento en su PC y lo instalará en su
+                  navegador. En este caso, es Chrome.
                 </li>
                 <li>
-                Haz clic en él y verás la lista de extensiones instaladas. Encuentra la extensión Phantom y haz clic en el "icono de pin". Se fijará la extensión en la parte superior y esto debería facilitar la búsqueda y el acceso a Phantom en el futuro.
-Ahora <strong>haz clic en el icono de Phantom</strong> e inicia la configuración de la cartera.
+                  Después de que la extensión Phantom se instale en su
+                  navegador, se abrirá automáticamente. Ahora, antes de crear
+                  una nueva cartera, así es como puedes acceder a Phantom en tu
+                  navegador. En la mayoría de los navegadores populares verás la
+                  extensión en la esquina superior derecha.
                 </li>
-                <li>La aplicación Phantom se iniciará en una nueva pestaña y encontrarás dos opciones. 
-<strong>Crea una nueva billetera nueva</strong> y ya <strong>tengo una billetera</strong></li>
-              <li>
-              Dado que estamos configurando una cartera nueva, elija <strong>&rdquo;crear una cartera nueva</strong>&rdquo;. Si usted es un usuario existente de Solana y anteriormente estaba usando carteras como Sollet o Solflare, entonces puede usar su frase de recuperación secreta para <strong>&rdquo;importar su billetera existente a Phantom&rdquo;</strong>, una billetera criptográfica reimaginada para DeFi y NFT e la opción <strong>&rdquo;Ya tengo una billetera&rdquo;</strong>
-              </li>
+                <li>
+                  También puede mirar en la barra de herramientas de su
+                  navegador y en la sección de <strong>complementos</strong>. En
+                  Chrome, en la esquina superior derecha, verás un icono de
+                  rompecabezas.
+                </li>
+                <li>
+                  Haz clic en él y verás la lista de extensiones instaladas.
+                  Encuentra la extensión Phantom y haz clic en el &rdquo;icono de
+                  pin&rdquo;. Se fijará la extensión en la parte superior y esto
+                  debería facilitar la búsqueda y el acceso a Phantom en el
+                  futuro. Ahora <strong>haz clic en el icono de Phantom</strong>{" "}
+                  e inicia la configuración de la cartera.
+                </li>
+                <li>
+                  La aplicación Phantom se iniciará en una nueva pestaña y
+                  encontrarás dos opciones.
+                  <strong>Crea una nueva billetera nueva</strong> y ya{" "}
+                  <strong>tengo una billetera</strong>
+                </li>
+                <li>
+                  Dado que estamos configurando una cartera nueva, elija{" "}
+                  <strong>&rdquo;crear una cartera nueva</strong>&rdquo;. Si
+                  usted es un usuario existente de Solana y anteriormente estaba
+                  usando carteras como Sollet o Solflare, entonces puede usar su
+                  frase de recuperación secreta para{" "}
+                  <strong>
+                    &rdquo;importar su billetera existente a Phantom&rdquo;
+                  </strong>
+                  , una billetera criptográfica reimaginada para DeFi y NFT e la
+                  opción <strong>&rdquo;Ya tengo una billetera&rdquo;</strong>
+                </li>
               </ul>
               <p className="mt-6 text-xl leading-8">
                 <strong>NUEVA CARTERA</strong>
               </p>
               <p className="mt-6 text-xl leading-8">
-              Haz clic en <strong>crear una nueva cartera 🔑</strong> y en la siguiente pantalla la cartera te pedirá que <strong>crees una contraseña 🔒 </strong>que se utilizará para bloquear y desbloquear tu cartera. 
+                Haz clic en <strong>crear una nueva cartera 🔑</strong> y en la
+                siguiente pantalla la cartera te pedirá que{" "}
+                <strong>crees una contraseña 🔒 </strong>que se utilizará para
+                bloquear y desbloquear tu cartera.
               </p>
               <p className="mt-6 text-xl leading-8">
-              <strong>🔐Establezca una contraseña segura 🔐.</strong>
+                <strong>🔐Establezca una contraseña segura 🔐.</strong>
               </p>
               <p className="mt-6 text-xl leading-8">
-              A continuación, lea y elija Acepto los <strong>Términos de Servicio 📜 </strong>y luego haga clic en <strong>Continuar ➡️</strong>.
+                A continuación, lea y elija Acepto los{" "}
+                <strong>Términos de Servicio 📜 </strong>y luego haga clic en{" "}
+                <strong>Continuar ➡️</strong>.
               </p>
               <p className="mt-6 text-xl leading-8">
-                
-                Luego mostrará la frase de recuperación secreta 🔍 de 12 palabras para usted.
-Para <strong>restaurar</strong> tu cartera Phantom en el futuro, necesitarás esta frase de recuperación. En caso de que alguien tenga acceso a esto o si lo pierdes, potencialmente perderás todos los fondos 💰 que tienes en tu Phantom.       
+                Luego mostrará la frase de recuperación secreta 🔍 de 12
+                palabras para usted. Para <strong>restaurar</strong> tu cartera
+                Phantom en el futuro, necesitarás esta frase de recuperación. En
+                caso de que alguien tenga acceso a esto o si lo pierdes,
+                potencialmente perderás todos los fondos 💰 que tienes en tu
+                Phantom.
               </p>
               <p className="mt-6 text-xl leading-8">
-              Una vez que tengas las palabras iniciales aseguradas, haz clic en <strong>"Continuar” ➡️</strong>.
+                Una vez que tengas las palabras iniciales aseguradas, haz clic
+                en <strong>&rdquo;Continuar&rdquo; ➡️</strong>.
               </p>
               <p className="mt-6 text-xl leading-8">
-              En la siguiente pantalla se te pedirá que crees una contraseña 🔒 que se utilizará para bloquear y desbloquear tu cartera. Establezca una contraseña segura 🔐. A continuación, lea y elija <strong>Acepto los Términos de Servicio 📜</strong> y luego haga clic en <strong>Continuar ➡️</strong>.
+                En la siguiente pantalla se te pedirá que crees una contraseña
+                🔒 que se utilizará para bloquear y desbloquear tu cartera.
+                Establezca una contraseña segura 🔐. A continuación, lea y elija{" "}
+                <strong>Acepto los Términos de Servicio 📜</strong> y luego haga
+                clic en <strong>Continuar ➡️</strong>.
               </p>
               <p className="mt-6 text-xl leading-8">
-              ¡Todo ha terminado! Tu cartera Phantom está lista para usar. Haga clic en <strong>&rdquo;Terminar&rdquo;</strong> para completar la configuración de la cartera.
+                ¡Todo ha terminado! Tu cartera Phantom está lista para usar.
+                Haga clic en <strong>&rdquo;Terminar&rdquo;</strong> para
+                completar la configuración de la cartera.
               </p>
             </>
           ) : null}
@@ -714,40 +762,65 @@ Para <strong>restaurar</strong> tu cartera Phantom en el futuro, necesitarás es
           {currentPage === 10 ? (
             <>
               <p className="mt-6 text-xl leading-8">
-                <strong>👉 ¿Qué es Exodus? ¡Descubre las características que hacen de esta billetera digital una de las mejores!</strong>
+                <strong>
+                  👉 ¿Qué es Exodus? ¡Descubre las características que hacen de
+                  esta billetera digital una de las mejores!
+                </strong>
               </p>
               <br />
               <p className="mt-6 text-xl leading-8">
-              Exodus está disponible de forma gratuita como una aplicación de escritorio para Linux, Windows y Mac OS, o como una aplicación móvil descargable en la Play Store de Google o en la App Store de Apple 📱.
+                Exodus está disponible de forma gratuita como una aplicación de
+                escritorio para Linux, Windows y Mac OS, o como una aplicación
+                móvil descargable en la Play Store de Google o en la App Store
+                de Apple 📱.
               </p>
               <p className="mt-6 text-xl leading-8">
-              Esta billetera no escatima en seguridad
- ¡Y eso es música para nuestros oídos criptográficos! 
-
+                Esta billetera no escatima en seguridad ¡Y eso es música para
+                nuestros oídos criptográficos!
               </p>
-              <p className="mt-6 text-xl leading-8">🔒 Con autenticación de doble factor, una frase-contraseña de doce palabras 🗝️, una función de bloqueo 🔐 y una copia de seguridad online 💾, podemos dormir tranquilos sabiendo que nuestras inversiones están seguras.</p>
+              <p className="mt-6 text-xl leading-8">
+                🔒 Con autenticación de doble factor, una frase-contraseña de
+                doce palabras 🗝️, una función de bloqueo 🔐 y una copia de
+                seguridad online 💾, podemos dormir tranquilos sabiendo que
+                nuestras inversiones están seguras.
+              </p>
               <p className="mt-6 text-xl leading-8">
                 <strong>
-                  👉 ¿Cómo abrir tu propia billetera digital en Exodus? ¡Te mostramos cómo hacerlo sin perder tiempo!
+                  👉 ¿Cómo abrir tu propia billetera digital en Exodus? ¡Te
+                  mostramos cómo hacerlo sin perder tiempo!
                 </strong>
               </p>
               <p className="mt-6 text-xl leading-8">
-              Primero, cuando abras la aplicación móvil, serás guiado con un tutorial paso a paso, así que no te preocupes si eres un novato en criptomonedas 🤓. Una vez que hayas completado el tutorial, haz clic en <strong>&rdquo;Create a new wallet</strong>&rdquo; y asegúrate de activar la copia de seguridad de tu monedero para que puedas dormir tranquilo sabiendo que tus criptos están a salvo.
+                Primero, cuando abras la aplicación móvil, serás guiado con un
+                tutorial paso a paso, así que no te preocupes si eres un novato
+                en criptomonedas 🤓. Una vez que hayas completado el tutorial,
+                haz clic en <strong>&rdquo;Create a new wallet</strong>&rdquo; y
+                asegúrate de activar la copia de seguridad de tu monedero para
+                que puedas dormir tranquilo sabiendo que tus criptos están a
+                salvo.
               </p>
               <p className="mt-6 text-xl leading-8">
-              Luego, dirígete a la sección de seguridad y haz clic en <strong>&rdquo;Backup" 🛡️&rdquo;</strong>.
+                Luego, dirígete a la sección de seguridad y haz clic en{" "}
+                <strong>&rdquo;Backup&rdquo; 🛡️</strong>.
               </p>
               <p className="mt-6 text-xl leading-8">
-               Aquí te darán 12 palabras de seguridad que debes guardar como oro en paño. Te recomendamos que las escribas en un papel y las guardes en un lugar seguro, lejos de cualquier mirada indiscreta 👀.
+                Aquí te darán 12 palabras de seguridad que debes guardar como
+                oro en paño. Te recomendamos que las escribas en un papel y las
+                guardes en un lugar seguro, lejos de cualquier mirada indiscreta
+                👀.
               </p>
               <p className="mt-6 text-xl leading-8">
-                Te saldrá este aviso en donde te recomiendan resguardar bien las <strong>frases semillas</strong> que aparecerán a continuación
+                Te saldrá este aviso en donde te recomiendan resguardar bien las{" "}
+                <strong>frases semillas</strong> que aparecerán a continuación
               </p>
               <p className="mt-6 text-xl leading-8">
-                <strong>¡Y voilà!</strong> Ya estás listo para empezar a guardar tus Bitcoin y más de 200 criptomonedas en una de las mejores billeteras del mercado.
+                <strong>¡Y voilà!</strong> Ya estás listo para empezar a guardar
+                tus Bitcoin y más de 200 criptomonedas en una de las mejores
+                billeteras del mercado.
               </p>
               <p className="mt-6 text-xl leading-8">
-              ¡No te preocupes por nada más, deja que Exodus se encargue del resto! 💰💻
+                ¡No te preocupes por nada más, deja que Exodus se encargue del
+                resto! 💰💻
               </p>
             </>
           ) : null}
