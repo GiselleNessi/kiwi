@@ -48,7 +48,7 @@ const teams = [
   {
     id: 2,
     name: "Wallets Digitales",
-    href: "/dashboard/wallets",
+    href: "#",
     initial: "W",
     current: false,
   },
