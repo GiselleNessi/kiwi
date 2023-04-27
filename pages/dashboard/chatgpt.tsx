@@ -28,12 +28,9 @@ interface PageProps {
 
 const pages = [
   {
-    subtitle: "Introduction",
+    subtitle: "Introducción",
     title:
       "¿Quieres aprender cómo ser un ninja en la redacción de prompts para Chat GPT?",
-  },
-  {
-    title: "¿Por qué tomar este curso? 🧐",
   },
   {
     title: "1.¡Bienvenidos! 🤩",
@@ -137,12 +134,9 @@ export default function ChatGPT({ subtitle, title, body, text }: PageProps) {
                 ¡Así que saca tu libreta 📝, prepara tus dedos 👌 y comencemos a
                 crear prompts increíbles juntos! 💪
               </p>
-              <br />
-            </div>
-          ) : null}
-
-          {currentPage === 1 ? (
-            <>
+              <h1 className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+              ¿Por qué tomar este curso? 🧐
+          </h1>
               <p className="mt-6 text-xl leading-8">
                 Al aprender a utilizar ChatGPT de manera efectiva, puedes
                 automatizar tareas, personalizar interacciones y manejar grandes
@@ -158,13 +152,14 @@ export default function ChatGPT({ subtitle, title, body, text }: PageProps) {
                 experiencia increíblemente satisfactoria. ¡Tus clientes te lo
                 agradecerán y tu proyecto lo notará! 🙌
               </p>
-            </>
+              <br />
+            </div>
           ) : null}
 
-          {currentPage === 2 ? (
+          {currentPage === 1 ? (
             <>
               <p className="mt-6 text-xl leading-8">
-                ¡Bienvenido tripulante! Ya vemos que quieres ser el ninja máximo
+              ¡Bienvenido Cosmonauta! 🧑‍🚀👩‍🚀 Ya vemos que quieres ser el ninja máximo
                 de ChatGPT e impresionar a tus amigos con tus habilidades en la
                 creación de prompts en esta maravillosa herramienta.
               </p>
@@ -191,7 +186,7 @@ export default function ChatGPT({ subtitle, title, body, text }: PageProps) {
             </>
           ) : null}
 
-          {currentPage === 3 ? (
+          {currentPage === 2 ? (
             <>
               <Image
                 src={chatgptOne}
@@ -201,7 +196,7 @@ export default function ChatGPT({ subtitle, title, body, text }: PageProps) {
                 style={{ objectFit: "cover", objectPosition: "center" }} />
 
               <p className="text-xl leading-8 mt-6">
-                ¡Hola tripulante! 👋 Cuando usamos ChatGPT por primera vez, ¡nos
+              ¡Hola Cosmonauta! 👋 Cuando usamos ChatGPT por primera vez, ¡nos
                 enamoramos como un adolescente en una cita a ciegas! 😍
                 Estuvimos jugando con la herramienta de todas las formas
                 posibles, y cada vez nos sorprendía más y más. Vimos cómo otros
@@ -296,7 +291,7 @@ export default function ChatGPT({ subtitle, title, body, text }: PageProps) {
                 ¿Estás listo para empezar? ¡Vamos! 💪
               </p>
               <p className="mt-6 text-xl leading-8">
-                <strong>Tarea 1: </strong> Entra a la plataforma de ChatGPT.
+                <strong>Tarea 1:  Entra a la plataforma de ChatGPT.
                 Dale clic a este link 👉{" "}
                 <a
                   href="https://chat.openai.com/chat"
@@ -305,11 +300,12 @@ export default function ChatGPT({ subtitle, title, body, text }: PageProps) {
                 >
                   https://chat.openai.com/chat
                 </a>
+                </strong>
               </p>
         </>
         ) : null}
 
-        {currentPage === 4 ? (
+        {currentPage === 3 ? (
           <>
             <p className="mt-6 text-xl leading-8 mt-6">
               Ahora que ya tienes una idea general de ChatGPT y sus
@@ -408,7 +404,7 @@ export default function ChatGPT({ subtitle, title, body, text }: PageProps) {
           </>
         ) : null}
 
-        {currentPage === 5 ? (
+        {currentPage === 4 ? (
           <>
             <p className="mt-6 text-xl leading-8">
               💬 Como ya hemos explicado, los prompts son la clave para tener
@@ -456,10 +452,7 @@ export default function ChatGPT({ subtitle, title, body, text }: PageProps) {
                 los que no 👎)
               </strong>
             </p>
-            <p className="mt-6 text-xl leading-8">
-              ¡Prepárate para descubrir los mejores y peores mensajes de
-              ChatGPT! 👀👋
-            </p>
+           
             <p className="mt-6 text-xl leading-8">
               Vamos a empezar con los buenos. ¿Quieres conocer algunos
               mensajes que funcionan como un cohete 🚀? Aquí tienes algunos
@@ -522,21 +515,24 @@ export default function ChatGPT({ subtitle, title, body, text }: PageProps) {
                 height={600}
                 style={{ objectFit: "cover", objectPosition: "center" }} />
 
+
             <p className="mt-6 text-xl leading-8">
+              <strong>
               Tarea 2: Escribe 2 preguntas a ChatGPT siguiendo los principios
               de claridad, enfoque y relevancia. Sé creativo y original 🤪,
               queremos que te diviertas haciéndolo. Cuando termines, haz un
               screenshot a tu pantalla y guárdala como &rdquo;Tarea 2&rdquo;,
               al final del curso te pediremos subirla.{" "}
+              </strong>
             </p>
           </>
         ) : null}
 
-        {currentPage === 6 ? (
+        {currentPage === 5 ? (
           <>
             <p className="mt-6 text-xl leading-8">
               Como ya vimos en la lección anterior, si quieres crear mensajes
-              ChatGPT que causen impacto y generen conversaciones interesantes
+              para ChatGPT que causen impacto y generen conversaciones interesantes
               e informativas, tienes que conocer estos principios de
               comunicación clara: Claridad, Enfoque y Relevancia.
             </p>
@@ -585,10 +581,7 @@ export default function ChatGPT({ subtitle, title, body, text }: PageProps) {
               los temas que interesan al usuario y brindar información útil y
               relevante.
             </p>
-            <p className="mt-6 text-xl leading-8 mb-6">
-              ¡Prepárate para descubrir los mejores y peores mensajes de
-              ChatGPT! 👀👋
-            </p>
+          
             <Image
                 src={chatgptThree}
                 alt="Logo"
@@ -609,8 +602,7 @@ export default function ChatGPT({ subtitle, title, body, text }: PageProps) {
             </p>
             <p className="mt-6 text-xl leading-8">
               <strong>
-                Aquí te van unos consejos para que tus mensajes sean tan
-                nítidos como la imagen en un día soleado:{" "}
+              Aquí te van unos consejos para que tus mensajes sean tan nítidos como la imagen en un día soleado:
               </strong>
             </p>
             <div>
@@ -629,7 +621,7 @@ export default function ChatGPT({ subtitle, title, body, text }: PageProps) {
               👉 Define la jerga o términos técnicos que necesitas utilizar.
               ¡No des por hecho que todos saben lo que significan tus palabras
               &rdquo;fancy&rdquo;! Proporciona definiciones claras y
-              explicaciones para que todo el mundo esté en la misma página.
+              explicaciones para que nuestro amigo robótico y tu estén en la misma página.
             </p>
             <p className="mt-6 text-xl leading-8">
               👉 Evita el lenguaje ambiguo. Si tus palabras pueden ser
@@ -643,6 +635,9 @@ export default function ChatGPT({ subtitle, title, body, text }: PageProps) {
               tus mensajes sean claros y no se desvíen del tema principal.
             </p>
             <p className="mt-6 text-xl leading-8">
+            ¡Ojo! Si no sigues estos consejos, puedes terminar con un mensaje como este:
+            </p>
+            <p className="mt-6 text-xl leading-8">
               <strong>
                 &rdquo;Hey ChatGPT, ¿me puedes explicar los últimos chismes de
                 la web? Estoy tratando de estar al día con el
@@ -652,7 +647,7 @@ export default function ChatGPT({ subtitle, title, body, text }: PageProps) {
             <p className="mt-6 text-xl leading-8">
               Este mensaje es una mezcla de jerga y ambigüedad. Palabras como
               &rdquo;hype&rdquo; o &rdquo;chismes de la web&rdquo; pueden ser
-              confusas para algunos usuarios, y el término &rdquo;últimos
+              confusas, y el término &rdquo;últimos
               chismes&rdquo; es demasiado vago. Así que, ¡a reescribir!
             </p>
             <p className="mt-6 text-xl leading-8">
@@ -674,17 +669,19 @@ export default function ChatGPT({ subtitle, title, body, text }: PageProps) {
               malentendidos.
             </p>
             <p className="mt-6 text-xl leading-8">
+              <strong>
               Tarea 3: Pongámonos filosóficos. Escribe una pregunta más
               compleja a ChatGPT, algo que lo ponga a reflexionar. Recuerda
               usar palabras que el bot entienda, guarda tu vocabulario lujoso
               para la cena con tus suegros 🤣. ¡Sé creativo!. Cuando termines,
               haz un screenshot y guárdalo como &rdquo;Tarea 3&rdquo;, al
               final del curso te pediremos subirla.{" "}
+              </strong>
             </p>
           </>
         ) : null}
 
-        {currentPage === 7 ? (
+        {currentPage === 6 ? (
           <>
             <p className="mt-6 text-xl leading-8">
               Ya que hemos explorado los principios de la elaboración de
@@ -728,12 +725,13 @@ export default function ChatGPT({ subtitle, title, body, text }: PageProps) {
               ChatGPT!
             </p>
             <p className="mt-6 text-xl leading-8">
-              <strong>Tarea 4:</strong>Con estos pasos, estamos seguros de que
+              <strong>Tarea 4: Con estos pasos, estamos seguros de que
               podrás crear mensajes efectivos y obtener la respuesta que
               necesitas de ChatGPT. ¡Es hora de planear una fiesta increíble!
               🥳🎉. Usa el prompt del ejemplo para que veas las respuestas
               increíbles que te dará nuestro amigo inteligente. No es
               necesario que tomes un screenshot, sólo diviértete.
+              </strong>
             </p>
             <p className="mt-6 text-xl leading-8">
               <strong>
@@ -830,7 +828,7 @@ export default function ChatGPT({ subtitle, title, body, text }: PageProps) {
               <strong>
                 &rdquo;Quiero que actúes como un chef de cocina. Quiero que me
                 des una receta original de un plato que tenga como ingrediente
-                principal la 🥦. Asegúrate de incluir todos los pasos
+                principal el 🥦. Asegúrate de incluir todos los pasos
                 necesarios y los ingredientes adicionales que sean necesarios.
                 No te olvides de decorar el plato para que sea vistoso. Cuando
                 necesites que te proporcione una cantidad específica de un
@@ -896,18 +894,19 @@ export default function ChatGPT({ subtitle, title, body, text }: PageProps) {
               comunes.
             </p>
             <p className="mt-6 text-xl leading-8">
-              <strong>Tarea 5: </strong>Usa el truco &rdquo;actúa como&rdquo;
+              <strong>Tarea 5: Usa el truco &rdquo;actúa como&rdquo;
               en ChatGPT. Puedes pedirle que te responda como un personaje
               ficticio o que te responda como un profesional en cualquier
               área. Las posibilidades son infinitas, pero queremos ver qué tan
               creativo puedes ser. Cuando termines, haz un screenshot y
               guárdalo como &rdquo;Tarea 5&rdquo;, al final del curso te
               pediremos subirla.
+              </strong>
             </p>
           </>
         ) : null}
 
-        {currentPage === 8 ? (
+        {currentPage === 7 ? (
           <>
             <p className="mt-6 text-xl leading-8">
               Sabemos que no es fácil crear prompts efectivos en ChatGPT,
@@ -961,11 +960,7 @@ export default function ChatGPT({ subtitle, title, body, text }: PageProps) {
                 de que sean claras y eficaces 🧹. Si algo no funciona,
                 reinicia el hilo y empieza de nuevo.
               </li>
-              <li className="mt-6 text-xl leading-8">
-                Por último, prueba y depura tus instrucciones para asegurarte
-                de que sean claras y eficaces 🧹. Si algo no funciona,
-                reinicia el hilo y empieza de nuevo.
-              </li>
+             
             </ul>
 
             <p className="mt-6 text-xl leading-8">
@@ -1007,7 +1002,7 @@ export default function ChatGPT({ subtitle, title, body, text }: PageProps) {
           </>
         ) : null}
 
-        {currentPage === 9 ? (
+        {currentPage === 8 ? (
           <>
             <p className="mt-6 text-xl leading-8">
               <strong>Problemas más comunes</strong>
@@ -1100,7 +1095,7 @@ export default function ChatGPT({ subtitle, title, body, text }: PageProps) {
           </>
         ) : null}
 
-        {currentPage === 10 ? (
+        {currentPage === 9 ? (
           <>
             <p className="mt-6 text-xl leading-8">
               <strong>Ya terminamos toda la teoría 🥳</strong>
@@ -1281,14 +1276,11 @@ export default function ChatGPT({ subtitle, title, body, text }: PageProps) {
               responderás el resultado de la tabla de Excel como texto.
               Primero, respóndeme la hoja vacía.
             </p>
-            <p className="mt-6 text-xl leading-8">
-              Para ver más ejemplos, basta con visitar <a href="https://prompts.chat" target="_blank" className="font-medium text-blue-600 dark:text-blue-500 hover:underline">https://prompts.chat.</a>
-
-            </p>
+            
           </>
         ) : null}
 
-        {currentPage === 11 ? (
+        {currentPage === 10 ? (
           <>
             <p className="mt-6 text-xl leading-8">
               <strong>
@@ -1384,13 +1376,11 @@ export default function ChatGPT({ subtitle, title, body, text }: PageProps) {
           </>
         ) : null}
 
-        {currentPage === 12 ? (
+        {currentPage === 11 ? (
           <>
             <p className="mt-6 text-xl leading-8">
               <strong>
-                Ahora te dejaremos dos pequeñas tareas para poder aprobar el
-                curso y tener tu certificado, ¡no te asustes, con todo lo que
-                has aprendido estamos seguras que lo obtendrás! 🎉
+              Ahora te dejaremos una pequeña tarea para poder aprobar el curso y tener tu certificado, ¡no te asustes, con todo lo que has aprendido estamos seguras que lo obtendrás! 🎉
               </strong>
             </p>
             <br />
@@ -1434,11 +1424,14 @@ export default function ChatGPT({ subtitle, title, body, text }: PageProps) {
                 respuestas para hacer que la conversación fluya de manera
                 natural.
               </li>
+              <li className="mt-6 text-xl leading-8">
+              Cuando lo hagas, debes tomar un screenshot de la respuesta que te de ChatGPT y subirlo como “Tarea final”
+              </li>
             </ul>
           </>
         ) : null}
 
-        {currentPage === 13 ? (
+        {currentPage === 12 ? (
           <>
             <p className=" text-xl leading-8">
               <strong>
@@ -1458,7 +1451,8 @@ export default function ChatGPT({ subtitle, title, body, text }: PageProps) {
           </>
         ) : null}
       </div>
-    </div><nav className="flex items-center justify-between border-t border-gray-200 px-4 sm:px-0">
+    </div>
+    <nav className=" flex items-center justify-between border-t border-gray-200 px-4 sm:px-0">
         <div className="-mt-px flex w-0 flex-1">
           <a
             onClick={() => setCurrentPage(currentPage - 1)}
@@ -1467,7 +1461,7 @@ export default function ChatGPT({ subtitle, title, body, text }: PageProps) {
             <ArrowLongLeftIcon
               className="mr-3 h-5 w-5 text-gray-400"
               aria-hidden="true" />
-            Previous
+            Anterior
           </a>
         </div>
 
@@ -1476,7 +1470,7 @@ export default function ChatGPT({ subtitle, title, body, text }: PageProps) {
             onClick={() => setCurrentPage(currentPage + 1)}
             className="inline-flex items-center border-t-2 border-transparent pl-1 pt-4 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700 hover:cursor-pointer"
           >
-            Next
+            Siguiente
             <ArrowLongRightIcon
               className="ml-3 h-5 w-5 text-gray-400"
               aria-hidden="true" />
