@@ -22,6 +22,7 @@ import {
 import { ChildProcess } from "child_process";
 import Image from "next/image";
 import profileImage from "../../public/favicon.ico"
+import homeImg from "../../public/home.png"
 
 const navigation = [
   { name: "Inicio", href: "/", icon: HomeIcon, current: true },
@@ -291,7 +292,9 @@ export default function Dashboard({ children }: Props) {
       <main className="py-10 lg:pl-72">
         <div className="px-4 sm:px-6 lg:px-8">
           <div>
-            {children ? <div>{children}</div> : <><div className="text-center pt-12 md:pb-16">
+            {children ? <div>{children}</div> : <>
+            
+            <div className="text-center pt-12 md:pb-16">
               <h1
                 className="text-4xl md:text-5xl font-extrabold leading-tighter tracking-tighter mb-4"
                 data-aos="zoom-y-out"
@@ -300,6 +303,19 @@ export default function Dashboard({ children }: Props) {
                 <br/>comiendo Kiwi 🥝
                 
               </h1>
+              <div className="text-center">
+  <div className="w-full max-w-3xl mx-auto">
+    <Image
+      src={homeImg}
+      alt="Logo"
+      width={600}
+      height={600}
+      className="mx-auto"
+      style={{ objectFit: "cover", objectPosition: "center" }}
+    />
+  </div>
+</div>
+
 
             </div></>
             }
