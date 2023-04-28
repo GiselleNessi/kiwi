@@ -518,11 +518,7 @@ export default function ChatGPT({ subtitle, title, body, text }: PageProps) {
 
             <p className="mt-6 text-xl leading-8">
               <strong>
-              Tarea 2: Escribe 2 preguntas a ChatGPT siguiendo los principios
-              de claridad, enfoque y relevancia. Sé creativo y original 🤪,
-              queremos que te diviertas haciéndolo. Cuando termines, haz un
-              screenshot a tu pantalla y guárdala como &rdquo;Tarea 2&rdquo;,
-              al final del curso te pediremos subirla.{" "}
+              Tarea 2: Escribe 2 preguntas a ChatGPT siguiendo los principios de claridad, enfoque y relevancia. Sé creativo y original 🤪, queremos que te diviertas haciéndolo. Cuando termines, haz un screenshot a tu pantalla y súbelo a Twitter etiquetando a @CryptonikasDAO y poniendo el hashtag #Kiwitonikas. Haremos un ranking con las mejores respuestas, ¿listx para conquistar el primer lugar? 🏆. 
               </strong>
             </p>
           </>
@@ -670,12 +666,7 @@ export default function ChatGPT({ subtitle, title, body, text }: PageProps) {
             </p>
             <p className="mt-6 text-xl leading-8">
               <strong>
-              Tarea 3: Pongámonos filosóficos. Escribe una pregunta más
-              compleja a ChatGPT, algo que lo ponga a reflexionar. Recuerda
-              usar palabras que el bot entienda, guarda tu vocabulario lujoso
-              para la cena con tus suegros 🤣. ¡Sé creativo!. Cuando termines,
-              haz un screenshot y guárdalo como &rdquo;Tarea 3&rdquo;, al
-              final del curso te pediremos subirla.{" "}
+              Tarea 3: Pongámonos filosóficos. Escribe una pregunta más compleja a ChatGPT, algo que lo ponga a reflexionar. Recuerda usar palabras que el bot entienda, guarda tu vocabulario lujoso para la cena con tus suegros 🤣. ¡Sé creativo!. Cuando termines, haz un screenshot a tu pantalla y súbelo a Twitter etiquetando a @CryptonikasDAO y poniendo el hashtag #Kiwitonikas. Recuerda que haremos un ranking con las mejores respuestas, ¿será que tus respuestas son lo suficientemente divertidas para estar el top?.
               </strong>
             </p>
           </>
@@ -894,13 +885,8 @@ export default function ChatGPT({ subtitle, title, body, text }: PageProps) {
               comunes.
             </p>
             <p className="mt-6 text-xl leading-8">
-              <strong>Tarea 5: Usa el truco &rdquo;actúa como&rdquo;
-              en ChatGPT. Puedes pedirle que te responda como un personaje
-              ficticio o que te responda como un profesional en cualquier
-              área. Las posibilidades son infinitas, pero queremos ver qué tan
-              creativo puedes ser. Cuando termines, haz un screenshot y
-              guárdalo como &rdquo;Tarea 5&rdquo;, al final del curso te
-              pediremos subirla.
+              <strong>
+              Tarea 5: Usa el truco &rdquo;actúa como&rdquo; en ChatGPT. Puedes pedirle que te responda como un personaje ficticio o que te responda como un profesional en cualquier área. Las posibilidades son infinitas, pero queremos ver qué tan creativo puedes ser. Cuando termines, haz un screenshot a tu pantalla y súbelo a Twitter etiquetando a @CryptonikasDAO y poniendo el hashtag #Kiwitonikas. Estamos acercándonos al final del curso, si aún no has entrado en el top del ranking, éste es tu momento. 
               </strong>
             </p>
           </>
@@ -1425,7 +1411,7 @@ export default function ChatGPT({ subtitle, title, body, text }: PageProps) {
                 natural.
               </li>
               <li className="mt-6 text-xl leading-8">
-              Cuando lo hagas, debes tomar un screenshot de la respuesta que te de ChatGPT y subirlo como “Tarea final”
+              Tarea final: Cuando termines la tarea haz un screenshot a tu pantalla y súbelo a Twitter etiquetando a @CryptonikasDAO y poniendo el hashtag #Kiwitonikas. ¡Esta es tu última oportunidad de poder estar en el top del ranking!
               </li>
             </ul>
           </>
