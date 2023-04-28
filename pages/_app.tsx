@@ -23,7 +23,7 @@ function MyApp({ Component, pageProps }: AppProps) {
           />
           <meta
             name="description"
-            content="Learn how to use the thirdweb Auth SDK to create an NFT Gated Website"
+            content="Kiwi creado por Cryptonikas"
           />
           <script src="//embed.typeform.com/next/embed.js" async></script>
         </Head>
