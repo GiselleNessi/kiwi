@@ -81,6 +81,7 @@ const pages = [
 export default function ChatGPT({ subtitle, title, body, text }: PageProps) {
   const address = useAddress(); // Get the user's address
   const [currentPage, setCurrentPage] = useState(0);
+  const totalPages = 13; // replace with the total number of pages
   console.log(currentPage);
 
   const { logout } = useLogout();
@@ -1488,39 +1489,43 @@ El costo del certificado es 1 MATIC
           ) : null}
         </div>
       </div>
-      <nav className=" flex items-center justify-between border-t border-gray-200 px-4 sm:px-0">
-        <div className="-mt-px flex w-0 flex-1">
-          <a
-             onClick={() => {
-              setCurrentPage(currentPage - 1);
-              scrollToTop();
-            }}
-            className="inline-flex items-center border-t-2 border-transparent pr-1 pt-4 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700 hover:cursor-pointer"
-          >
-            <ArrowLongLeftIcon
-              className="mr-3 h-5 w-5 text-gray-400"
-              aria-hidden="true"
-            />
-            Anterior
-          </a>
-        </div>
+      <nav className="flex items-center justify-between border-t border-gray-200 px-4 sm:px-0">
+  <div className="-mt-px flex w-0 flex-1">
+    <a
+      onClick={() => {
+        if (currentPage > 0) {
+          setCurrentPage(currentPage - 1);
+          scrollToTop();
+        }
+      }}
+      className="inline-flex items-center border-t-2 border-transparent pr-1 pt-4 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700 hover:cursor-pointer"
+    >
+      <ArrowLongLeftIcon
+        className="mr-3 h-5 w-5 text-gray-400"
+        aria-hidden="true"
+      />
+      Anterior
+    </a>
+  </div>
 
-        <div className="-mt-px flex w-0 flex-1 justify-end">
-          <a
-            onClick={() => {
-              setCurrentPage(currentPage + 1);
-              scrollToTop();
-            }}
-            className="inline-flex items-center border-t-2 border-transparent pl-1 pt-4 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700 hover:cursor-pointer"
-          >
-            Siguiente
-            <ArrowLongRightIcon
-              className="ml-3 h-5 w-5 text-gray-400"
-              aria-hidden="true"
-            />
-          </a>
-        </div>
-      </nav>
+  <div className="-mt-px flex w-0 flex-1 justify-end">
+    <a
+      onClick={currentPage === totalPages - 1 ? undefined : () => {
+        setCurrentPage(currentPage + 1);
+        scrollToTop();
+      }}
+      className={`inline-flex items-center border-t-2 border-transparent pl-1 pt-4 text-sm font-medium ${
+        currentPage === totalPages - 1 ? 'text-gray-400 cursor-not-allowed' : 'text-gray-500 hover:border-gray-300 hover:text-gray-700 hover:cursor-pointer'
+      }`}
+    >
+      Siguiente
+      <ArrowLongRightIcon
+        className="ml-3 h-5 w-5 text-gray-400"
+        aria-hidden="true"
+      />
+    </a>
+  </div>
+</nav>
     </Dashboard>
   );
 }

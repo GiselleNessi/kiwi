@@ -24,7 +24,7 @@ import Image from "next/image";
 import profileImage from "../../public/favicon.ico"
 
 const navigation = [
-  { name: "Home", href: "/", icon: HomeIcon, current: true },
+  { name: "Inicio", href: "/", icon: HomeIcon, current: true },
   {
     name: "Comunidad",
     href: "https://t.me/+h34sjsoM2ZllNzZh",
