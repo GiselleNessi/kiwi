@@ -52,7 +52,7 @@ export default function Login() {
                   data-aos="zoom-y-out"
                   data-aos-delay="150"
                 >
-                  Presentamos Kiwi🥝 , la herramienta para creadores de contenido hispano hablantes que usa tecnología Blockchain para avalar la finalización de un contenido educativo con un NFT 🧩
+                  Presentamos Kiwi 🥝 , la herramienta para creadores de contenido hispano hablantes que usa tecnología Blockchain para avalar la finalización de un contenido educativo con un NFT 🧩
                 </p>
                 <hr />
                 <div className="mt-10 flex items-center justify-center gap-x-6">
@@ -63,8 +63,8 @@ export default function Login() {
                 <>
                   {address ? (
                     <p className="text-white">
-                      Bienvenidxs 🛸 , {address?.slice(0, 6)}...
-                      {address?.slice(-4)}
+                      ¡Bievenidx, {address?.slice(0, 6)}...
+                      {address?.slice(-4)}!
                     </p>
                   ) : (
                     <p className="text-white">
