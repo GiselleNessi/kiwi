@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { ThirdwebSDK } from "@thirdweb-dev/sdk";
-import { useAddress, useLogout, useUser } from "@thirdweb-dev/react";
+import { Web3Button, useAddress, useLogout, useUser } from "@thirdweb-dev/react";
 import { getUser } from "../../auth.config";
 import { useRouter } from "next/router";
 import checkBalance from "../../utils/checkBalance";
@@ -1431,8 +1431,18 @@ export default function ChatGPT({ subtitle, title, body, text }: PageProps) {
             <p className="mt-6 text-xl leading-8">
             Ahora puedes presumir tus skills. Cuando recibas el certificado, sube una foto en Twitter y etiquétanos usando el hashtag #Kiwitonikas 🥝
             </p>
-            <div className="mt-6">
-              <TypeformWidget />
+          
+            <div className="mx-auto w-600">
+  
+            <div className="mb-6 mt-6 ml-16">
+            <iframe
+    src="https://ipfs.thirdwebcdn.com/ipfs/QmfK9mw9eQKE9vCbtZht9kygpkNWffdwibsJPnCo7MBN4M/erc1155.html?contract=0x47DA47429F0127EDd178cc36ebDEc58874310220&chain=%7B%22name%22%3A%22Polygon+Mainnet%22%2C%22chain%22%3A%22Polygon%22%2C%22rpc%22%3A%5B%22https%3A%2F%2Fpolygon.rpc.thirdweb.com%2F5a9bc94b87f7cbbbfbbc234bf1e07f0adf5f3cf3012c9f26f9fc9820d64df93a%22%5D%2C%22nativeCurrency%22%3A%7B%22name%22%3A%22MATIC%22%2C%22symbol%22%3A%22MATIC%22%2C%22decimals%22%3A18%7D%2C%22shortName%22%3A%22matic%22%2C%22chainId%22%3A137%2C%22testnet%22%3Afalse%2C%22slug%22%3A%22polygon%22%7D&tokenId=0&primaryColor=green"
+    width="600px"
+    height="600px"
+    ></iframe>
+  
+
+            </div>
             </div>
           </>
         ) : null}
