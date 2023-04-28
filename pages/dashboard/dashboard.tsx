@@ -1,6 +1,6 @@
 import React, { ReactNode, useEffect } from "react";
 import { ThirdwebSDK } from "@thirdweb-dev/sdk";
-import { useLogout, useUser } from "@thirdweb-dev/react";
+import { useAddress, useLogout, useUser } from "@thirdweb-dev/react";
 import { getUser } from "../../auth.config";
 import { useRouter } from "next/router";
 import checkBalance from "../../utils/checkBalance";
@@ -20,6 +20,8 @@ import {
   QuestionMarkCircleIcon,
 } from "@heroicons/react/24/outline";
 import { ChildProcess } from "child_process";
+import Image from "next/image";
+import profileImage from "../../public/favicon.ico"
 
 const navigation = [
   { name: "Home", href: "/", icon: HomeIcon, current: true },
@@ -67,6 +69,7 @@ export default function Dashboard({ children }: Props) {
   const { logout } = useLogout();
   const { isLoggedIn, isLoading } = useUser();
   const router = useRouter();
+  const address = useAddress(); // Get the user's address
 
   const handleLogout = async () => {
     await logout();
@@ -185,13 +188,24 @@ export default function Dashboard({ children }: Props) {
                   href="#"
                   className="flex items-center gap-x-4 py-3 text-sm font-semibold leading-6 text-white hover:bg-gray-800"
                 >
-                  <img
-                    className="h-8 w-8 rounded-full bg-gray-800"
-                    src="https://img.seadn.io/files/2f76c1d4964b0cb327f0081c48ce14e2.png?fit=max&w=600"
-                    alt=""
-                  />
+                 
+                   <Image
+                src={profileImage}
+                alt="Logo"
+                width={8}
+                height={8}
+                className="h-8 w-8 rounded-full bg-gray-800"
+              />
                   <span className="sr-only">Your profile</span>
-                  <span aria-hidden="true">Giselle</span>
+                  <span aria-hidden="true">
+                  <p className="text-sm leading-8">
+                Bienvenidxs
+              
+                  {" "}
+                  {address?.slice(0, 6)}...{address?.slice(-4)}{" "}
+              
+              </p>
+              </span>
                 </a>
               </li>
               <li>
