@@ -27,7 +27,7 @@ const navigation = [
   { name: "Home", href: "/", icon: HomeIcon, current: true },
   {
     name: "Comunidad",
-    href: "https://discord.gg/d6Bp55mY",
+    href: "https://t.me/+h34sjsoM2ZllNzZh",
     icon: UsersIcon,
     current: false,
     target: "_blank", 
@@ -293,10 +293,11 @@ export default function Dashboard({ children }: Props) {
           <div>
             {children ? <div>{children}</div> : <><div className="text-center pt-12 md:pb-16">
               <h1
-                className="text-5xl md:text-6xl font-extrabold leading-tighter tracking-tighter mb-4"
+                className="text-4xl md:text-5xl font-extrabold leading-tighter tracking-tighter mb-4"
                 data-aos="zoom-y-out"
               >
-                Móntate en la nave 🛸 comiendo Kiwi 🥝
+                Móntate en la nave 🛸 
+                <br/>comiendo Kiwi 🥝
                 
               </h1>
 

@@ -93,6 +93,13 @@ export default function ChatGPT({ subtitle, title, body, text }: PageProps) {
     router.push("/login");
   };
 
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  }
+
   useEffect(() => {
     if (!isLoading && !isLoggedIn) {
       router.push("/login");
@@ -1484,7 +1491,10 @@ El costo del certificado es 1 MATIC
       <nav className=" flex items-center justify-between border-t border-gray-200 px-4 sm:px-0">
         <div className="-mt-px flex w-0 flex-1">
           <a
-            onClick={() => setCurrentPage(currentPage - 1)}
+             onClick={() => {
+              setCurrentPage(currentPage - 1);
+              scrollToTop();
+            }}
             className="inline-flex items-center border-t-2 border-transparent pr-1 pt-4 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700 hover:cursor-pointer"
           >
             <ArrowLongLeftIcon
@@ -1497,7 +1507,10 @@ El costo del certificado es 1 MATIC
 
         <div className="-mt-px flex w-0 flex-1 justify-end">
           <a
-            onClick={() => setCurrentPage(currentPage + 1)}
+            onClick={() => {
+              setCurrentPage(currentPage + 1);
+              scrollToTop();
+            }}
             className="inline-flex items-center border-t-2 border-transparent pl-1 pt-4 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700 hover:cursor-pointer"
           >
             Siguiente
