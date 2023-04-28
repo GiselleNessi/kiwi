@@ -16,7 +16,7 @@ function MyApp({ Component, pageProps }: AppProps) {
       }}
     >
         <Head>
-          <title>Welcome to CKS Private Area</title>
+          <title>CKS - Kiwi Beta</title>
           <meta
             name="viewport"
             content="width=device-width, initial-scale=1.0"

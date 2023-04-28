@@ -32,12 +32,7 @@ const navigation = [
     current: false,
     target: "_blank", 
   },
-  {
-    name: "Video",
-    href: "/dashboard/asset",
-    icon: QuestionMarkCircleIcon,
-    current: false,
-  },
+  
 ];
 const teams = [
   {
@@ -138,13 +133,13 @@ export default function Dashboard({ children }: Props) {
                   </div>
                 </Transition.Child>
                 {/* Sidebar component, swap this element with another sidebar if you like */}
-                <div className="flex grow flex-col gap-y-5 overflow-y-auto bg-gray-900 px-6 pb-2 ring-1 ring-white/10">
+                <div className="flex grow flex-col gap-y-5 overflow-y-auto bg-zinc-950 px-6 pb-2 ring-1 ring-white/10">
                   <div className="flex h-16 shrink-0 items-center">🥝</div>
                   <nav className="flex flex-1 flex-col">
                     <ul role="list" className="flex flex-1 flex-col gap-y-7">
                       <li>
                         <div className="text-xs font-semibold leading-6 text-gray-400">
-                          Your Courses
+                          Cursos
                         </div>
                         <ul role="list" className="-mx-2 mt-2 space-y-1">
                           {teams.map((team) => (
@@ -179,7 +174,7 @@ export default function Dashboard({ children }: Props) {
       {/* Static sidebar for desktop */}
       <div className="hidden lg:fixed lg:inset-y-0 lg:z-50 lg:flex lg:w-72 lg:flex-col">
         {/* Sidebar component, swap this element with another sidebar if you like */}
-        <div className="flex grow flex-col gap-y-5 overflow-y-auto bg-gray-900 px-6">
+        <div className="flex grow flex-col gap-y-5 overflow-y-auto bg-zinc-950 px-6">
 
           <nav className="flex flex-1 flex-col">
             <ul role="list" className="flex flex-1 flex-col gap-y-7">
@@ -210,7 +205,7 @@ export default function Dashboard({ children }: Props) {
               </li>
               <li>
                 <div className="text-xs font-semibold leading-6 text-gray-400">
-                  Your courses
+                  Cursos
                 </div>
                 <ul role="list" className="-mx-2 mt-2 space-y-1">
                   {teams.map((team) => (
@@ -296,7 +291,17 @@ export default function Dashboard({ children }: Props) {
       <main className="py-10 lg:pl-72">
         <div className="px-4 sm:px-6 lg:px-8">
           <div>
-            {children ? <div>{children}</div> : <p>Welcome to Kiwi 🥝 </p>}
+            {children ? <div>{children}</div> : <><div className="text-center pt-12 md:pb-16">
+              <h1
+                className="text-5xl md:text-6xl font-extrabold leading-tighter tracking-tighter mb-4"
+                data-aos="zoom-y-out"
+              >
+                Móntate en la nave 🛸 comiendo Kiwi 🥝
+                
+              </h1>
+
+            </div></>
+            }
           </div>
         </div>
       </main>

@@ -52,8 +52,7 @@ export default function Login() {
                   data-aos="zoom-y-out"
                   data-aos-delay="150"
                 >
-                  A tool for hispanic creators, allow users to create,
-                  share and learn, without worrying about their privacy.
+                  Presentamos Kiwi🥝 , la herramienta para creadores de contenido hispano hablantes que usa tecnología Blockchain para avalar la finalización de un contenido educativo con un NFT 🧩
                 </p>
                 <hr />
                 <div className="mt-10 flex items-center justify-center gap-x-6">
@@ -69,7 +68,8 @@ export default function Login() {
                     </p>
                   ) : (
                     <p className="text-white">
-                      Please connect your wallet and sign in to continue.
+                      Porfavor conecta tu wallet y luego haz sign in para continuar.
+                     
                     </p>
                   )}
 
