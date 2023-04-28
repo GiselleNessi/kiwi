@@ -223,7 +223,7 @@ export default function Dashboard({ children }: Props) {
         <div className="flex grow flex-col gap-y-5 overflow-y-auto bg-zinc-950 px-6">
           <nav className="flex flex-1 flex-col">
             <ul role="list" className="flex flex-1 flex-col gap-y-7">
-              <li className="mt-4">
+              <li className="mt-4 flex">
                 <Image
                   src={profileImage}
                   alt="Logo"
@@ -232,7 +232,7 @@ export default function Dashboard({ children }: Props) {
                   className="h-8 w-8 rounded-full bg-gray-800"
                 />
 
-                <p className="text-sm leading-8">
+                <p className="text-sm leading-8 text-white ml-2">
                   Bienvenidx {address?.slice(0, 6)}...{address?.slice(-4)}{" "}
                 </p>
               </li>
