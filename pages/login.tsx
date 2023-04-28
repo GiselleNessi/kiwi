@@ -79,6 +79,14 @@ export default function Login() {
                       tener el NFT en su billetera.
                     </p>
                   )}
+
+<p className="text-white mt-6">
+<span className="bg-clip-text text-transparent bg-gradient-to-r from-green-500 to-teal-400">
+               
+  Creado por <a href="https://www.cryptonikasdao.xyz/" target="_blank" rel="noopener noreferrer" className="underline">Cryptonikas</a>
+  
+                </span>
+</p>
                 </>
               </div>
             </div>

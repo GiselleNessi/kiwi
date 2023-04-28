@@ -22,10 +22,10 @@ import {
 import { ChildProcess } from "child_process";
 import Image from "next/image";
 import profileImage from "../../public/favicon.ico"
-import homeImg from "../../public/home.png"
+import homeImg from "../../public/home.jpeg"
 
 const navigation = [
-  { name: "Inicio", href: "/", icon: HomeIcon, current: true },
+  { name: "Inicio", href: "/", icon: HomeIcon, current: false },
   {
     name: "Comunidad",
     href: "https://t.me/+h34sjsoM2ZllNzZh",
@@ -195,7 +195,7 @@ export default function Dashboard({ children }: Props) {
                   <span className="sr-only">Your profile</span>
                   <span aria-hidden="true">
                   <p className="text-sm leading-8">
-                Bienvenidxs
+                Bienvenidx
               
                   {" "}
                   {address?.slice(0, 6)}...{address?.slice(-4)}{" "}
@@ -230,9 +230,9 @@ export default function Dashboard({ children }: Props) {
                 </ul>
               </li>
 
-              <ul role="list" className="-mx-6 mt-auto">
+              <ul role="list" className="mt-auto mt-2 space-y-1">
                 {navigation.map((item) => (
-                  <li key={item.name} className="ml-4 mt-2">
+                  <li key={item.name}>
                     <a
                       href={item.href}
                       className={classNames(
