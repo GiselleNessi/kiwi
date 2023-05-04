@@ -4,7 +4,7 @@ import "../styles/globals.css";
 import Head from "next/head";
 import { domainName } from "../const/yourDetails";
 
-const activeChain = "ethereum";
+const activeChain = "polygon";
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
@@ -25,7 +25,6 @@ function MyApp({ Component, pageProps }: AppProps) {
             name="description"
             content="Kiwi creado por Cryptonikas"
           />
-          <script src="//embed.typeform.com/next/embed.js" async></script>
         </Head>
 
         <Component {...pageProps} />

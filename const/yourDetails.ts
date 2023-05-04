@@ -1,5 +1,5 @@
 // Replace this with your contract address
-export const contractAddress = "0xf93bf510e387740602C79B951fcB81a58405C112";
+export const contractAddress = "0xD8D79CEA441C59F36e849eD73FbB74D5F87E5986";
 
 // Replace this with your domain name.
 export const domainName = "https://www.cryptonikasdao.xyz/";

@@ -7,7 +7,7 @@ import {
 
 export default async function checkBalance(sdk, address) {
   const contract = await sdk.getContract(
-    contractAddress // replace this with your contract address
+    contractAddress, // replace this with your contract address
   );
 
   let balance;
