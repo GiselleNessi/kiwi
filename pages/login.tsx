@@ -1,6 +1,8 @@
 import { ConnectWallet, useAddress, Web3Button } from "@thirdweb-dev/react";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
+import { ThirdwebNftMedia, useContract, useNFT } from "@thirdweb-dev/react";
+import { ArrowUpRightIcon } from "@heroicons/react/20/solid";
 
 
 export default function Login() {
@@ -8,6 +10,12 @@ export default function Login() {
   const address = useAddress(); // Get the user's address
   const router = useRouter();
   const missingNft = router.query.missingNft === "true";
+
+  // Connect to your NFT contract
+  const { contract } = useContract("0xD8D79CEA441C59F36e849eD73FbB74D5F87E5986");
+  // Load the NFT metadata from the contract using a hook
+  const { data: nft, isLoading, error } = useNFT(contract, "0");
+
 
   useEffect(() => {
     // Check if the wallet is connected and the required NFT is not missing
@@ -19,6 +27,11 @@ export default function Login() {
       router.push("/");
     }
   }, [address, missingNft, router]);
+
+
+  // Render the NFT onto the UI
+  if (isLoading) return <div>Loading...</div>;
+  if (error || !nft) return <div>NFT not found</div>;
 
   return (
     <section className="relative bg-black flex flex-col h-screen justify-center items-center">
@@ -45,7 +58,23 @@ export default function Login() {
                 finalización de un contenido educativo con un NFT 🧩
               </p>
               <hr />
-              <div className="mt-10 flex items-center justify-center gap-x-6">
+              <div className="flex text-center justify-center">
+              <h2 className="text-white mt-6 text-xl">
+                <span className="bg-clip-text text-transparent bg-gradient-to-r from-green-500 to-teal-400">
+                  <a
+                    href="https://www.cryptonikasdao.xyz/betapass"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="underline"
+                  >
+                    Mintea Kiwi betapass 
+                  
+                  </a>
+                </span>
+              </h2>
+              <ArrowUpRightIcon className="mt-7 w-5 h-5 text-white" aria-hidden="true" />
+              </div>
+              <div className="mt-4 flex items-center justify-center gap-x-6">
                 <ConnectWallet />
               </div>
               <br></br>
@@ -70,7 +99,9 @@ export default function Login() {
                   </p>
                 )}
 
-                <p className="text-white mt-6">
+                {/* <ThirdwebNftMedia metadata={nft.metadata} /> */}
+
+                <p className="text-white mt-6 mb-10">
                   <span className="bg-clip-text text-transparent bg-gradient-to-r from-green-500 to-teal-400">
                     Creado por{" "}
                     <a
