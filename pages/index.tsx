@@ -78,7 +78,7 @@ export async function getServerSideProps(context: {
     console.log("User", user.address, "doesn't have an NFT! Redirecting...");
     return {
       redirect: {
-        destination: "/login",
+        destination: "/login?missingNft=true",
         permanent: false,
       },
     };

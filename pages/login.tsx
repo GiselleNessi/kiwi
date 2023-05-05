@@ -8,14 +8,11 @@ import { ArrowUpRightIcon } from "@heroicons/react/20/solid";
 export default function Login() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const address = useAddress(); // Get the user's address
+  
   const router = useRouter();
   const missingNft = router.query.missingNft === "true";
 
-  // Connect to your NFT contract
-  const { contract } = useContract("0xD8D79CEA441C59F36e849eD73FbB74D5F87E5986");
-  // Load the NFT metadata from the contract using a hook
-  const { data: nft, isLoading, error } = useNFT(contract, "0");
-
+  
 
   useEffect(() => {
     // Check if the wallet is connected and the required NFT is not missing
@@ -27,11 +24,6 @@ export default function Login() {
       router.push("/");
     }
   }, [address, missingNft, router]);
-
-
-  // Render the NFT onto the UI
-  if (isLoading) return <div>Loading...</div>;
-  if (error || !nft) return <div>NFT not found</div>;
 
   return (
     <section className="relative bg-black flex flex-col h-screen justify-center items-center">
@@ -92,14 +84,11 @@ export default function Login() {
                   </p>
                 )}
 
-                {missingNft && address && (
-                  <p className="text-red-500 mt-2">
-                    No se encontró el NFT requerido. Por favor, asegúrese de
-                    tener el NFT en su billetera.
-                  </p>
-                )}
-
-                {/* <ThirdwebNftMedia metadata={nft.metadata} /> */}
+                {missingNft && (
+                    <p className="text-red-500 mt-2">
+                      No tienes el NFT requerido. Por favor, asegúrate de tenerlo en tu billetera.
+                    </p>
+                  )}
 
                 <p className="text-white mt-6 mb-10">
                   <span className="bg-clip-text text-transparent bg-gradient-to-r from-green-500 to-teal-400">
