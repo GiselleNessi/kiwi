@@ -4,15 +4,12 @@ import { useRouter } from "next/router";
 import { ThirdwebNftMedia, useContract, useNFT } from "@thirdweb-dev/react";
 import { ArrowUpRightIcon } from "@heroicons/react/20/solid";
 
-
 export default function Login() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const address = useAddress(); // Get the user's address
-  
+
   const router = useRouter();
   const missingNft = router.query.missingNft === "true";
-
-  
 
   useEffect(() => {
     // Check if the wallet is connected and the required NFT is not missing
@@ -45,26 +42,28 @@ export default function Login() {
                 data-aos="zoom-y-out"
                 data-aos-delay="150"
               >
-                Presentamos Kiwi 🥝 , la herramienta para creadores de contenido
-                hispano hablantes que usa tecnología Blockchain para avalar la
-                finalización de un contenido educativo con un NFT 🧩
+                Presentamos Kiwi 🥝, la herramienta para creadores de contenido
+                hispanohablantes que usa tecnología Blockchain y certifica con
+                un NFT a quienes terminan el contenido educativo 🧩
               </p>
               <hr />
               <div className="flex text-center justify-center">
-              <h2 className="text-white mt-6 text-xl">
-                <span className="bg-clip-text text-transparent bg-gradient-to-r from-green-500 to-teal-400">
-                  <a
-                    href="https://www.cryptonikasdao.xyz/betapass"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="underline"
-                  >
-                    Mintea Kiwi betapass 
-                  
-                  </a>
-                </span>
-              </h2>
-              <ArrowUpRightIcon className="mt-7 w-5 h-5 text-white" aria-hidden="true" />
+                <h2 className="text-white mt-6 text-xl">
+                  <span className="bg-clip-text text-transparent bg-gradient-to-r from-green-500 to-teal-400">
+                    <a
+                      href="https://www.cryptonikasdao.xyz/betapass"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="underline"
+                    >
+                      Mintea Kiwi betapass
+                    </a>
+                  </span>
+                </h2>
+                <ArrowUpRightIcon
+                  className="mt-7 w-5 h-5 text-white"
+                  aria-hidden="true"
+                />
               </div>
               <div className="mt-4 flex items-center justify-center gap-x-6">
                 <ConnectWallet />
@@ -85,10 +84,11 @@ export default function Login() {
                 )}
 
                 {missingNft && (
-                    <p className="text-red-500 mt-2">
-                      No tienes el NFT requerido. Por favor, asegúrate de tenerlo en tu billetera.
-                    </p>
-                  )}
+                  <p className="text-red-500 mt-2">
+                    No tienes el NFT requerido. Por favor, asegúrate de tenerlo
+                    en tu billetera.
+                  </p>
+                )}
 
                 <p className="text-white mt-6 mb-10">
                   <span className="bg-clip-text text-transparent bg-gradient-to-r from-green-500 to-teal-400">
