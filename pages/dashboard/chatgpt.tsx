@@ -38,24 +38,24 @@ const pages = [
       "¿Quieres aprender cómo ser un ninja en la redacción de prompts para Chat GPT?",
   },
   {
-    title: "1.¡Bienvenidos! 🤩",
+    title: "1. ¡Bienvenidos! 🤩",
   },
   {
-    title: "2.Introducción 📖",
+    title: "2. Introducción 📖",
   },
   {
-    title: "3.¿Qué es ChatGPT y cómo funciona? 🤖",
+    title: "3. ¿Qué es ChatGPT y cómo funciona? 🤖",
   },
   {
-    title: "4.¿Cómo los prompts impulsan tus chats con Chat GPT? 🚀💬",
-  },
-  {
-    title:
-      "5.Consejos para evitar la confusión y el lenguaje técnico en ChatGPT",
+    title: "4. ¿Cómo los prompts impulsan tus chats con Chat GPT? 🚀💬",
   },
   {
     title:
-      "6.¡Haz que ChatGPT te entienda! Aprende a crear mensajes efectivos con estos consejos 🤖💬",
+      "5. Consejos para evitar la confusión y el lenguaje técnico en ChatGPT",
+  },
+  {
+    title:
+      "6. ¡Haz que ChatGPT te entienda! Aprende a crear mensajes efectivos con estos consejos 🤖💬",
   },
   {
     title:
@@ -97,9 +97,9 @@ export default function ChatGPT({ subtitle, title, body, text }: PageProps) {
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
-      behavior: "smooth"
+      behavior: "smooth",
     });
-  }
+  };
 
   useEffect(() => {
     if (!isLoading && !isLoggedIn) {
@@ -116,17 +116,17 @@ export default function ChatGPT({ subtitle, title, body, text }: PageProps) {
           </p>
           <br />
           {currentPage === 0 ? (
-            <div>
-              <br />
+            <div
+              className="relative mt-6 mb-6"
+              style={{ paddingTop: "56.25%" }}
+            >
               <iframe
                 src="https://lvpr.tv?v=bb696iluhg7rdync"
                 allowFullScreen
                 allow="autoplay; encrypted-media; picture-in-picture"
                 sandbox="allow-scripts"
-                width="720"
-                height="400"
+                className="absolute inset-0 w-full h-full"
               ></iframe>
-              <br />
             </div>
           ) : null}
           <h1 className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
@@ -226,18 +226,19 @@ export default function ChatGPT({ subtitle, title, body, text }: PageProps) {
                 tips y le saques el jugo a esta maravilla de la tecnología. 🚀
               </p>
 
-              <div>
-                <br />
+              <div
+                className="relative mt-6 mb-6"
+                style={{ paddingTop: "56.25%" }}
+              >
                 <iframe
                   src="https://lvpr.tv?v=f96c3fqqjz5iqll3"
                   allowFullScreen
                   allow="autoplay; encrypted-media; picture-in-picture"
                   sandbox="allow-scripts"
-                  width="600"
-                  height="400"
+                  className="absolute inset-0 w-full h-full"
                 ></iframe>
-                <br />
               </div>
+
               <p className="mt-6 text-xl leading-8">
                 Antes de empezar, ¿sabes qué es ChatGPT? No te preocupes si no
                 lo tienes muy claro, te lo contamos: ChatGPT (Generative
@@ -365,18 +366,20 @@ export default function ChatGPT({ subtitle, title, body, text }: PageProps) {
                 Te contamos algunos de los usos más divertidos y útiles de esta
                 herramienta 🔍🤖
               </p>
-              <div>
-                <br />
+
+              <div
+                className="relative mt-6 mb-6"
+                style={{ paddingTop: "56.25%" }}
+              >
                 <iframe
                   src="https://lvpr.tv?v=5470w5nt8fr31mii"
                   allowFullScreen
                   allow="autoplay; encrypted-media; picture-in-picture"
                   sandbox="allow-scripts"
-                  width="600"
-                  height="400"
+                  className="absolute inset-0 w-full h-full"
                 ></iframe>
-                <br />
               </div>
+
               <p className="mt-6 text-xl leading-8">
                 📞 Atención al cliente: ¿Necesitas ayuda para comprar esos
                 zapatos que tanto quieres en la tienda en línea a altas horas de
@@ -430,18 +433,20 @@ export default function ChatGPT({ subtitle, title, body, text }: PageProps) {
                 que conduzcan a conversaciones interesantes?
               </p>
               <br />
-              <div>
-                <br />
+
+              <div
+                className="relative mt-6 mb-6"
+                style={{ paddingTop: "56.25%" }}
+              >
                 <iframe
                   src="https://lvpr.tv?v=f02543829ml8u8zz"
                   allowFullScreen
                   allow="autoplay; encrypted-media; picture-in-picture"
                   sandbox="allow-scripts"
-                  width="600"
-                  height="400"
+                  className="absolute inset-0 w-full h-full"
                 ></iframe>
-                <br />
               </div>
+
               <p className="mt-6 text-xl leading-8">
                 Pues bien, hay algunos principios clave que debes tener en
                 cuenta. Primero, ¡la claridad es fundamental! Asegúrate de que
@@ -559,18 +564,20 @@ export default function ChatGPT({ subtitle, title, body, text }: PageProps) {
                 aplicar estos principios para crear prompts efectivos y lograr
                 tus objetivos.
               </p>
-              <div>
-                <br />
+
+              <div
+                className="relative mt-6 mb-6"
+                style={{ paddingTop: "56.25%" }}
+              >
                 <iframe
                   src="https://lvpr.tv?v=a508pzq661okvwmp"
                   allowFullScreen
                   allow="autoplay; encrypted-media; picture-in-picture"
                   sandbox="allow-scripts"
-                  width="600"
-                  height="400"
+                  className="absolute inset-0 w-full h-full"
                 ></iframe>
-                <br />
               </div>
+
               <p className="mt-6 text-xl leading-8">
                 🎯 Define el propósito y el enfoque de la conversación. ¿Quieres
                 responder una pregunta, proporcionar información o simplemente
@@ -624,18 +631,20 @@ export default function ChatGPT({ subtitle, title, body, text }: PageProps) {
                   nítidos como la imagen en un día soleado:
                 </strong>
               </p>
-              <div>
-                <br />
+
+              <div
+                className="relative mt-6 mb-6"
+                style={{ paddingTop: "56.25%" }}
+              >
                 <iframe
                   src="https://lvpr.tv?v=4b78phhz6cp1ac96"
                   allowFullScreen
                   allow="autoplay; encrypted-media; picture-in-picture"
                   sandbox="allow-scripts"
-                  width="600"
-                  height="400"
+                  className="absolute inset-0 w-full h-full"
                 ></iframe>
-                <br />
               </div>
+
               <p className="mt-6 text-xl leading-8">
                 👉 Define la jerga o términos técnicos que necesitas utilizar.
                 ¡No des por hecho que todos saben lo que significan tus palabras
@@ -797,18 +806,20 @@ export default function ChatGPT({ subtitle, title, body, text }: PageProps) {
               <p className="mt-6 text-xl leading-8">
                 <strong>El truco &rdquo;Actúa como...&rdquo; </strong>
               </p>
-              <div>
-                <br />
+
+              <div
+                className="relative mt-6 mb-6"
+                style={{ paddingTop: "56.25%" }}
+              >
                 <iframe
                   src="https://lvpr.tv?v=9fealiajlt0dxsd6"
                   allowFullScreen
                   allow="autoplay; encrypted-media; picture-in-picture"
                   sandbox="allow-scripts"
-                  width="600"
-                  height="400"
+                  className="absolute inset-0 w-full h-full"
                 ></iframe>
-                <br />
               </div>
+
               <p className="mt-6 text-xl leading-8">
                 ¡Aquí te presento un truco que te encantará! Se llama
                 &rdquo;Actúa como&rdquo; y te permite indicar al ChatGPT que
@@ -946,18 +957,20 @@ export default function ChatGPT({ subtitle, title, body, text }: PageProps) {
                 consejos para que logres este objetivo.
               </p>
               <br />
-              <div>
-                <br />
+
+              <div
+                className="relative mt-6 mb-6"
+                style={{ paddingTop: "56.25%" }}
+              >
                 <iframe
                   src="https://lvpr.tv?v=cb79lhw05qt06cn3"
                   allowFullScreen
                   allow="autoplay; encrypted-media; picture-in-picture"
                   sandbox="allow-scripts"
-                  width="600"
-                  height="400"
+                  className="absolute inset-0 w-full h-full"
                 ></iframe>
-                <br />
               </div>
+
               <ul className="list-disc">
                 <li className="mt-6 text-xl leading-8">
                   No te emociones y no te pases con la información. Proporciona
@@ -1042,18 +1055,20 @@ export default function ChatGPT({ subtitle, title, body, text }: PageProps) {
                 👍
               </p>
               <br />
-              <div>
-                <br />
+
+              <div
+                className="relative mt-6 mb-6"
+                style={{ paddingTop: "56.25%" }}
+              >
                 <iframe
                   src="https://lvpr.tv?v=7ddddoszmu8yfmrs"
                   allowFullScreen
                   allow="autoplay; encrypted-media; picture-in-picture"
                   sandbox="allow-scripts"
-                  width="600"
-                  height="400"
+                  className="absolute inset-0 w-full h-full"
                 ></iframe>
-                <br />
               </div>
+
               <ul className="list-disc">
                 <li className="mt-6 text-xl leading-8">
                   El ChatGPT no entiende tu solicitud o te da una respuesta poco
@@ -1358,18 +1373,20 @@ export default function ChatGPT({ subtitle, title, body, text }: PageProps) {
                 Te dejamos los próximos pasos que debes seguir para seguir
                 mejorando tus habilidades:
               </p>
-              <div>
-                <br />
+
+              <div
+                className="relative mt-6 mb-6"
+                style={{ paddingTop: "56.25%" }}
+              >
                 <iframe
                   src="https://lvpr.tv?v=b368bgk0x37a13tv"
                   allowFullScreen
                   allow="autoplay; encrypted-media; picture-in-picture"
                   sandbox="allow-scripts"
-                  width="600"
-                  height="400"
+                  className="absolute inset-0 w-full h-full"
                 ></iframe>
-                <br />
               </div>
+
               <p className="mt-6 text-xl leading-8">
                 Primero y más importante, ¡practica! Cuanto más uses ChatGPT y
                 experimentes con diferentes tipos de mensajes, más fácil será
@@ -1454,10 +1471,10 @@ export default function ChatGPT({ subtitle, title, body, text }: PageProps) {
                   natural.
                 </li>
                 <li className="mt-6 text-xl leading-8">
-                  Cuando termines la tarea haz un screenshot a tu
-                  pantalla y súbelo a Twitter etiquetando a @CryptonikasDAO y
-                  poniendo el hashtag #Kiwitonikas. ¡Esta es tu última
-                  oportunidad de poder estar en el top del ranking!
+                  Cuando termines la tarea haz un screenshot a tu pantalla y
+                  súbelo a Twitter etiquetando a @CryptonikasDAO y poniendo el
+                  hashtag #Kiwitonikas. ¡Esta es tu última oportunidad de poder
+                  estar en el top del ranking!
                 </li>
               </ul>
             </>
@@ -1465,14 +1482,12 @@ export default function ChatGPT({ subtitle, title, body, text }: PageProps) {
 
           {currentPage === 12 ? (
             <>
-             
-
               <p className="mt-6 text-xl leading-8">
-              Para graduarte de Ninja de prompts en ChatGPT debes mintear tu certificado 👇. 
-
-Antes de mintear debes verificar que tu Wallet es la correcta y que has enviado todas las tareas por twitter como te solicitamos en el curso, de lo contrario no podrás obtener el certificado. 
-
-El costo del certificado es 1 MATIC
+                Para graduarte de Ninja de prompts en ChatGPT debes mintear tu
+                certificado 👇. Antes de mintear debes verificar que tu Wallet
+                es la correcta y que has enviado todas las tareas por twitter
+                como te solicitamos en el curso, de lo contrario no podrás
+                obtener el certificado. El costo del certificado es 1 MATIC
                 #Kiwitonikas 🥝
               </p>
 
@@ -1489,43 +1504,70 @@ El costo del certificado es 1 MATIC
           ) : null}
         </div>
       </div>
-      <nav className="flex items-center justify-between border-t border-gray-200 px-4 sm:px-0">
-  <div className="-mt-px flex w-0 flex-1">
-    <a
-      onClick={() => {
-        if (currentPage > 0) {
-          setCurrentPage(currentPage - 1);
-          scrollToTop();
-        }
-      }}
-      className="inline-flex items-center border-t-2 border-transparent pr-1 pt-4 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700 hover:cursor-pointer"
-    >
-      <ArrowLongLeftIcon
-        className="mr-3 h-5 w-5 text-gray-400"
-        aria-hidden="true"
-      />
-      Anterior
-    </a>
-  </div>
 
-  <div className="-mt-px flex w-0 flex-1 justify-end">
-    <a
-      onClick={currentPage === totalPages - 1 ? undefined : () => {
-        setCurrentPage(currentPage + 1);
-        scrollToTop();
-      }}
-      className={`inline-flex items-center border-t-2 border-transparent pl-1 pt-4 text-sm font-medium ${
-        currentPage === totalPages - 1 ? 'text-gray-400 cursor-not-allowed' : 'text-gray-500 hover:border-gray-300 hover:text-gray-700 hover:cursor-pointer'
-      }`}
-    >
-      Siguiente
-      <ArrowLongRightIcon
-        className="ml-3 h-5 w-5 text-gray-400"
-        aria-hidden="true"
-      />
-    </a>
-  </div>
-</nav>
+      <nav className="flex items-center justify-between border-t border-gray-200 px-4 sm:px-0">
+        <div className="-mt-px flex w-0 flex-1">
+          <a
+            onClick={() => {
+              if (currentPage > 0) {
+                setCurrentPage(currentPage - 1);
+                scrollToTop();
+              }
+            }}
+            className="hover:cursor-pointer inline-flex items-center border-t-2 border-transparent pr-1 pt-4 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700"
+          >
+            <ArrowLongLeftIcon
+              className="mr-3 h-5 w-5 text-gray-400"
+              aria-hidden="true"
+            />
+            Anterior
+          </a>
+        </div>
+        <div className="hidden md:-mt-px md:flex">
+          {Array.from({ length: totalPages }, (_, i) => i + 1).map(
+            (pageNumber) => (
+              <a
+                key={pageNumber}
+                href="#"
+                onClick={() => {
+                  setCurrentPage(pageNumber - 1);
+                  scrollToTop();
+                }}
+                className={`inline-flex items-center border-t-2 ${
+                  currentPage === pageNumber - 1
+                    ? "border-green-500 text-green-600"
+                    : "border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300"
+                } px-4 pt-4 text-sm font-medium`}
+              >
+                {pageNumber}
+              </a>
+            )
+          )}
+        </div>
+        <div className="-mt-px flex w-0 flex-1 justify-end">
+          <a
+            onClick={
+              currentPage === totalPages - 1
+                ? undefined
+                : () => {
+                    setCurrentPage(currentPage + 1);
+                    scrollToTop();
+                  }
+            }
+            className={`inline-flex items-center border-t-2 border-transparent pl-1 pt-4 text-sm font-medium ${
+              currentPage === totalPages - 1
+                ? "text-gray-400 cursor-not-allowed"
+                : "text-gray-500 hover:border-gray-300 hover:text-gray-700 hover:cursor-pointer"
+            }`}
+          >
+            Siguiente
+            <ArrowLongRightIcon
+              className="ml-3 h-5 w-5 text-gray-400"
+              aria-hidden="true"
+            />
+          </a>
+        </div>
+      </nav>
     </Dashboard>
   );
 }
