@@ -28,13 +28,10 @@ export default function Login() {
         <div className="pt-32 pb-12 md:pt-40 md:pb-20">
           <div className="text-center pb-12 md:pb-16">
             <h1
-              className="text-5xl text-white md:text-6xl font-extrabold leading-tighter tracking-tighter mb-4"
+              className="text-5xl text-white md:text-6xl font-extrabold mb-4"
               data-aos="zoom-y-out"
             >
-              Herramienta para creadores <br></br>
-              <span className="bg-clip-text text-transparent bg-gradient-to-r from-green-500 to-teal-400">
-                “enseña-para-ganar”
-              </span>
+              El futuro de la eduación.
             </h1>
             <div className="max-w-3xl mx-auto">
               <p
@@ -42,9 +39,7 @@ export default function Login() {
                 data-aos="zoom-y-out"
                 data-aos-delay="150"
               >
-                Presentamos Kiwi 🥝, la herramienta para creadores de contenido
-                hispanohablantes que usa tecnología Blockchain y certifica con
-                un NFT a quienes terminan el contenido educativo 🧩
+                Descubre, aprende y certifícate en la blockchain 🥝
               </p>
               <hr />
               <div className="flex text-center justify-center">

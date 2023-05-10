@@ -7,22 +7,22 @@ import checkBalance from "../../utils/checkBalance";
 import { IncomingMessage } from "http";
 import { NextApiRequest } from "next";
 import { NextRequest } from "next/server";
-import Layout from "../../components/Layout";
 import { Fragment, useState } from "react";
 import { Dialog, Transition } from "@headlessui/react";
 import {
   Bars3Icon,
-  DocumentDuplicateIcon,
-  FolderIcon,
   HomeIcon,
   XMarkIcon,
   UsersIcon,
-  QuestionMarkCircleIcon,
 } from "@heroicons/react/24/outline";
-import { ChildProcess } from "child_process";
 import Image from "next/image";
 import profileImage from "../../public/favicon.ico";
-import homeImg from "../../public/home.jpeg";
+import homeImg from "../../public/coverhome.jpeg";
+
+interface Feature {
+  name: string;
+  description: string[];
+}
 
 const navigation = [
   { name: "Inicio", href: "/", icon: HomeIcon, current: false },
@@ -45,9 +45,28 @@ const teams = [
   {
     id: 2,
     name: "Wallets Digitales",
-    href: "#",
+    href: "/dashboard/wallets",
     initial: "W",
     current: false,
+  },
+];
+
+const features: Feature[] = [
+  {
+    name: "Si eres un estudiante podrás:",
+    description: [
+      "👉 Aprender de manera simple y divertida",
+      "👉 Recibir un certificado en forma de NFT",
+      "👉 Conectar con otros estudiantes",
+    ],
+  },
+  {
+    name: "Si eres un creador de contenido educativo podrás:",
+    description: [
+      "👉 Subir tu contenido a la Blockchain",
+      "👉 Tener la seguridad que tu contenido te pertenece",
+      "👉 Crear un certificado en forma de NFT para tus estudiantes",
+    ],
   },
 ];
 
@@ -135,17 +154,17 @@ export default function Dashboard({ children }: Props) {
                 {/* Sidebar component, swap this element with another sidebar if you like */}
                 <div className="flex grow flex-col gap-y-5 overflow-y-auto bg-zinc-950 px-6 pb-2 ring-1 ring-white/10">
                   <div className="flex h-16 shrink-0 items-center">
-                  <Image
-                  src={profileImage}
-                  alt="Logo"
-                  width={8}
-                  height={8}
-                  className="h-8 w-8 rounded-full bg-gray-800"
-                />
+                    <Image
+                      src={profileImage}
+                      alt="Logo"
+                      width={8}
+                      height={8}
+                      className="h-8 w-8 rounded-full bg-gray-800"
+                    />
 
-                <p className="ml-4 text-sm text-white leading-8">
-                  Bienvenidx {address?.slice(0, 6)}...{address?.slice(-4)}{" "}
-                </p>
+                    <p className="ml-4 text-sm text-white leading-8">
+                      Bienvenidx {address?.slice(0, 6)}...{address?.slice(-4)}{" "}
+                    </p>
                   </div>
                   <nav className="flex flex-1 flex-col">
                     <ul role="list" className="flex flex-1 flex-col gap-y-7">
@@ -172,42 +191,39 @@ export default function Dashboard({ children }: Props) {
                               </a>
                             </li>
                           ))}
-                               
-                {navigation.map((item) => (
-                  <li key={item.name}>
-                    <a
-                      href={item.href}
-                      className={classNames(
-                        item.current
-                          ? "bg-gray-800 text-white"
-                          : "text-gray-400 hover:text-white hover:bg-gray-800",
-                        "group flex gap-x-3 rounded-md p-2 text-sm leading-6 font-semibold"
-                      )}
-                      target={item.target}
-                    >
-                      <item.icon
-                        className="h-6 w-6 shrink-0"
-                        aria-hidden="true"
-                      />
-                      {item.name}
-                    </a>
-                  </li>
-                ))}
+
+                          {navigation.map((item) => (
+                            <li key={item.name}>
+                              <a
+                                href={item.href}
+                                className={classNames(
+                                  item.current
+                                    ? "bg-gray-800 text-white"
+                                    : "text-gray-400 hover:text-white hover:bg-gray-800",
+                                  "group flex gap-x-3 rounded-md p-2 text-sm leading-6 font-semibold"
+                                )}
+                                target={item.target}
+                              >
+                                <item.icon
+                                  className="h-6 w-6 shrink-0"
+                                  aria-hidden="true"
+                                />
+                                {item.name}
+                              </a>
+                            </li>
+                          ))}
                         </ul>
                       </li>
 
-               
-            
-
-              <li className="mb-6">
-                <button
-                  onClick={handleLogout}
-                  type="button"
-                  className="rounded bg-white px-2 py-1 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50"
-                >
-                  Logout
-                </button>
-              </li>
+                      <li className="mb-6">
+                        <button
+                          onClick={handleLogout}
+                          type="button"
+                          className="rounded bg-white px-2 py-1 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50"
+                        >
+                          Logout
+                        </button>
+                      </li>
                     </ul>
                   </nav>
                 </div>
@@ -320,25 +336,64 @@ export default function Dashboard({ children }: Props) {
               <div>{children}</div>
             ) : (
               <>
-                <div className="text-center pt-12 md:pb-16">
-                  <h1
-                    className="text-4xl md:text-5xl font-extrabold leading-tighter tracking-tighter mb-4"
-                    data-aos="zoom-y-out"
-                  >
-                    Móntate en la nave 🛸
-                    <br />
-                    comiendo Kiwi 🥝
-                  </h1>
-                  <div className="text-center">
-                    <div className="w-full max-w-3xl mx-auto">
-                      <Image
-                        src={homeImg}
-                        alt="Logo"
-                        width={600}
-                        height={600}
-                        className="mx-auto"
-                        style={{ objectFit: "cover", objectPosition: "center" }}
-                      />
+                <div className="overflow-hidden bg-white">
+                  <div className="mx-auto max-w-7xl md:px-6 lg:px-8">
+                    <div className="grid grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:grid-cols-2 lg:items-start">
+                      <div className="px-6 md:px-0 lg:pr-4">
+                        <div className="mx-auto max-w-2xl lg:mx-0 lg:max-w-lg">
+                         
+                          <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+                            {" "}
+                            Móntate en la nave 🛸
+                            <br />
+                            comiendo Kiwi 🥝
+                          </p>
+                          <p className="mt-6 text-lg leading-8 text-gray-600">
+                            En Kiwi encontrarás varios
+                            cursos para poder expandir tus conocimiento y
+                            habilidades. Nuestra base de creadores de contenido
+                            sigue aumentanto, así que revisa periodicamente la
+                            plataforma para que no te pierdas sus cursos.
+                          </p>
+                          <dl className="mt-10 max-w-xl space-y-8 text-base leading-7 text-gray-600 lg:max-w-none">
+                            {features.map((feature) => (
+                              <div key={feature.name} className="relative">
+                                <dt className="inline font-semibold text-gray-900">
+                                  {feature.name}
+                                </dt>{" "}
+                                <dd className="inline">
+                                  <ul>
+                                    {feature.description.map((item, index) => (
+                                      <li key={index}>{item}</li>
+                                    ))}
+                                  </ul>
+                                </dd>
+                              </div>
+                            ))}
+                          </dl>
+                        </div>
+                      </div>
+
+                      <div className="sm:px-6 lg:px-0 flex justify-center items-center">
+
+    <div className="flex justify-center items-center">
+      <Image
+        src={homeImg}
+        alt="Logo"
+        width={600}
+        height={600}
+        style={{
+          objectFit: "cover",
+          objectPosition: "center",
+        }}
+        className="w-full h-auto max-w-xl rounded-xl mt-2 "
+      />
+    </div>
+
+</div>
+
+
+
                     </div>
                   </div>
                 </div>

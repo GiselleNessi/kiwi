@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { ThirdwebSDK } from "@thirdweb-dev/sdk";
 import {
-  Web3Button,
   useAddress,
   useLogout,
   useUser,
@@ -17,12 +16,12 @@ import {
   ArrowLongLeftIcon,
   ArrowLongRightIcon,
 } from "@heroicons/react/20/solid";
-import TypeformWidget from "../../components/TypeformWidget";
 import chatgptOne from "../../public/1.png";
 import chatgptTwo from "../../public/2.png";
 import chatgptThree from "../../public/3.png";
 import chatgptFour from "../../public/4.png";
 import Image from "next/image";
+import { CheckIcon } from '@heroicons/react/24/solid'
 
 interface PageProps {
   subtitle: string;
@@ -78,6 +77,7 @@ const pages = [
   },
 ];
 
+
 export default function ChatGPT({ subtitle, title, body, text }: PageProps) {
   const address = useAddress(); // Get the user's address
   const [currentPage, setCurrentPage] = useState(0);
@@ -109,6 +109,7 @@ export default function ChatGPT({ subtitle, title, body, text }: PageProps) {
 
   return (
     <Dashboard>
+     
       <div className="bg-white px-6 py-6 lg:px-8">
         <div className="mx-auto max-w-3xl text-base leading-7 text-gray-700">
           <p className="text-base font-semibold leading-7 text-indigo-600">
@@ -123,7 +124,7 @@ export default function ChatGPT({ subtitle, title, body, text }: PageProps) {
               <iframe
                 src="https://lvpr.tv?v=bb696iluhg7rdync"
                 allowFullScreen
-                allow="autoplay; encrypted-media; picture-in-picture"
+                allow="encrypted-media; picture-in-picture"
                 sandbox="allow-scripts"
                 className="absolute inset-0 w-full h-full"
               ></iframe>
@@ -233,7 +234,7 @@ export default function ChatGPT({ subtitle, title, body, text }: PageProps) {
                 <iframe
                   src="https://lvpr.tv?v=f96c3fqqjz5iqll3"
                   allowFullScreen
-                  allow="autoplay; encrypted-media; picture-in-picture"
+                  allow=" encrypted-media; picture-in-picture"
                   sandbox="allow-scripts"
                   className="absolute inset-0 w-full h-full"
                 ></iframe>
@@ -374,7 +375,7 @@ export default function ChatGPT({ subtitle, title, body, text }: PageProps) {
                 <iframe
                   src="https://lvpr.tv?v=5470w5nt8fr31mii"
                   allowFullScreen
-                  allow="autoplay; encrypted-media; picture-in-picture"
+                  allow=" encrypted-media; picture-in-picture"
                   sandbox="allow-scripts"
                   className="absolute inset-0 w-full h-full"
                 ></iframe>
@@ -441,7 +442,7 @@ export default function ChatGPT({ subtitle, title, body, text }: PageProps) {
                 <iframe
                   src="https://lvpr.tv?v=f02543829ml8u8zz"
                   allowFullScreen
-                  allow="autoplay; encrypted-media; picture-in-picture"
+                  allow=" encrypted-media; picture-in-picture"
                   sandbox="allow-scripts"
                   className="absolute inset-0 w-full h-full"
                 ></iframe>
@@ -572,7 +573,7 @@ export default function ChatGPT({ subtitle, title, body, text }: PageProps) {
                 <iframe
                   src="https://lvpr.tv?v=a508pzq661okvwmp"
                   allowFullScreen
-                  allow="autoplay; encrypted-media; picture-in-picture"
+                  allow=" encrypted-media; picture-in-picture"
                   sandbox="allow-scripts"
                   className="absolute inset-0 w-full h-full"
                 ></iframe>
@@ -639,7 +640,7 @@ export default function ChatGPT({ subtitle, title, body, text }: PageProps) {
                 <iframe
                   src="https://lvpr.tv?v=4b78phhz6cp1ac96"
                   allowFullScreen
-                  allow="autoplay; encrypted-media; picture-in-picture"
+                  allow=" encrypted-media; picture-in-picture"
                   sandbox="allow-scripts"
                   className="absolute inset-0 w-full h-full"
                 ></iframe>
@@ -814,7 +815,7 @@ export default function ChatGPT({ subtitle, title, body, text }: PageProps) {
                 <iframe
                   src="https://lvpr.tv?v=9fealiajlt0dxsd6"
                   allowFullScreen
-                  allow="autoplay; encrypted-media; picture-in-picture"
+                  allow=" encrypted-media; picture-in-picture"
                   sandbox="allow-scripts"
                   className="absolute inset-0 w-full h-full"
                 ></iframe>
@@ -965,7 +966,7 @@ export default function ChatGPT({ subtitle, title, body, text }: PageProps) {
                 <iframe
                   src="https://lvpr.tv?v=cb79lhw05qt06cn3"
                   allowFullScreen
-                  allow="autoplay; encrypted-media; picture-in-picture"
+                  allow=" encrypted-media; picture-in-picture"
                   sandbox="allow-scripts"
                   className="absolute inset-0 w-full h-full"
                 ></iframe>
@@ -1063,7 +1064,7 @@ export default function ChatGPT({ subtitle, title, body, text }: PageProps) {
                 <iframe
                   src="https://lvpr.tv?v=7ddddoszmu8yfmrs"
                   allowFullScreen
-                  allow="autoplay; encrypted-media; picture-in-picture"
+                  allow=" encrypted-media; picture-in-picture"
                   sandbox="allow-scripts"
                   className="absolute inset-0 w-full h-full"
                 ></iframe>
@@ -1381,7 +1382,7 @@ export default function ChatGPT({ subtitle, title, body, text }: PageProps) {
                 <iframe
                   src="https://lvpr.tv?v=b368bgk0x37a13tv"
                   allowFullScreen
-                  allow="autoplay; encrypted-media; picture-in-picture"
+                  allow=" encrypted-media; picture-in-picture"
                   sandbox="allow-scripts"
                   className="absolute inset-0 w-full h-full"
                 ></iframe>
