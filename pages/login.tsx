@@ -31,7 +31,7 @@ export default function Login() {
               className="text-5xl text-white md:text-6xl font-extrabold mb-4"
               data-aos="zoom-y-out"
             >
-              El futuro de la eduación.
+              El futuro de la eduación
             </h1>
             <div className="max-w-3xl mx-auto">
               <p

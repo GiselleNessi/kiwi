@@ -341,7 +341,6 @@ export default function Dashboard({ children }: Props) {
                     <div className="grid grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:grid-cols-2 lg:items-start">
                       <div className="px-6 md:px-0 lg:pr-4">
                         <div className="mx-auto max-w-2xl lg:mx-0 lg:max-w-lg">
-                         
                           <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
                             {" "}
                             Móntate en la nave 🛸
@@ -349,11 +348,11 @@ export default function Dashboard({ children }: Props) {
                             comiendo Kiwi 🥝
                           </p>
                           <p className="mt-6 text-lg leading-8 text-gray-600">
-                            En Kiwi encontrarás varios
-                            cursos para poder expandir tus conocimiento y
-                            habilidades. Nuestra base de creadores de contenido
-                            sigue aumentanto, así que revisa periodicamente la
-                            plataforma para que no te pierdas sus cursos.
+                            En Kiwi encontrarás varios cursos para poder
+                            expandir tus conocimiento y habilidades. Nuestra
+                            base de creadores de contenido sigue aumentanto, así
+                            que revisa periodicamente la plataforma para que no
+                            te pierdas sus cursos.
                           </p>
                           <dl className="mt-10 max-w-xl space-y-8 text-base leading-7 text-gray-600 lg:max-w-none">
                             {features.map((feature) => (
@@ -375,25 +374,20 @@ export default function Dashboard({ children }: Props) {
                       </div>
 
                       <div className="sm:px-6 lg:px-0 flex justify-center items-center">
-
-    <div className="flex justify-center items-center">
-      <Image
-        src={homeImg}
-        alt="Logo"
-        width={600}
-        height={600}
-        style={{
-          objectFit: "cover",
-          objectPosition: "center",
-        }}
-        className="w-full h-auto max-w-xl rounded-xl mt-2 "
-      />
-    </div>
-
-</div>
-
-
-
+                        <div className="flex justify-center items-center">
+                          <Image
+                            src={homeImg}
+                            alt="Logo"
+                            width={600}
+                            height={600}
+                            style={{
+                              objectFit: "cover",
+                              objectPosition: "center",
+                            }}
+                            className="w-full h-auto max-w-xl rounded-xl mt-2 "
+                          />
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
