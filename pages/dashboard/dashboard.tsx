@@ -408,8 +408,9 @@ export async function getServerSideProps(context: {
     | (IncomingMessage & { cookies: Partial<{ [key: string]: string }> });
 }) {
   const user = await getUser(context.req);
-
+  console.log('user:', user)
   if (!user) {
+    console.log(user)
     return {
       redirect: {
         destination: "/login",

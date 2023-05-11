@@ -13,14 +13,14 @@ export default function Login() {
 
   useEffect(() => {
     // Check if the wallet is connected and the required NFT is not missing
-    if (address && !missingNft) {
+    if (address) {
       // Store the user's address in local storage or set a cookie to indicate that they are logged in
       localStorage.setItem("userAddress", address);
 
       // Navigate to the Beta dApp automatically
       router.push("/");
     }
-  }, [address, missingNft, router]);
+  }, [address, router]);
 
   return (
     <section className="relative bg-black flex flex-col h-screen justify-center items-center">
@@ -31,7 +31,7 @@ export default function Login() {
               className="text-5xl text-white md:text-6xl font-extrabold mb-4"
               data-aos="zoom-y-out"
             >
-              El futuro de la eduación
+              El futuro de la educación
             </h1>
             <div className="max-w-3xl mx-auto">
               <p
@@ -75,13 +75,6 @@ export default function Login() {
                   <p className="text-white">
                     Porfavor conecta tu wallet y luego haz sign in para
                     continuar.
-                  </p>
-                )}
-
-                {missingNft && (
-                  <p className="text-red-500 mt-2">
-                    No tienes el NFT requerido. Por favor, asegúrate de tenerlo
-                    en tu billetera.
                   </p>
                 )}
 
