@@ -42,24 +42,7 @@ export default function Login() {
                 Descubre, aprende y certifícate en la blockchain 🥝
               </p>
               <hr />
-              <div className="flex text-center justify-center">
-                <h2 className="text-white mt-6 text-xl">
-                  <span className="bg-clip-text text-transparent bg-gradient-to-r from-green-500 to-teal-400">
-                    <a
-                      href="https://www.cryptonikasdao.xyz/betapass"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="underline"
-                    >
-                      Mintea Kiwi betapass
-                    </a>
-                  </span>
-                </h2>
-                <ArrowUpRightIcon
-                  className="mt-7 w-5 h-5 text-white"
-                  aria-hidden="true"
-                />
-              </div>
+           
               <div className="mt-4 flex items-center justify-center gap-x-6">
                 <ConnectWallet
                  auth={{
@@ -82,9 +65,10 @@ export default function Login() {
                   </p>
                 )}
 
-                <p className="text-white mt-6 mb-10">
+                <div className="flex text-center justify-center">
+                <h2 className="text-white mt-6 text-xl">
                   <span className="bg-clip-text text-transparent bg-gradient-to-r from-green-500 to-teal-400">
-                    Creado por{" "}
+                  Creado por{" "}
                     <a
                       href="https://www.cryptonikasdao.xyz/"
                       target="_blank"
@@ -94,7 +78,12 @@ export default function Login() {
                       Cryptonikas
                     </a>
                   </span>
-                </p>
+                </h2>
+                <ArrowUpRightIcon
+                  className="mt-7 w-5 h-5 text-white"
+                  aria-hidden="true"
+                />
+              </div>
               </>
             </div>
           </div>

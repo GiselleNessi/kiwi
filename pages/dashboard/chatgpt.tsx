@@ -82,7 +82,7 @@ export default function ChatGPT({ subtitle, title, body, text }: PageProps) {
   const address = useAddress(); // Get the user's address
   const [currentPage, setCurrentPage] = useState(0);
   const totalPages = 13; // replace with the total number of pages
-  console.log(currentPage);
+  //console.log(currentPage);
 
   const { logout } = useLogout();
   const { isLoggedIn, isLoading } = useUser();

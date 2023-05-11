@@ -72,7 +72,7 @@ const pages = [
 export default function Wallets({ subtitle, title, body, text }: PageProps) {
   const address = useAddress(); // Get the user's address
   const [currentPage, setCurrentPage] = useState(0);
-  console.log(currentPage);
+  //console.log(currentPage);
 
   const { logout } = useLogout();
   const { isLoggedIn, isLoading } = useUser();
