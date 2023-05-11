@@ -9,17 +9,9 @@ import { NextApiRequest } from "next";
 import { NextRequest } from "next/server";
 import Dashboard from "./dashboard/dashboard";
 
-
 export default function Home() {
-  const { logout } = useLogout();
   const { isLoggedIn, isLoading } = useUser();
   const router = useRouter();
-
-  const handleLogout = async () => {
-    await logout();
-    console.log("Logged out");
-    router.push("/login");
-  };
 
   useEffect(() => {
     if (!isLoading && !isLoggedIn) {
@@ -27,13 +19,8 @@ export default function Home() {
     }
   }, [isLoading, isLoggedIn, router]);
 
-  return (
-    <Dashboard>
-  {/* children */}
-</Dashboard>
-  );
+  return <Dashboard>{/* children */}</Dashboard>;
 }
-
 
 // This gets called on every request
 export async function getServerSideProps(context: {
@@ -43,7 +30,7 @@ export async function getServerSideProps(context: {
     | (IncomingMessage & { cookies: Partial<{ [key: string]: string }> });
 }) {
   const user = await getUser(context.req);
-
+  console.log('user:', user)
   if (!user) {
     return {
       redirect: {
@@ -70,7 +57,7 @@ export async function getServerSideProps(context: {
 
   const sdk = ThirdwebSDK.fromPrivateKey(privateKey, "polygon");
 
-  // Check to see if the user has an NFT
+  /* // Check to see if the user has an NFT
   const hasNft = await checkBalance(sdk, user.address);
 
   // If they don't have an NFT, redirect them to the login page
@@ -82,7 +69,7 @@ export async function getServerSideProps(context: {
         permanent: false,
       },
     };
-  }
+  } */
 
   // Finally, return the props
   return {

@@ -436,7 +436,7 @@ export async function getServerSideProps(context: {
 
   const sdk = ThirdwebSDK.fromPrivateKey(privateKey, "polygon");
 
-  // Check to see if the user has an NFT
+/*   // Check to see if the user has an NFT
   const hasNft = await checkBalance(sdk, user.address);
 
   // If they don't have an NFT, redirect them to the login page
@@ -448,7 +448,7 @@ export async function getServerSideProps(context: {
         permanent: false,
       },
     };
-  }
+  } */
 
   // Finally, return the props
   return {

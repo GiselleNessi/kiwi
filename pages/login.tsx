@@ -61,7 +61,11 @@ export default function Login() {
                 />
               </div>
               <div className="mt-4 flex items-center justify-center gap-x-6">
-                <ConnectWallet />
+                <ConnectWallet
+                 auth={{
+                  loginOptional: false,
+                }}
+                />
               </div>
               <br></br>
 
