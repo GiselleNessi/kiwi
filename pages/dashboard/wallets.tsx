@@ -12,7 +12,6 @@ import {
   ArrowLongLeftIcon,
   ArrowLongRightIcon,
 } from "@heroicons/react/20/solid";
-import TypeformWidget from "../../components/TypeformWidget";
 
 interface PageProps {
   subtitle: string;
@@ -77,12 +76,6 @@ export default function Wallets({ subtitle, title, body, text }: PageProps) {
   const { logout } = useLogout();
   const { isLoggedIn, isLoading } = useUser();
   const router = useRouter();
-
-  const handleLogout = async () => {
-    await logout();
-    console.log("Logged out");
-    router.push("/login");
-  };
 
   useEffect(() => {
     if (!isLoading && !isLoggedIn) {

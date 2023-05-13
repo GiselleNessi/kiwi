@@ -1,16 +1,13 @@
 import React, { useEffect, useState } from "react";
-import { ThirdwebSDK } from "@thirdweb-dev/sdk";
 import {
-  useAddress,
-  useLogout,
+  ThirdwebNftMedia,
+  Web3Button,
+  useContract,
+  useNFT,
+  useNFTs,
   useUser,
 } from "@thirdweb-dev/react";
-import { getUser } from "../../auth.config";
 import { useRouter } from "next/router";
-import checkBalance from "../../utils/checkBalance";
-import { IncomingMessage } from "http";
-import { NextApiRequest } from "next";
-import { NextRequest } from "next/server";
 import Dashboard from "./dashboard";
 import {
   ArrowLongLeftIcon,
@@ -21,7 +18,6 @@ import chatgptTwo from "../../public/2.png";
 import chatgptThree from "../../public/3.png";
 import chatgptFour from "../../public/4.png";
 import Image from "next/image";
-import { CheckIcon } from '@heroicons/react/24/solid'
 
 interface PageProps {
   subtitle: string;
@@ -78,21 +74,22 @@ const pages = [
 ];
 
 
-export default function ChatGPT({ subtitle, title, body, text }: PageProps) {
-  const address = useAddress(); // Get the user's address
+export default function ChatGPT() {
   const [currentPage, setCurrentPage] = useState(0);
   const totalPages = 13; // replace with the total number of pages
   //console.log(currentPage);
 
-  const { logout } = useLogout();
-  const { isLoggedIn, isLoading } = useUser();
-  const router = useRouter();
+  //web3button
+  const tokenId = 0; // the id of the NFT you want to claim
+const quantity = 1; // how many NFTs you want to claim
 
-  const handleLogout = async () => {
-    await logout();
-    console.log("Logged out");
-    router.push("/login");
-  };
+  const { contract } = useContract(
+    "0x47DA47429F0127EDd178cc36ebDEc58874310220"
+  );
+  const { data: nft, error } = useNFT(contract, "0");
+  
+  const { isLoggedIn, isLoading, user } = useUser();
+  const router = useRouter();
 
   const scrollToTop = () => {
     window.scrollTo({
@@ -107,9 +104,10 @@ export default function ChatGPT({ subtitle, title, body, text }: PageProps) {
     }
   }, [isLoading, isLoggedIn, router]);
 
+  if (error || !nft) return <div>NFT not found</div>;
+
   return (
     <Dashboard>
-     
       <div className="bg-white px-6 py-6 lg:px-8">
         <div className="mx-auto max-w-3xl text-base leading-7 text-gray-700">
           <p className="text-base font-semibold leading-7 text-indigo-600">
@@ -1492,14 +1490,25 @@ export default function ChatGPT({ subtitle, title, body, text }: PageProps) {
                 #Kiwitonikas 🥝
               </p>
 
+              <div className="mt-6">
+                <ThirdwebNftMedia metadata={nft.metadata} />
+              </div>
+
               <div className="mx-auto w-600">
                 <div className="mb-6 mt-6 ml-16">
-                  <iframe
-                    src="https://ipfs.thirdwebcdn.com/ipfs/QmfK9mw9eQKE9vCbtZht9kygpkNWffdwibsJPnCo7MBN4M/erc1155.html?contract=0x47DA47429F0127EDd178cc36ebDEc58874310220&chain=%7B%22name%22%3A%22Polygon+Mainnet%22%2C%22chain%22%3A%22Polygon%22%2C%22rpc%22%3A%5B%22https%3A%2F%2Fpolygon.rpc.thirdweb.com%2F5a9bc94b87f7cbbbfbbc234bf1e07f0adf5f3cf3012c9f26f9fc9820d64df93a%22%5D%2C%22nativeCurrency%22%3A%7B%22name%22%3A%22MATIC%22%2C%22symbol%22%3A%22MATIC%22%2C%22decimals%22%3A18%7D%2C%22shortName%22%3A%22matic%22%2C%22chainId%22%3A137%2C%22testnet%22%3Afalse%2C%22slug%22%3A%22polygon%22%7D&tokenId=0&primaryColor=green"
-                    width="600px"
-                    height="600px"
-                  ></iframe>
-                </div>
+                <Web3Button
+                  contractAddress={"0x47DA47429F0127EDd178cc36ebDEc58874310220"}
+                  action={(contract) =>
+                    contract.erc1155.claim(tokenId, quantity)
+                  }
+                  onSuccess={() =>
+                    alert("Felicidades ya tienes tu NFT certificado!")
+                  }
+                  onError={(err) => alert(err)}
+                >
+                  Certifícate
+                </Web3Button>
+              </div>
               </div>
             </>
           ) : null}
@@ -1573,57 +1582,3 @@ export default function ChatGPT({ subtitle, title, body, text }: PageProps) {
   );
 }
 
-// This gets called on every request
-export async function getServerSideProps(context: {
-  req:
-    | NextApiRequest
-    | NextRequest
-    | (IncomingMessage & { cookies: Partial<{ [key: string]: string }> });
-}) {
-  const user = await getUser(context.req);
-
-  if (!user) {
-    return {
-      redirect: {
-        destination: "/login",
-        permanent: false,
-      },
-    };
-  }
-
-  // Ensure we are able to generate an auth token using our private key instantiated SDK
-  const PRIVATE_KEY = process.env.THIRDWEB_AUTH_PRIVATE_KEY;
-  if (!PRIVATE_KEY) {
-    throw new Error("You need to add an PRIVATE_KEY environment variable.");
-  }
-
-  // Instantiate our SDK
-  const privateKey = process.env.THIRDWEB_AUTH_PRIVATE_KEY;
-
-  if (!privateKey) {
-    throw new Error(
-      "THIRDWEB_AUTH_PRIVATE_KEY environment variable is missing"
-    );
-  }
-
-  const sdk = ThirdwebSDK.fromPrivateKey(privateKey, "polygon");
-
-/*   // Check to see if the user has an NFT
-  const hasNft = await checkBalance(sdk, user.address);
-
-  // If they don't have an NFT, redirect them to the login page
-  if (!hasNft) {
-    console.log("User", user.address, "doesn't have an NFT! Redirecting...");
-    return {
-      redirect: {
-        destination: "/login",
-        permanent: false,
-      },
-    };
-  } */
-
-  // Finally, return the props
-  return {
-    props: {},
-  };
-}

@@ -14,7 +14,7 @@ const Layout: React.FC<Props> = ({ children }) => {
 
   const handleLogout = async () => {
     await logout();
-    console.log('Logged out');
+    //console.log('Logged out');
     router.push('/login');
   };
 
