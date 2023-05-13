@@ -4,7 +4,6 @@ import {
   Web3Button,
   useContract,
   useNFT,
-  useNFTs,
   useUser,
 } from "@thirdweb-dev/react";
 import { useRouter } from "next/router";
@@ -73,7 +72,6 @@ const pages = [
   },
 ];
 
-
 export default function ChatGPT() {
   const [currentPage, setCurrentPage] = useState(0);
   const totalPages = 13; // replace with the total number of pages
@@ -81,13 +79,13 @@ export default function ChatGPT() {
 
   //web3button
   const tokenId = 0; // the id of the NFT you want to claim
-const quantity = 1; // how many NFTs you want to claim
+  const quantity = 1; // how many NFTs you want to claim
 
   const { contract } = useContract(
     "0x47DA47429F0127EDd178cc36ebDEc58874310220"
   );
   const { data: nft, error } = useNFT(contract, "0");
-  
+
   const { isLoggedIn, isLoading, user } = useUser();
   const router = useRouter();
 
@@ -104,13 +102,13 @@ const quantity = 1; // how many NFTs you want to claim
     }
   }, [isLoading, isLoggedIn, router]);
 
-  if (error || !nft) return <div>NFT not found</div>;
+  if (error || !nft) return <div>Loading...</div>;
 
   return (
     <Dashboard>
       <div className="bg-white px-6 py-6 lg:px-8">
         <div className="mx-auto max-w-3xl text-base leading-7 text-gray-700">
-          <p className="text-base font-semibold leading-7 text-indigo-600">
+          <p className="text-base font-semibold leading-7 text-green-500">
             {pages[currentPage]?.subtitle || ""}
           </p>
           <br />
@@ -1496,19 +1494,21 @@ const quantity = 1; // how many NFTs you want to claim
 
               <div className="mx-auto w-600">
                 <div className="mb-6 mt-6 ml-16">
-                <Web3Button
-                  contractAddress={"0x47DA47429F0127EDd178cc36ebDEc58874310220"}
-                  action={(contract) =>
-                    contract.erc1155.claim(tokenId, quantity)
-                  }
-                  onSuccess={() =>
-                    alert("Felicidades ya tienes tu NFT certificado!")
-                  }
-                  onError={(err) => alert(err)}
-                >
-                  Certifícate
-                </Web3Button>
-              </div>
+                  <Web3Button
+                    contractAddress={
+                      "0x47DA47429F0127EDd178cc36ebDEc58874310220"
+                    }
+                    action={(contract) =>
+                      contract.erc1155.claim(tokenId, quantity)
+                    }
+                    onSuccess={() =>
+                      alert("Felicidades ya tienes tu NFT certificado!")
+                    }
+                    onError={(err) => alert(err)}
+                  >
+                    Certifícate
+                  </Web3Button>
+                </div>
               </div>
             </>
           ) : null}
@@ -1524,16 +1524,15 @@ const quantity = 1; // how many NFTs you want to claim
                 scrollToTop();
               }
             }}
-            className="hover:cursor-pointer inline-flex items-center border-t-2 border-transparent pr-1 pt-4 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700"
+            className="hover:cursor-pointer inline-flex items-center  border-transparent pr-1 pt-4 text-sm font-medium text-gray-500  hover:text-gray-700"
           >
             <ArrowLongLeftIcon
-              className="mr-3 h-5 w-5 text-gray-400"
+              className="mr-3 h-5 w-5 text-gray-900"
               aria-hidden="true"
             />
-            Anterior
           </a>
         </div>
-        <div className="hidden md:-mt-px md:flex">
+        <div className="flex flex-wrap justify-center">
           {Array.from({ length: totalPages }, (_, i) => i + 1).map(
             (pageNumber) => (
               <a
@@ -1543,10 +1542,10 @@ const quantity = 1; // how many NFTs you want to claim
                   setCurrentPage(pageNumber - 1);
                   scrollToTop();
                 }}
-                className={`inline-flex items-center border-t-2 ${
+                className={`inline-flex items-center  ${
                   currentPage === pageNumber - 1
-                    ? "border-green-500 text-green-600"
-                    : "border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300"
+                    ? "text-green-600"
+                    : "border-transparent text-gray-500 hover:text-gray-700 "
                 } px-4 pt-4 text-sm font-medium`}
               >
                 {pageNumber}
@@ -1564,15 +1563,14 @@ const quantity = 1; // how many NFTs you want to claim
                     scrollToTop();
                   }
             }
-            className={`inline-flex items-center border-t-2 border-transparent pl-1 pt-4 text-sm font-medium ${
+            className={`inline-flex items-center  border-transparent pl-1 pt-4 text-sm font-medium ${
               currentPage === totalPages - 1
                 ? "text-gray-400 cursor-not-allowed"
-                : "text-gray-500 hover:border-gray-300 hover:text-gray-700 hover:cursor-pointer"
+                : "text-gray-500  hover:text-gray-700 hover:cursor-pointer"
             }`}
           >
-            Siguiente
             <ArrowLongRightIcon
-              className="ml-3 h-5 w-5 text-gray-400"
+              className="ml-3 h-5 w-5 text-gray-900"
               aria-hidden="true"
             />
           </a>
@@ -1581,4 +1579,3 @@ const quantity = 1; // how many NFTs you want to claim
     </Dashboard>
   );
 }
-

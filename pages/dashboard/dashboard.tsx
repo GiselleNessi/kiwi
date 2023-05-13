@@ -1,12 +1,6 @@
 import React, { ReactNode, useEffect } from "react";
-import { ThirdwebSDK } from "@thirdweb-dev/sdk";
 import { useAddress, useLogout, useUser } from "@thirdweb-dev/react";
-import { getUser } from "../../auth.config";
 import { useRouter } from "next/router";
-import checkBalance from "../../utils/checkBalance";
-import { IncomingMessage } from "http";
-import { NextApiRequest } from "next";
-import { NextRequest } from "next/server";
 import { Fragment, useState } from "react";
 import { Dialog, Transition } from "@headlessui/react";
 import {
@@ -17,7 +11,9 @@ import {
 } from "@heroicons/react/24/outline";
 import Image from "next/image";
 import profileImage from "../../public/favicon.ico";
+import logo from "../../public/mientrastantologokiwi.png";
 import homeImg from "../../public/coverhome.jpeg";
+import Avatar, { genConfig } from "react-nice-avatar";
 
 interface Feature {
   name: string;
@@ -39,14 +35,14 @@ const teams = [
     id: 1,
     name: "Chat GPT",
     href: "/dashboard/chatgpt",
-    initial: "C",
+    initial: "G",
     current: false,
   },
   {
     id: 2,
-    name: "Wallets Digitales",
-    href: "/dashboard/wallets",
-    initial: "W",
+    name: "Ilustración Digital",
+    href: "/dashboard/chama",
+    initial: "C",
     current: false,
   },
 ];
@@ -77,6 +73,8 @@ function classNames(...classes: string[]) {
 type Props = {
   children: ReactNode;
 };
+
+const config = genConfig();
 
 export default function Dashboard({ children }: Props) {
   const [sidebarOpen, setSidebarOpen] = useState(false);
@@ -155,17 +153,22 @@ export default function Dashboard({ children }: Props) {
                 </Transition.Child>
                 {/* Sidebar component, swap this element with another sidebar if you like */}
                 <div className="flex grow flex-col gap-y-5 overflow-y-auto bg-zinc-950 px-6 pb-2 ring-1 ring-white/10">
+                  <Image
+                    src={logo}
+                    alt="Logo"
+                    width={100}
+                    height={100}
+                    className="mt-6"
+                  />
+
                   <div className="flex h-16 shrink-0 items-center">
-                    <Image
-                      src={profileImage}
-                      alt="Logo"
-                      width={8}
-                      height={8}
-                      className="h-8 w-8 rounded-full bg-gray-800"
+                    <Avatar
+                      style={{ width: "2rem", height: "2rem" }}
+                      {...config}
                     />
 
                     <p className="ml-4 text-sm text-white leading-8">
-                      Bienvenidx {address?.slice(0, 6)}...{address?.slice(-4)}{" "}
+                      {address?.slice(0, 6)}...{address?.slice(-4)}{" "}
                     </p>
                   </div>
                   <nav className="flex flex-1 flex-col">
@@ -240,21 +243,28 @@ export default function Dashboard({ children }: Props) {
         {/* Sidebar component, swap this element with another sidebar if you like */}
         <div className="flex grow flex-col gap-y-5 overflow-y-auto bg-zinc-950 px-6">
           <nav className="flex flex-1 flex-col">
-            <ul role="list" className="flex flex-1 flex-col gap-y-7">
-              <li className="mt-4 flex">
+            <ul role="list" className="flex flex-1 flex-col">
+              <li className="flex justify-center">
                 <Image
-                  src={profileImage}
+                  src={logo}
                   alt="Logo"
-                  width={8}
-                  height={8}
-                  className="h-8 w-8 rounded-full bg-gray-800"
+                  width={100}
+                  height={100}
+                  className="mt-6"
                 />
-
-                <p className="text-sm leading-8 text-white ml-2">
-                  Bienvenidx {address?.slice(0, 6)}...{address?.slice(-4)}{" "}
+              </li>
+              <li className="flex justify-center mt-4">
+                <Avatar style={{ width: "3rem", height: "3rem" }} {...config} />
+              </li>
+              <li className=" flex justify-center mt-2">
+                <p className="text-white ">Wallet address</p>
+              </li>
+              <li className="flex justify-center">
+                <p className="text-sm leading-8 text-white">
+                  {address?.slice(0, 6)}...{address?.slice(-4)}{" "}
                 </p>
               </li>
-              <li>
+              <li className="mt-6">
                 <div className="text-xs font-semibold leading-6 text-gray-400">
                   Cursos
                 </div>
@@ -303,7 +313,7 @@ export default function Dashboard({ children }: Props) {
                 ))}
               </ul>
 
-              <li className="mb-6">
+              <li className="mb-6 mt-6">
                 <button
                   onClick={handleLogout}
                   type="button"
@@ -401,4 +411,3 @@ export default function Dashboard({ children }: Props) {
     </div>
   );
 }
-
