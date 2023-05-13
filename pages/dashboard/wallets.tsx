@@ -1,17 +1,36 @@
 import React, { useEffect, useState } from "react";
-import { ThirdwebSDK } from "@thirdweb-dev/sdk";
-import { useAddress, useLogout, useUser } from "@thirdweb-dev/react";
-import { getUser } from "../../auth.config";
+import {
+  ThirdwebNftMedia,
+  Web3Button,
+  useAddress,
+  useContract,
+  useLogout,
+  useNFT,
+  useUser,
+} from "@thirdweb-dev/react";
 import { useRouter } from "next/router";
-import checkBalance from "../../utils/checkBalance";
-import { IncomingMessage } from "http";
-import { NextApiRequest } from "next";
-import { NextRequest } from "next/server";
 import Dashboard from "./dashboard";
 import {
   ArrowLongLeftIcon,
   ArrowLongRightIcon,
 } from "@heroicons/react/20/solid";
+import Image from "next/image";
+import wallet1 from "../../public/wallet1.png";
+import wallet2 from "../../public/wallet2.png";
+import wallet3 from "../../public/wallet3.png";
+import wallet4 from "../../public/wallet4.png";
+import wallet5 from "../../public/wallet5.png";
+import wallet6 from "../../public/wallet6.png";
+
+import enviar1 from "../../public/enviar1.png";
+import enviar2 from "../../public/enviar2.png";
+import enviar3 from "../../public/enviar3.png";
+import enviar4 from "../../public/enviar4.png";
+import enviar5 from "../../public/enviar5.png";
+import enviar6 from "../../public/enviar6.png";
+
+import sitios2 from "../../public/sitios2.png";
+import sitios3 from "../../public/sitios3.png";
 
 interface PageProps {
   subtitle: string;
@@ -34,6 +53,9 @@ const pages = [
   },
   {
     title: "👉 ¿Cómo instalar Metamask en tu dispositivo móvil Iphone/Android?",
+  },
+  {
+    title: "👉 ¿Cómo abrir una cuenta en Etherscan?",
   },
   {
     title:
@@ -60,16 +82,37 @@ const pages = [
   {
     title: "3. ¡Exodus, la billetera digital que lo tiene todo!",
   },
+  {
+    title: "¡Felicidades! Has terminado el curso de Wallets Digitales.",
+  },
 ];
 
 export default function Wallets({ subtitle, title, body, text }: PageProps) {
-  const address = useAddress(); // Get the user's address
   const [currentPage, setCurrentPage] = useState(0);
+  const totalPages = 13; // replace with the total number of pages
   //console.log(currentPage);
+
+  //web3button
+  const tokenId = 2; // the id of the NFT you want to claim
+  const quantity = 1; // how many NFTs you want to claim
+
+  const address = useAddress(); // Get the user's address
+  const { contract } = useContract(
+    "0x47DA47429F0127EDd178cc36ebDEc58874310220"
+  );
+
+  const { data: nft, error } = useNFT(contract, "2");
 
   const { logout } = useLogout();
   const { isLoggedIn, isLoading } = useUser();
   const router = useRouter();
+
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
 
   useEffect(() => {
     if (!isLoading && !isLoggedIn) {
@@ -77,11 +120,13 @@ export default function Wallets({ subtitle, title, body, text }: PageProps) {
     }
   }, [isLoading, isLoggedIn, router]);
 
+  if (error || !nft) return <div>Loading...</div>;
+
   return (
     <Dashboard>
-      <div className="bg-white px-6 py-32 lg:px-8">
+      <div className="bg-white px-6 py-6 lg:px-8">
         <div className="mx-auto max-w-3xl text-base leading-7 text-gray-700">
-          <p className="text-base font-semibold leading-7 text-indigo-600">
+          <p className="text-base font-semibold leading-7 text-green-500">
             {pages[currentPage]?.subtitle || ""}
           </p>
           <br />
@@ -91,34 +136,42 @@ export default function Wallets({ subtitle, title, body, text }: PageProps) {
           <br />
           {currentPage === 0 ? (
             <div>
-              <div>
+              <div
+                className="relative mt-6 mb-6"
+                style={{ paddingTop: "56.25%" }}
+              >
                 <iframe
-                  src="https://lvpr.tv?v=ebafl18bf6o0pseo"
+                  src="https://lvpr.tv?v=a4feb6zlwhmhstek"
                   allowFullScreen
-                  allow="autoplay; encrypted-media; picture-in-picture"
+                  allow="encrypted-media; picture-in-picture"
                   sandbox="allow-scripts"
-                  width="600"
-                  height="400"
+                  className="absolute inset-0 w-full h-full"
                 ></iframe>
               </div>
+
               <br />
               <p className="mt-6 text-xl leading-8">
                 Las billeteras de criptomonedas son la clave para desbloquear el
                 mundo de las monedas digitales. Son una forma segura de
                 almacenar, enviar y recibir criptomonedas como por ejemplo:
-                Bitcoin y Ethereum. Hay diferentes tipos de billeteras de
-                criptomonedas disponibles en la actualidad, cada una con sus
-                propias características y beneficios únicos. Si tienes
-                criptomonedas, seguramente has oído hablar de ellas, pero si
-                eres nuevo en el mundo de las criptomonedas, es posible que te
-                preguntes: ¿Qué son las wallets? Las wallets son dispositivos
-                diseñados para almacenar y gestionar tus criptomonedas. A
-                diferencia de las monedas físicas, que llevamos en nuestro
-                bolsillo, las criptomonedas no tienen una forma física, por lo
-                que necesitamos un lugar seguro para almacenarlas. Aquí es donde
-                entran las wallets. Es importante destacar que las wallets son
-                una pieza fundamental de la seguridad en el mundo de las
-                criptomonedas. Algunas te permiten configurar medidas de
+                <strong> Bitcoin y Ethereum.</strong> Hay diferentes tipos de
+                billeteras de criptomonedas disponibles en la actualidad, cada
+                una con sus propias características y beneficios únicos.
+              </p>
+              <p className="mt-6 text-xl leading-8">
+                Si tienes criptomonedas, seguramente has oído hablar de ellas,
+                pero si eres nuevo en el mundo de las criptomonedas, es posible
+                que te preguntes: ¿Qué son las wallets? Las wallets son
+                dispositivos diseñados para almacenar y gestionar tus
+                criptomonedas. A diferencia de las monedas físicas, que llevamos
+                en nuestro bolsillo, las criptomonedas no tienen una forma
+                física, por lo que necesitamos un lugar seguro para
+                almacenarlas.
+              </p>
+              <p className="mt-6 text-xl leading-8">
+                Aquí es donde entran las wallets. Es importante destacar que las
+                wallets son una pieza fundamental de la seguridad en el mundo de
+                las criptomonedas. Algunas te permiten configurar medidas de
                 seguridad adicionales, como la autenticación de dos factores,
                 que te protegen aún más contra el riesgo de robo de tus activos.
               </p>
@@ -135,6 +188,17 @@ export default function Wallets({ subtitle, title, body, text }: PageProps) {
               <p className="mt-6 text-xl leading-8">
                 - En primer lugar <strong>La Dirección:</strong>
               </p>
+
+              <div className="mt-2 mb-2 flex flex-col items-center">
+                <Image
+                  src={wallet1}
+                  alt="Logo"
+                  width={400}
+                  height={400}
+                  style={{ objectFit: "cover", objectPosition: "center" }}
+                />
+              </div>
+
               <p className="mt-6 text-xl leading-8">
                 Como toda cuenta bancaria, cada wallet de criptomonedas tiene
                 una dirección única que identifica el lugar de almacenamiento de
@@ -165,6 +229,15 @@ export default function Wallets({ subtitle, title, body, text }: PageProps) {
                 y que te permiten recuperar tus activos en caso de pérdida de
                 acceso al dispositivo en el que tienes instalada tu wallet.
               </p>
+              <div className="mt-2 mb-2 flex flex-col items-center">
+                <Image
+                  src={wallet2}
+                  alt="Logo"
+                  width={400}
+                  height={400}
+                  style={{ objectFit: "cover", objectPosition: "center" }}
+                />
+              </div>
             </>
           ) : null}
 
@@ -176,16 +249,16 @@ export default function Wallets({ subtitle, title, body, text }: PageProps) {
                 Ethereum. Pero no te preocupes, no necesitas ser un genio de la
                 tecnología para entender cómo funciona 🤓💃
               </p>
-              <br />
+
               <p className="mt-6 text-xl leading-8">
                 👉{" "}
                 <strong>
                   ¿Cómo abrir tu propia billetera digital en Metamask?
                 </strong>
               </p>
-              <br />
+
               <p className="mt-6 text-xl leading-8">¡Te lo explicamos todo!</p>
-              <br />
+
               <p className="mt-6 text-xl leading-8">
                 <strong>
                   Abre tu navegador Chrome y busca la extensión de Metamask en
@@ -202,6 +275,18 @@ export default function Wallets({ subtitle, title, body, text }: PageProps) {
                   sigue las instrucciones para crear una nueva cuenta o importar
                   una existente.
                 </p>
+                <div
+                  className="relative mt-6 mb-6"
+                  style={{ paddingTop: "56.25%" }}
+                >
+                  <iframe
+                    src="https://lvpr.tv?v=489a50svo9ukvq7j"
+                    allowFullScreen
+                    allow="encrypted-media; picture-in-picture"
+                    sandbox="allow-scripts"
+                    className="absolute inset-0 w-full h-full"
+                  ></iframe>
+                </div>
                 <p className="mt-6 text-xl leading-8">
                   <strong>
                     👉 ¿Cómo asegurar tu billetera digital en Metamask?
@@ -226,6 +311,17 @@ export default function Wallets({ subtitle, title, body, text }: PageProps) {
                   nunca compartas esta información con nadie. ¡Es la llave
                   maestra para acceder a tu billetera! 🔑
                 </p>
+
+                <div className="mt-2 mb-2 flex flex-col items-center">
+                  <Image
+                    src={wallet3}
+                    alt="Logo"
+                    width={400}
+                    height={400}
+                    style={{ objectFit: "cover", objectPosition: "center" }}
+                  />
+                </div>
+
                 <p className="mt-6 text-xl leading-8">
                   Además, es importante tener en cuenta que nunca debes
                   compartir tu información personal o tus claves privadas en
@@ -249,15 +345,15 @@ export default function Wallets({ subtitle, title, body, text }: PageProps) {
                   Descarga la aplicación móvil desde Play Store o AppStore
                 </strong>
               </p>
-              <br />
+
               <p className="mt-6 text-xl leading-8">
                 Después de descargar la aplicación y hojear la pantalla, se le
-                presentan tres opciones:
+                presentan dos opciones:
               </p>
 
               <ul className="list-decimal ml-6 mt-6 text-xl leading-8">
-                <li>Al importar usando la frase de recuperación secreta</li>
-                <li>Sincronizar con la extensión MetaMask</li>
+                <li>Importar usando la frase de recuperación secreta</li>
+
                 <li>Crea una nueva billetera</li>
               </ul>
 
@@ -267,27 +363,7 @@ export default function Wallets({ subtitle, title, body, text }: PageProps) {
                 lugar de repetir los mismos pasos te ilustraremos las dos formas
                 de importar su billetera MetaMask en su dispositivo.
               </p>
-              <p className="mt-6 text-xl leading-8">
-                <strong>Sincronizar con la extensión MetaMask</strong>
-              </p>
-              <p className="mt-6 text-xl leading-8">
-                <strong>Tenemos noticias:</strong>¡esta función ha sido
-                temporalmente desactivada! 😱 Pero no te preocupes, ¡no todo
-                está perdido!
-              </p>
-              <p className="mt-6 text-xl leading-8">
-                Solo para tu información, si quisieras obtener el código QR
-                necesario para sincronizar, simplemente tienes que hacer clic en
-                tu avatar en la extensión MetaMask y selecciona
-                &rdquo;Ajustes&rdquo;👤⚙️.
-              </p>
-              <p className="mt-6 text-xl leading-8">
-                Desde allí, dirígete a &rdquo;Configuración&rdquo; y finalmente
-                selecciona &rdquo;Sincronizar con el móvil&rdquo;. 📱💻
-              </p>
-              <p className="mt-6 text-xl leading-8">
-                Y recibirá este mensaje de MetaMask deshabilitando esta función.
-              </p>
+
               <p className="mt-6 text-xl leading-8">
                 <strong>
                   Importar usando la frase de recuperación secreta
@@ -298,6 +374,15 @@ export default function Wallets({ subtitle, title, body, text }: PageProps) {
                 frase secreta de recuperación de 12 palabras y haciendo clic en
                 el botón <strong>IMPORTAR</strong> en la parte inferior. 💻💥👍
               </p>
+              <div className="mt-2 mb-2 flex flex-col items-center">
+                <Image
+                  src={wallet4}
+                  alt="Logo"
+                  width={300}
+                  height={300}
+                  style={{ objectFit: "cover", objectPosition: "center" }}
+                />
+              </div>
               <p className="mt-6 text-xl leading-8">
                 Sé que puede ser un dolor de cabeza recordar otra contraseña,
                 pero hey, ¿qué son unas pocas contraseñas más en tu vida? 😂
@@ -308,6 +393,15 @@ export default function Wallets({ subtitle, title, body, text }: PageProps) {
                 todo está almacenado en tu dispositivo local y no en la nube.
                 🔒📱
               </p>
+              <div className="mt-2 mb-2 flex flex-col items-center">
+                <Image
+                  src={wallet5}
+                  alt="Logo"
+                  width={300}
+                  height={300}
+                  style={{ objectFit: "cover", objectPosition: "center" }}
+                />
+              </div>
               <p className="mt-6 text-xl leading-8">
                 ¡Tenemos una gran noticia! ¡Ya tenemos una billetera! 🎉 Pero
                 espera, no es solo una billetera, es una billetera MetaMask, y
@@ -336,9 +430,11 @@ export default function Wallets({ subtitle, title, body, text }: PageProps) {
                 avatar en la ventana emergente de MetaMask y selecciona{" "}
                 <strong>&rdquo;Crear cuenta&rdquo;</strong>.
               </p>
+
               <p className="mt-6 text-xl leading-8">
-                Asígnele un nombre, y ¡listo! 🙌
+                <strong>Asígnele un nombre, y ¡listo! 🙌</strong>
               </p>
+
               <p className="mt-6 text-xl leading-8">
                 Ah, y una cosa importante que debes saber: cada cuenta es un
                 registro en la cadena de bloques, lo que significa que{" "}
@@ -351,10 +447,37 @@ export default function Wallets({ subtitle, title, body, text }: PageProps) {
                 ¡porque sin ella, no podrás volver a instalar la cuenta! 😉
               </p>
               <p className="mt-6 text-xl leading-8">Pasos especiales 👇</p>
+
+              <div className="mt-2 mb-2 flex flex-col items-center">
+                <Image
+                  src={wallet6}
+                  alt="Logo"
+                  width={300}
+                  height={300}
+                  style={{ objectFit: "cover", objectPosition: "center" }}
+                />
+              </div>
             </>
           ) : null}
 
           {currentPage === 4 ? (
+            <>
+              <div
+                className="relative mt-6 mb-6"
+                style={{ paddingTop: "56.25%" }}
+              >
+                <iframe
+                  src="https://lvpr.tv?v=4288gw914x4io3em"
+                  allowFullScreen
+                  allow="encrypted-media; picture-in-picture"
+                  sandbox="allow-scripts"
+                  className="absolute inset-0 w-full h-full"
+                ></iframe>
+              </div>
+            </>
+          ) : null}
+
+          {currentPage === 5 ? (
             <>
               <p className="mt-6 text-xl leading-8">
                 Primero, tenemos el botón <strong>&rdquo;Comprar&rdquo;</strong>{" "}
@@ -377,13 +500,43 @@ export default function Wallets({ subtitle, title, body, text }: PageProps) {
                 MetaMask. Solo necesitas tener la clave pública del destinatario
                 y ¡listo! 👉💰👈
               </p>
+              <div className="mt-2 mb-2 flex flex-row items-center">
+                <Image
+                  src={enviar1}
+                  alt="Logo"
+                  width={300}
+                  height={300}
+                  style={{ objectFit: "cover", objectPosition: "center" }}
+                />
+                <Image
+                  src={enviar2}
+                  alt="Logo"
+                  width={300}
+                  height={300}
+                  style={{
+                    objectFit: "cover",
+                    objectPosition: "center",
+                    marginLeft: "10px",
+                  }}
+                />
+              </div>
+
               <p className="mt-6 text-xl leading-8">
                 Aunque debes tener en cuenta que las transacciones con propinas
                 para los mineros pueden retrasarse o incluso fallar según las
                 condiciones de la red. Pero no te preocupes si eres nuevo en
-                esto, deja el botón de &rdquo;<strong>edición</strong>&rdquo;
+                esto, deja el botón de &rdquo;<strong>mercado</strong>&rdquo;
                 intacto y ¡confirma tu transacción! ✅
               </p>
+              <div className="mt-2 mb-2 flex flex-row items-center">
+                <Image
+                  src={enviar3}
+                  alt="Logo"
+                  width={300}
+                  height={300}
+                  style={{ objectFit: "cover", objectPosition: "center" }}
+                />
+              </div>
               <p className="mt-6 text-xl leading-8">
                 Después de verificar la transacción, puedes ver el historial en
                 el área de actividad. Y si alguna vez necesitas practicar,
@@ -395,9 +548,17 @@ export default function Wallets({ subtitle, title, body, text }: PageProps) {
               </p>
               <p className="mt-6 text-xl leading-8">
                 En particular, solicitamos 0.1 ETH en Goerli Test Network
-                (arriba a la derecha, además del avatar puedes ver la red) para
-                ilustrar cómo enviar usando MetaMask.
+                (arriba a la derecha )
               </p>
+              <div className="mt-2 mb-2 flex flex-row items-center">
+                <Image
+                  src={enviar6}
+                  alt="Logo"
+                  width={300}
+                  height={300}
+                  style={{ objectFit: "cover", objectPosition: "center" }}
+                />
+              </div>
               <p className="mt-6 text-xl leading-8">
                 Los activos de{" "}
                 <strong>las redes de prueba no valen un centavo</strong>. Estas
@@ -405,10 +566,19 @@ export default function Wallets({ subtitle, title, body, text }: PageProps) {
                 desarrolladores antes de lanzar sus productos en la red
                 principal de Ethereum.
               </p>
+              <div className="mt-2 mb-2 flex flex-row items-center">
+                <Image
+                  src={enviar4}
+                  alt="Logo"
+                  width={300}
+                  height={300}
+                  style={{ objectFit: "cover", objectPosition: "center" }}
+                />
+              </div>
             </>
           ) : null}
 
-          {currentPage === 5 ? (
+          {currentPage === 6 ? (
             <>
               <p className="mt-6 text-xl leading-8">
                 Aunque MetaMask es una billetera caliente, lo que significa que
@@ -481,6 +651,17 @@ export default function Wallets({ subtitle, title, body, text }: PageProps) {
                 hacer clic en los tres puntos verticales (Sí, esos puntitos
                 curiosos en la esquina superior derecha)
               </p>
+
+              <div className="mt-2 mb-2 flex flex-row items-center">
+                <Image
+                  src={sitios2}
+                  alt="Logo"
+                  width={300}
+                  height={300}
+                  style={{ objectFit: "cover", objectPosition: "center" }}
+                />
+              </div>
+
               <p className="mt-6 text-xl leading-8">
                 Luego seleccionamos{" "}
                 <strong>&rdquo;Sitios conectados&rdquo;</strong>
@@ -488,6 +669,16 @@ export default function Wallets({ subtitle, title, body, text }: PageProps) {
               <p className="mt-6 text-xl leading-8">
                 Y finalmente clic en <strong>&rdquo;Desconectar&rdquo;</strong>
               </p>
+
+              <div className="mt-2 mb-2 flex flex-row items-center">
+                <Image
+                  src={sitios3}
+                  alt="Logo"
+                  width={300}
+                  height={300}
+                  style={{ objectFit: "cover", objectPosition: "center" }}
+                />
+              </div>
               <p className="mt-6 text-xl leading-8">
                 <strong>
                   Recuerda siempre estar atento y tomar medidas para mantener tu
@@ -497,38 +688,32 @@ export default function Wallets({ subtitle, title, body, text }: PageProps) {
             </>
           ) : null}
 
-          {currentPage === 6 ? (
+          {currentPage === 7 ? (
             <>
               <p className="mt-6 text-xl leading-8">
                 Primero, aterrizamos en el tablero y buscamos tres líneas
                 paralelas en la esquina superior izquierda. ¡Tócalas! 👆
               </p>
               <br />
-              <p className="mt-6 text-xl leading-8">
-                Después, navegamos a{" "}
-                <strong>&rdquo;Configuración&rdquo;</strong> y tocamos{" "}
-                <strong>&rdquo;Seguridad y privacidad&rdquo;</strong>.
-              </p>
-              <p className="mt-6 text-xl leading-8">
-                ¡Mantengámoslo seguro! 🔒
-              </p>
-              <p className="mt-6 text-xl leading-8">
-                Luego, desplácese hacia abajo hasta la sección{" "}
-                <strong>&rdquo;Privacidad&rdquo;</strong> y toca &rdquo;
-                <strong>Borrar datos de privacidad</strong>&rdquo;.
-              </p>
-              <p className="mt-6 text-xl leading-8">
-                Aparecerá una ventana emergente, ¡no te asustes! Sólo toca{" "}
-                <strong>&rdquo;Borrar&rdquo;</strong> y estarás listo para
-                desconectar sitios conectados en MetaMask. 💥
-              </p>
+              <div
+                className="relative mt-6 mb-6"
+                style={{ paddingTop: "56.25%" }}
+              >
+                <iframe
+                  src="https://lvpr.tv?v=974fynkimqsbej6x"
+                  allowFullScreen
+                  allow=" encrypted-media; picture-in-picture"
+                  sandbox="allow-scripts"
+                  className="absolute inset-0 w-full h-full"
+                ></iframe>
+              </div>
               <p className="mt-6 text-xl leading-8">
                 <strong>¡Haz limpiado la casa! 🧹</strong>
               </p>
             </>
           ) : null}
 
-          {currentPage === 7 ? (
+          {currentPage === 8 ? (
             <>
               <p className="mt-6 text-xl leading-8">
                 Mainnet es donde los tokens tienen valor real. Testnets son
@@ -536,7 +721,7 @@ export default function Wallets({ subtitle, title, body, text }: PageProps) {
                 inteligentes.{" "}
                 <strong>El token de Testnet no tiene valor. 🚀</strong>
               </p>
-              <br />
+
               <p className="mt-6 text-xl leading-8">
                 Los tokens de Testnet se entregan de forma gratuita a través de
                 faucets. Sin embargo, se distribuyen en pequeñas cantidades para
@@ -562,7 +747,7 @@ export default function Wallets({ subtitle, title, body, text }: PageProps) {
                 Aquí aparecerán las redes personalizadas más populares
                 actualmente como:
               </p>
-              <br />
+
               <ul className="list-disc ml-6 mt-6 text-xl leading-8">
                 <li>Polygon</li>
                 <li>Binance smart Chain</li>
@@ -576,7 +761,20 @@ export default function Wallets({ subtitle, title, body, text }: PageProps) {
                 A continuación, introduce la información en el formulario tal y
                 como aparece aquí:
               </p>
-              <br />
+
+              <div
+                className="relative mt-6 mb-6"
+                style={{ paddingTop: "56.25%" }}
+              >
+                <iframe
+                  src="https://lvpr.tv?v=f75fu85y4vjiuos9"
+                  allowFullScreen
+                  allow="encrypted-media; picture-in-picture"
+                  sandbox="allow-scripts"
+                  className="absolute inset-0 w-full h-full"
+                ></iframe>
+              </div>
+
               <ul className="list-disc ml-6 mt-6 text-xl leading-8">
                 <li>
                   Network Name: <strong>Celo (Mainnet)</strong>
@@ -597,12 +795,12 @@ export default function Wallets({ subtitle, title, body, text }: PageProps) {
             </>
           ) : null}
 
-          {currentPage === 8 ? (
+          {currentPage === 9 ? (
             <>
               <p className="mt-6 text-xl leading-8">
                 <strong>👉 ¿Qué es Phantom? ¡Te lo contamos! </strong>
               </p>
-              <br />
+
               <p className="mt-6 text-xl leading-8">
                 Con Phantom, puedes almacenar, enviar, recibir, apostar e
                 intercambiar tokens en la cadena de bloques Solana. Además,
@@ -624,7 +822,7 @@ export default function Wallets({ subtitle, title, body, text }: PageProps) {
             </>
           ) : null}
 
-          {currentPage === 9 ? (
+          {currentPage === 10 ? (
             <>
               <p className="mt-6 text-xl leading-8">
                 <strong>
@@ -641,15 +839,39 @@ export default function Wallets({ subtitle, title, body, text }: PageProps) {
                   a Phantom fácilmente!
                 </li>
               </ul>
+              <div
+                className="relative mt-6 mb-6"
+                style={{ paddingTop: "56.25%" }}
+              >
+                <iframe
+                  src="https://lvpr.tv?v=7afei45vlmylnjq2"
+                  allowFullScreen
+                  allow="encrypted-media; picture-in-picture"
+                  sandbox="allow-scripts"
+                  className="absolute inset-0 w-full h-full"
+                ></iframe>
+              </div>
               <p className="mt-6 text-xl leading-8">
                 <strong>
-                👉 ¿Cómo elimino un NFT de mi cartera de Phantom?
+                  👉 ¿Cómo elimino un NFT de mi cartera de Phantom?
                 </strong>
               </p>
+              <div
+                className="relative mt-6 mb-6"
+                style={{ paddingTop: "56.25%" }}
+              >
+                <iframe
+                  src="https://lvpr.tv?v=96f1e6ctvf5fufan"
+                  allowFullScreen
+                  allow="encrypted-media; picture-in-picture"
+                  sandbox="allow-scripts"
+                  className="absolute inset-0 w-full h-full"
+                ></iframe>
+              </div>
             </>
           ) : null}
 
-          {currentPage === 10 ? (
+          {currentPage === 11 ? (
             <>
               <p className="mt-6 text-xl leading-8">
                 <strong>
@@ -683,6 +905,18 @@ export default function Wallets({ subtitle, title, body, text }: PageProps) {
                 Luego, dirígete a la sección de seguridad y haz clic en{" "}
                 <strong>&rdquo;Backup&rdquo; 🛡️</strong>.
               </p>
+              <div
+                className="relative mt-6 mb-6"
+                style={{ paddingTop: "56.25%" }}
+              >
+                <iframe
+                  src="https://lvpr.tv?v=ee5cdprwm6ay830f"
+                  allowFullScreen
+                  allow="encrypted-media; picture-in-picture"
+                  sandbox="allow-scripts"
+                  className="absolute inset-0 w-full h-full"
+                ></iframe>
+              </div>
               <p className="mt-6 text-xl leading-8">
                 Aquí te darán 12 palabras de seguridad que debes guardar como
                 oro en paño. Te recomendamos que las escribas en un papel y las
@@ -696,31 +930,107 @@ export default function Wallets({ subtitle, title, body, text }: PageProps) {
               </p>
             </>
           ) : null}
+
+          {currentPage === 12 ? (
+            <>
+              <p className="mt-6 text-xl leading-8">
+                Para graduarte como un maestro de Wallets Digitales debes
+                reclamar tu certificado 👇 Antes de generar tu certificado debes
+                verificar que tu Wallet es la correcta y que has realizado todas
+                las tareas, de lo contrario no podrás obtener el certificado. El
+                costo del certificado es 1 MATIC #Kiwitonikas 🥝
+              </p>
+
+              <div className="mt-6 flex flex-col items-center">
+                <div className="mb-6">
+                  <ThirdwebNftMedia metadata={nft.metadata} />
+                </div>
+
+                <div className="w-600">
+                  <div className="mb-6 mt-6">
+                    <Web3Button
+                      contractAddress={
+                        "0x47DA47429F0127EDd178cc36ebDEc58874310220"
+                      }
+                      action={(contract) =>
+                        contract.erc1155.claim(tokenId, quantity)
+                      }
+                      onSuccess={() =>
+                        alert("¡Felicidades, ya tienes tu NFT certificado!")
+                      }
+                      onError={() =>
+                        alert(
+                          "Oops, hubo un error :( Verifica tu saldo, es posible que necesites Matic"
+                        )
+                      }
+                      className="mx-auto"
+                    >
+                      Certifícate
+                    </Web3Button>
+                  </div>
+                </div>
+              </div>
+            </>
+          ) : null}
         </div>
       </div>
 
       <nav className="flex items-center justify-between border-t border-gray-200 px-4 sm:px-0">
         <div className="-mt-px flex w-0 flex-1">
           <a
-            onClick={() => setCurrentPage(currentPage - 1)}
-            className="inline-flex items-center border-t-2 border-transparent pr-1 pt-4 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700 hover:cursor-pointer"
+            onClick={() => {
+              if (currentPage > 0) {
+                setCurrentPage(currentPage - 1);
+                scrollToTop();
+              }
+            }}
+            className="hover:cursor-pointer inline-flex items-center  border-transparent pr-1 pt-4 text-sm font-medium text-gray-500  hover:text-gray-700"
           >
             <ArrowLongLeftIcon
-              className="mr-3 h-5 w-5 text-gray-400"
+              className="mr-3 h-5 w-5 text-gray-900"
               aria-hidden="true"
             />
-            Previous
           </a>
         </div>
-
+        <div className="flex flex-wrap justify-center">
+          {Array.from({ length: totalPages }, (_, i) => i + 1).map(
+            (pageNumber) => (
+              <a
+                key={pageNumber}
+                href="#"
+                onClick={() => {
+                  setCurrentPage(pageNumber - 1);
+                  scrollToTop();
+                }}
+                className={`inline-flex items-center  ${
+                  currentPage === pageNumber - 1
+                    ? "text-green-600"
+                    : "border-transparent text-gray-500 hover:text-gray-700 "
+                } px-4 pt-4 text-sm font-medium`}
+              >
+                {pageNumber}
+              </a>
+            )
+          )}
+        </div>
         <div className="-mt-px flex w-0 flex-1 justify-end">
           <a
-            onClick={() => setCurrentPage(currentPage + 1)}
-            className="inline-flex items-center border-t-2 border-transparent pl-1 pt-4 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700 hover:cursor-pointer"
+            onClick={
+              currentPage === totalPages - 1
+                ? undefined
+                : () => {
+                    setCurrentPage(currentPage + 1);
+                    scrollToTop();
+                  }
+            }
+            className={`inline-flex items-center  border-transparent pl-1 pt-4 text-sm font-medium ${
+              currentPage === totalPages - 1
+                ? "text-gray-400 cursor-not-allowed"
+                : "text-gray-500  hover:text-gray-700 hover:cursor-pointer"
+            }`}
           >
-            Next
             <ArrowLongRightIcon
-              className="ml-3 h-5 w-5 text-gray-400"
+              className="ml-3 h-5 w-5 text-gray-900"
               aria-hidden="true"
             />
           </a>
@@ -728,59 +1038,4 @@ export default function Wallets({ subtitle, title, body, text }: PageProps) {
       </nav>
     </Dashboard>
   );
-}
-
-// This gets called on every request
-export async function getServerSideProps(context: {
-  req:
-    | NextApiRequest
-    | NextRequest
-    | (IncomingMessage & { cookies: Partial<{ [key: string]: string }> });
-}) {
-  const user = await getUser(context.req);
-
-  if (!user) {
-    return {
-      redirect: {
-        destination: "/login",
-        permanent: false,
-      },
-    };
-  }
-
-  // Ensure we are able to generate an auth token using our private key instantiated SDK
-  const PRIVATE_KEY = process.env.THIRDWEB_AUTH_PRIVATE_KEY;
-  if (!PRIVATE_KEY) {
-    throw new Error("You need to add an PRIVATE_KEY environment variable.");
-  }
-
-  // Instantiate our SDK
-  const privateKey = process.env.THIRDWEB_AUTH_PRIVATE_KEY;
-
-  if (!privateKey) {
-    throw new Error(
-      "THIRDWEB_AUTH_PRIVATE_KEY environment variable is missing"
-    );
-  }
-
-  const sdk = ThirdwebSDK.fromPrivateKey(privateKey, "polygon");
-
-  /*  // Check to see if the user has an NFT
-  const hasNft = await checkBalance(sdk, user.address);
-
-  // If they don't have an NFT, redirect them to the login page
-  if (!hasNft) {
-    console.log("User", user.address, "doesn't have an NFT! Redirecting...");
-    return {
-      redirect: {
-        destination: "/login",
-        permanent: false,
-      },
-    };
-  } */
-
-  // Finally, return the props
-  return {
-    props: {},
-  };
 }

@@ -1,25 +1,16 @@
 import React, { useEffect } from "react";
 import { ThirdwebSDK } from "@thirdweb-dev/sdk";
-import { useLogout, useUser } from "@thirdweb-dev/react";
+import { useUser } from "@thirdweb-dev/react";
 import { getUser } from "../../auth.config";
 import { useRouter } from "next/router";
-import checkBalance from "../../utils/checkBalance";
 import { IncomingMessage } from "http";
 import { NextApiRequest } from "next";
 import { NextRequest } from "next/server";
-import Layout from "../../components/Layout";
 import Dashboard from "./dashboard";
 
 export default function Home() {
-  const { logout } = useLogout();
   const { isLoggedIn, isLoading } = useUser();
   const router = useRouter();
-
-  const handleLogout = async () => {
-    await logout();
-    console.log("Logged out");
-    router.push("/login");
-  };
 
   useEffect(() => {
     if (!isLoading && !isLoggedIn) {

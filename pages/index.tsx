@@ -10,7 +10,7 @@ import { NextRequest } from "next/server";
 import Dashboard from "./dashboard/dashboard";
 
 export default function Home() {
-  const { isLoggedIn, isLoading } = useUser();
+  const { isLoggedIn, isLoading, user } = useUser();
   const router = useRouter();
 
   useEffect(() => {
