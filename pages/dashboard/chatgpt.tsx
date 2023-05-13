@@ -1488,26 +1488,33 @@ export default function ChatGPT() {
                 #Kiwitonikas 🥝
               </p>
 
-              <div className="mt-6">
-                <ThirdwebNftMedia metadata={nft.metadata} />
-              </div>
+              <div className="mt-6 flex flex-col items-center">
+                <div className="mb-6">
+                  <ThirdwebNftMedia metadata={nft.metadata} />
+                </div>
 
-              <div className="mx-auto w-600">
-                <div className="mb-6 mt-6 ml-16">
-                  <Web3Button
-                    contractAddress={
-                      "0x47DA47429F0127EDd178cc36ebDEc58874310220"
-                    }
-                    action={(contract) =>
-                      contract.erc1155.claim(tokenId, quantity)
-                    }
-                    onSuccess={() =>
-                      alert("Felicidades ya tienes tu NFT certificado!")
-                    }
-                    onError={(err) => alert("Oops, hubo un error :( Verifica tu saldo, es posible que necesites Matic")}
-                  >
-                    Certifícate
-                  </Web3Button>
+                <div className="w-600">
+                  <div className="mb-6 mt-6">
+                    <Web3Button
+                      contractAddress={
+                        "0x47DA47429F0127EDd178cc36ebDEc58874310220"
+                      }
+                      action={(contract) =>
+                        contract.erc1155.claim(tokenId, quantity)
+                      }
+                      onSuccess={() =>
+                        alert("¡Felicidades, ya tienes tu NFT certificado!")
+                      }
+                      onError={() =>
+                        alert(
+                          "Oops, hubo un error :( Verifica tu saldo, es posible que necesites Matic"
+                        )
+                      }
+                      className="mx-auto"
+                    >
+                      Certifícate
+                    </Web3Button>
+                  </div>
                 </div>
               </div>
             </>

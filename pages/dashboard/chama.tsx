@@ -1,5 +1,11 @@
 import React, { useEffect, useState } from "react";
-import { ThirdwebNftMedia, Web3Button, useContract, useNFT, useUser } from "@thirdweb-dev/react";
+import {
+  ThirdwebNftMedia,
+  Web3Button,
+  useContract,
+  useNFT,
+  useUser,
+} from "@thirdweb-dev/react";
 import { useRouter } from "next/router";
 import Dashboard from "./dashboard";
 import {
@@ -19,7 +25,7 @@ interface PageProps {
 const pages = [
   {
     subtitle: "Introducción",
-    title: "Retrato Estilizado por Chama Candela 🔥",
+    title: "Rostros Estilizados por Chama Candela 🔥",
   },
   {
     title: "1. Ilustración de perfil de lado 🗣️",
@@ -398,33 +404,40 @@ export default function ChatGPT() {
                 </strong>
               </p>
 
+              <div className="mt-6 flex flex-col items-center">
+                <div className="mb-6">
+                  <ThirdwebNftMedia metadata={nft.metadata} />
+                </div>
 
-              <div className="mt-6">
-                <ThirdwebNftMedia metadata={nft.metadata} />
-              </div>
-
-              <div className="mx-auto w-600">
-                <div className="mb-6 mt-6 ml-16">
-                <Web3Button
-                  contractAddress={"0x47DA47429F0127EDd178cc36ebDEc58874310220"}
-                  action={(contract) =>
-                    contract.erc1155.claim(tokenId, quantity)
-                  }
-                  onSuccess={() =>
-                    alert("Felicidades ya tienes tu NFT certificado!")
-                  }
-                  onError={(err) => alert("Oops, hubo un error :( Verifica tu saldo, es posible que necesites Matic")}
-                >
-                  Certifícate
-                </Web3Button>
-              </div>
+                <div className="w-600">
+                  <div className="mb-6 mt-6">
+                    <Web3Button
+                      contractAddress={
+                        "0x47DA47429F0127EDd178cc36ebDEc58874310220"
+                      }
+                      action={(contract) =>
+                        contract.erc1155.claim(tokenId, quantity)
+                      }
+                      onSuccess={() =>
+                        alert("¡Felicidades, ya tienes tu NFT certificado!")
+                      }
+                      onError={() =>
+                        alert(
+                          "Oops, hubo un error :( Verifica tu saldo, es posible que necesites Matic"
+                        )
+                      }
+                      className="mx-auto"
+                    >
+                      Certifícate
+                    </Web3Button>
+                  </div>
+                </div>
               </div>
             </>
           ) : null}
         </div>
       </div>
 
-      
       <nav className="flex items-center justify-between border-t border-gray-200 px-4 sm:px-0">
         <div className="-mt-px flex w-0 flex-1">
           <a
@@ -440,7 +453,6 @@ export default function ChatGPT() {
               className="mr-3 h-5 w-5 text-gray-900"
               aria-hidden="true"
             />
-            
           </a>
         </div>
         <div className="flex flex-wrap justify-center">
@@ -480,7 +492,6 @@ export default function ChatGPT() {
                 : "text-gray-500  hover:text-gray-700 hover:cursor-pointer"
             }`}
           >
-            
             <ArrowLongRightIcon
               className="ml-3 h-5 w-5 text-gray-900"
               aria-hidden="true"
