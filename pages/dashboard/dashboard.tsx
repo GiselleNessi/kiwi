@@ -45,6 +45,13 @@ const teams = [
     initial: "C",
     current: false,
   },
+  {
+    id: 3,
+    name: "Wallets Digitales",
+    href: "/dashboard/wallets",
+    initial: "C",
+    current: false,
+  },
 ];
 
 const features: Feature[] = [

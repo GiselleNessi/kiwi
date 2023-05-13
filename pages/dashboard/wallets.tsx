@@ -47,7 +47,7 @@ const pages = [
     title: "Desconectar sitios conectados en la aplicación móvil MetaMask! 📱",
   },
   {
-    title: "¡¿Cuál es la diferencia entre Mainnet y Testnets? 🤔",
+    title: "¿Cuál es la diferencia entre Mainnet y Testnets? 🤔",
   },
   {
     title:
@@ -59,12 +59,6 @@ const pages = [
   },
   {
     title: "3. ¡Exodus, la billetera digital que lo tiene todo!",
-  },
-  {
-    title: "9. Ejercicios",
-  },
-  {
-    title: "10. ¡Felicidades, completaste el curso! 🥳",
   },
 ];
 
@@ -300,11 +294,9 @@ export default function Wallets({ subtitle, title, body, text }: PageProps) {
                 </strong>
               </p>
               <p className="mt-6 text-xl leading-8">
-                ¡Muy bien! Así que si te has quedado sin opciones, la mejor
-                manera de importar tu billetera es usando la frase secreta de
-                recuperación de 12 palabras. Solo tienes que ingresar junto con
-                una nueva contraseña y hacer clic en el botón{" "}
-                <strong>IMPORTAR</strong> en la parte inferior. 💻💥👍
+                ¡Muy bien! La mejor manera de importar tu billetera es usando la
+                frase secreta de recuperación de 12 palabras y haciendo clic en
+                el botón <strong>IMPORTAR</strong> en la parte inferior. 💻💥👍
               </p>
               <p className="mt-6 text-xl leading-8">
                 Sé que puede ser un dolor de cabeza recordar otra contraseña,
@@ -314,12 +306,7 @@ export default function Wallets({ subtitle, title, body, text }: PageProps) {
                 MetaMask en todas las plataformas. Además, esto demuestra que
                 MetaMask es una billetera sin custodia, lo que significa que
                 todo está almacenado en tu dispositivo local y no en la nube.
-                🔒📱 Una vez que hayas completado todo el proceso, verás la
-                pantalla de felicitaciones y finalmente podrás tener tu panel de
-                control de usuario móvil MetaMask.
-              </p>
-              <p className="mt-6 text-xl leading-8">
-                ¡Hora de hacer negocios! 💰💳💸
+                🔒📱
               </p>
               <p className="mt-6 text-xl leading-8">
                 ¡Tenemos una gran noticia! ¡Ya tenemos una billetera! 🎉 Pero
@@ -407,9 +394,9 @@ export default function Wallets({ subtitle, title, body, text }: PageProps) {
                 ¡Genial para experimentar sin preocupaciones! 🧪
               </p>
               <p className="mt-6 text-xl leading-8">
-                En particular, solicitamos 5 ETH en Goerli Test Network (arriba
-                a la derecha, además del avatar puedes ver la red) para ilustrar
-                cómo enviar usando MetaMask.
+                En particular, solicitamos 0.1 ETH en Goerli Test Network
+                (arriba a la derecha, además del avatar puedes ver la red) para
+                ilustrar cómo enviar usando MetaMask.
               </p>
               <p className="mt-6 text-xl leading-8">
                 Los activos de{" "}
@@ -417,11 +404,6 @@ export default function Wallets({ subtitle, title, body, text }: PageProps) {
                 redes de prueba se utilizan para las pruebas de los
                 desarrolladores antes de lanzar sus productos en la red
                 principal de Ethereum.
-              </p>
-              <p className="mt-6 text-xl leading-8">
-                <strong>
-                  TAREA* Muestran que lograron obtener cripto de test GOERLI
-                </strong>
               </p>
             </>
           ) : null}
@@ -494,7 +476,7 @@ export default function Wallets({ subtitle, title, body, text }: PageProps) {
               </p>
 
               <p className="mt-6 text-xl leading-8">
-                Pero no se preocupen, amigos, tenemos la solución. Para ver y
+                Pero no se preocupen, tenemos la solución. Para ver y
                 desconectar sitios conectados en MetaMask, solo necesitamos
                 hacer clic en los tres puntos verticales (Sí, esos puntitos
                 curiosos en la esquina superior derecha)
@@ -591,17 +573,8 @@ export default function Wallets({ subtitle, title, body, text }: PageProps) {
                 Estas redes puedes agregarla de forma automática en el buscador
               </p>
               <p className="mt-6 text-xl leading-8">
-                Ahora, si quieres agregar otro selecciona{" "}
-                <strong> Token personalizado. 📱 </strong>
-              </p>
-              <p className="mt-6 text-xl leading-8">
-                ⚠️Hay <strong>redes que no son compatibles con Ethereum</strong>
-                , como por ejemplo Bitcoin, Dogecoin o Cardano, por lo que no se
-                pueden agregar a MetaMask y requieren su propia billetera⚠️
-              </p>
-              <p className="mt-6 text-xl leading-8">
-                Y a continuación, introduce la información en el formulario tal
-                y como aparece aquí:
+                A continuación, introduce la información en el formulario tal y
+                como aparece aquí:
               </p>
               <br />
               <ul className="list-disc ml-6 mt-6 text-xl leading-8">
@@ -662,92 +635,16 @@ export default function Wallets({ subtitle, title, body, text }: PageProps) {
               <br />
               <ul className="list-disc ml-6 mt-6 text-xl leading-8">
                 <li>
-                  Haz clic en <strong>añadir a Chrome</strong> y añade la
-                  extensión. Los pasos también son los mismos para otros
-                  navegadores. Después de hacer clic en añadir extensión,
-                  descarga el complemento en su PC y lo instalará en su
-                  navegador. En este caso, es Chrome.
-                </li>
-                <li>
-                  Después de que la extensión Phantom se instale en su
-                  navegador, se abrirá automáticamente. Ahora, antes de crear
-                  una nueva cartera, así es como puedes acceder a Phantom en tu
-                  navegador. En la mayoría de los navegadores populares verás la
-                  extensión en la esquina superior derecha.
-                </li>
-                <li>
-                  También puede mirar en la barra de herramientas de su
-                  navegador y en la sección de <strong>complementos</strong>. En
-                  Chrome, en la esquina superior derecha, verás un icono de
-                  rompecabezas.
-                </li>
-                <li>
-                  Haz clic en él y verás la lista de extensiones instaladas.
-                  Encuentra la extensión Phantom y haz clic en el &rdquo;icono de
-                  pin&rdquo;. Se fijará la extensión en la parte superior y esto
-                  debería facilitar la búsqueda y el acceso a Phantom en el
-                  futuro. Ahora <strong>haz clic en el icono de Phantom</strong>{" "}
-                  e inicia la configuración de la cartera.
-                </li>
-                <li>
-                  La aplicación Phantom se iniciará en una nueva pestaña y
-                  encontrarás dos opciones.
-                  <strong>Crea una nueva billetera nueva</strong> y ya{" "}
-                  <strong>tengo una billetera</strong>
-                </li>
-                <li>
-                  Dado que estamos configurando una cartera nueva, elija{" "}
-                  <strong>&rdquo;crear una cartera nueva</strong>&rdquo;. Si
-                  usted es un usuario existente de Solana y anteriormente estaba
-                  usando carteras como Sollet o Solflare, entonces puede usar su
-                  frase de recuperación secreta para{" "}
-                  <strong>
-                    &rdquo;importar su billetera existente a Phantom&rdquo;
-                  </strong>
-                  , una billetera criptográfica reimaginada para DeFi y NFT e la
-                  opción <strong>&rdquo;Ya tengo una billetera&rdquo;</strong>
+                  Visita https://www.phantom.app/download y sigue los sencillos
+                  pasos de descarga e instalación. Ya sea que estés en Google
+                  Chrome, Firefox, Microsoft Edge o Brave, ¡podrás tener acceso
+                  a Phantom fácilmente!
                 </li>
               </ul>
               <p className="mt-6 text-xl leading-8">
-                <strong>NUEVA CARTERA</strong>
-              </p>
-              <p className="mt-6 text-xl leading-8">
-                Haz clic en <strong>crear una nueva cartera 🔑</strong> y en la
-                siguiente pantalla la cartera te pedirá que{" "}
-                <strong>crees una contraseña 🔒 </strong>que se utilizará para
-                bloquear y desbloquear tu cartera.
-              </p>
-              <p className="mt-6 text-xl leading-8">
-                <strong>🔐Establezca una contraseña segura 🔐.</strong>
-              </p>
-              <p className="mt-6 text-xl leading-8">
-                A continuación, lea y elija Acepto los{" "}
-                <strong>Términos de Servicio 📜 </strong>y luego haga clic en{" "}
-                <strong>Continuar ➡️</strong>.
-              </p>
-              <p className="mt-6 text-xl leading-8">
-                Luego mostrará la frase de recuperación secreta 🔍 de 12
-                palabras para usted. Para <strong>restaurar</strong> tu cartera
-                Phantom en el futuro, necesitarás esta frase de recuperación. En
-                caso de que alguien tenga acceso a esto o si lo pierdes,
-                potencialmente perderás todos los fondos 💰 que tienes en tu
-                Phantom.
-              </p>
-              <p className="mt-6 text-xl leading-8">
-                Una vez que tengas las palabras iniciales aseguradas, haz clic
-                en <strong>&rdquo;Continuar&rdquo; ➡️</strong>.
-              </p>
-              <p className="mt-6 text-xl leading-8">
-                En la siguiente pantalla se te pedirá que crees una contraseña
-                🔒 que se utilizará para bloquear y desbloquear tu cartera.
-                Establezca una contraseña segura 🔐. A continuación, lea y elija{" "}
-                <strong>Acepto los Términos de Servicio 📜</strong> y luego haga
-                clic en <strong>Continuar ➡️</strong>.
-              </p>
-              <p className="mt-6 text-xl leading-8">
-                ¡Todo ha terminado! Tu cartera Phantom está lista para usar.
-                Haga clic en <strong>&rdquo;Terminar&rdquo;</strong> para
-                completar la configuración de la cartera.
+                <strong>
+                👉 ¿Cómo elimino un NFT de mi cartera de Phantom?
+                </strong>
               </p>
             </>
           ) : null}
@@ -766,16 +663,6 @@ export default function Wallets({ subtitle, title, body, text }: PageProps) {
                 escritorio para Linux, Windows y Mac OS, o como una aplicación
                 móvil descargable en la Play Store de Google o en la App Store
                 de Apple 📱.
-              </p>
-              <p className="mt-6 text-xl leading-8">
-                Esta billetera no escatima en seguridad ¡Y eso es música para
-                nuestros oídos criptográficos!
-              </p>
-              <p className="mt-6 text-xl leading-8">
-                🔒 Con autenticación de doble factor, una frase-contraseña de
-                doce palabras 🗝️, una función de bloqueo 🔐 y una copia de
-                seguridad online 💾, podemos dormir tranquilos sabiendo que
-                nuestras inversiones están seguras.
               </p>
               <p className="mt-6 text-xl leading-8">
                 <strong>
@@ -803,145 +690,9 @@ export default function Wallets({ subtitle, title, body, text }: PageProps) {
                 👀.
               </p>
               <p className="mt-6 text-xl leading-8">
-                Te saldrá este aviso en donde te recomiendan resguardar bien las{" "}
-                <strong>frases semillas</strong> que aparecerán a continuación
-              </p>
-              <p className="mt-6 text-xl leading-8">
                 <strong>¡Y voilà!</strong> Ya estás listo para empezar a guardar
                 tus Bitcoin y más de 200 criptomonedas en una de las mejores
                 billeteras del mercado.
-              </p>
-              <p className="mt-6 text-xl leading-8">
-                ¡No te preocupes por nada más, deja que Exodus se encargue del
-                resto! 💰💻
-              </p>
-            </>
-          ) : null}
-
-          {currentPage === 11 ? (
-            <>
-              <p className="mt-6 text-xl leading-8">
-                <strong>
-                  ¡Llegaste al final de este curso lleno de consejos y trucos
-                  para sacar el máximo provecho de ChatGPT! Como habrás notado,
-                  la clave para el éxito es escribir instrucciones claras y
-                  precisas. Si logras hacerlo, podrás guiar a ChatGPT en la
-                  dirección correcta para obtener resultados significativos y
-                  útiles. 🤖👍
-                </strong>
-              </p>
-              <br />
-              <p className="mt-6 text-xl leading-8">
-                ¿Recuerdas la técnica del &rdquo;actuar como&rdquo;? Es una
-                herramienta poderosa que te permite definir claramente el papel
-                que deseas que ChatGPT desempeñe en la conversación. ¡No te
-                quedes atrás y ponla en práctica! 🤖💬
-              </p>
-              <p className="mt-6 text-xl leading-8">
-                Otro consejo importante es evitar la jerga y la ambigüedad en
-                las instrucciones. Usa un lenguaje sencillo y directo, así como
-                preguntas específicas, para que ChatGPT pueda darte respuestas
-                precisas. Y recuerda, ChatGPT es una herramienta poderosa, pero
-                su eficacia depende de cómo la uses. 🧑‍💻💭
-              </p>
-              <p className="mt-6 text-xl leading-8">
-                Para redactar instrucciones efectivas para ChatGPT, debes tener
-                en cuenta la comunicación clara, la especificidad y las
-                capacidades y limitaciones de la herramienta. Con los consejos y
-                prácticas recomendadas que se encuentran en este libro
-                electrónico, podrás crear instrucciones efectivas que te
-                ayudarán a lograr tus objetivos. Así que ¡adelante, pon manos a
-                la obra y haz que ChatGPT trabaje para ti! 🤖💪
-              </p>
-              <p className="mt-6 text-xl leading-8">
-                <strong>
-                  ¿Listo para dominar el arte de los prompts en ChatGPT? Aquí
-                  están los próximos pasos que necesitas tomar! 🚀🤖
-                </strong>
-              </p>
-              <p className="mt-6 text-xl leading-8">
-                Te dejamos los próximos pasos que debes seguir para seguir
-                mejorando tus habilidades:
-              </p>
-              <p className="mt-6 text-xl leading-8">
-                Primero y más importante, ¡practica! Cuanto más uses ChatGPT y
-                experimentes con diferentes tipos de mensajes, más fácil será
-                crear mensajes efectivos y geniales.
-              </p>
-              <p className="mt-6 text-xl leading-8">
-                Pide a tus amigos y compañeros que revisen tus mensajes y te den
-                sus opiniones. Sus críticas constructivas te ayudarán a
-                identificar áreas de mejora y a perfeccionar tus habilidades.
-              </p>
-              <p className="mt-6 text-xl leading-8">
-                No te quedes atrás, aprende de los demás. Investiga en línea
-                ejemplos de mensajes de ChatGPT que hayan tenido éxito o únete a
-                comunidades y foros en línea dedicados a ChatGPT para aprender
-                de los expertos y compartir tus propias experiencias.
-              </p>
-              <p className="mt-6 text-xl leading-8">
-                ¡Experimenta con diferentes estilos y enfoques! No tengas miedo
-                de probar cosas nuevas y ver qué es lo que funciona mejor. Puede
-                que descubras que ciertas técnicas o enfoques son más eficaces
-                para diferentes tipos de conversaciones.
-              </p>
-              <p className="mt-6 text-xl leading-8">
-                Mantente actualizado con los últimos avances en ChatGPT e
-                inteligencia artificial. A medida que la tecnología siga
-                avanzando, también lo harán las capacidades de ChatGPT. Al
-                mantenerte al día con las últimas noticias, puedes estar seguro
-                de estar utilizando las mejores técnicas y enfoques para tus
-                mensajes ChatGPT.
-              </p>
-            </>
-          ) : null}
-
-          {currentPage === 12 ? (
-            <>
-              <p className="mt-6 text-xl leading-8">
-                <strong>
-                  Ahora te dejaremos dos pequeñas tareas para poder aprobar el
-                  curso y tener tu certificado, ¡no te asustes, con todo lo que
-                  has aprendido estamos seguras que lo obtendrás! 🎉
-                </strong>
-              </p>
-              <br />
-              <p className="mt-6 text-xl leading-8">
-                Escribe un hilo de tweet sobre un tema de actualidad.
-              </p>
-              <p className="mt-6 text-xl leading-8">
-                Comienza con una pregunta clara y sencilla para ChatGPT, como
-                &rdquo;¿Puedes decirme cuál es el tema de actualidad más
-                importante de hoy?&rdquo; (recuerda que ChatGPT está alimentado
-                hasta el 2021)
-              </p>
-              <p className="mt-6 text-xl leading-8">
-                Utiliza preguntas de seguimiento para obtener detalles
-                específicos sobre el tema, como &rdquo;¿Cuáles son los
-                principales aspectos de este tema que la gente necesita
-                saber?&rdquo;, o &rdquo;¿Cuál es la postura oficial de los
-                líderes en relación a este tema?&rdquo;
-              </p>
-              <p className="mt-6 text-xl leading-8">
-                Mantén un tono respetuoso y coherente en todo momento para
-                asegurarte de que ChatGPT no se desvíe de la conversación. Si se
-                desvía, usa preguntas de seguimiento para que vuelva al tema
-                original.
-              </p>
-              <p className="mt-6 text-xl leading-8">
-                Utiliza el truco &rdquo;actúa como&rdquo; para hacer que ChatGPT
-                se comporte como un periodista o experto en el tema. Por
-                ejemplo, puedes preguntar: &rdquo;¿Qué crees que las personas
-                deben hacer para abordar este problema?&rdquo; o &rdquo;¿Puedes
-                compartir algún recurso útil para que las personas puedan
-                profundizar en este tema?&rdquo;.
-              </p>
-              <p className="mt-6 text-xl leading-8">
-                Utiliza la limitación de caracteres de Twitter para ayudar a los
-                estudiantes a ser precisos y concisos en su escritura. Usa un
-                hilo de 3 o 4 tweets sobre el tema y utiliza preguntas y
-                respuestas para hacer que la conversación fluya de manera
-                natural.
               </p>
             </>
           ) : null}
@@ -1014,7 +765,7 @@ export async function getServerSideProps(context: {
 
   const sdk = ThirdwebSDK.fromPrivateKey(privateKey, "polygon");
 
- /*  // Check to see if the user has an NFT
+  /*  // Check to see if the user has an NFT
   const hasNft = await checkBalance(sdk, user.address);
 
   // If they don't have an NFT, redirect them to the login page
