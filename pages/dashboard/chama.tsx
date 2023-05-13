@@ -413,7 +413,7 @@ export default function ChatGPT() {
                   onSuccess={() =>
                     alert("Felicidades ya tienes tu NFT certificado!")
                   }
-                  onError={(err) => alert(err)}
+                  onError={(err) => alert("Oops, hubo un error :( Verifica tu saldo, es posible que necesites Matic")}
                 >
                   Certifícate
                 </Web3Button>
