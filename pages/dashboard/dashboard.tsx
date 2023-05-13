@@ -40,11 +40,19 @@ const teams = [
   },
   {
     id: 2,
+    name: "Wallets Digitales",
+    href: "/dashboard/wallets",
+    initial: "C",
+    current: false,
+  },
+  {
+    id: 3,
     name: "Ilustración Digital",
     href: "/dashboard/chama",
     initial: "C",
     current: false,
   },
+ 
 ];
 
 const features: Feature[] = [
@@ -95,7 +103,12 @@ export default function Dashboard({ children }: Props) {
     }
   }, [isLoading, isLoggedIn, router]);
 
-  //console.log(isLoggedIn)
+/*
+  if (!address) {
+    router.push("/login");
+    return null;
+  }
+  */
 
   return (
     <div>
@@ -262,6 +275,7 @@ export default function Dashboard({ children }: Props) {
               <li className="flex justify-center">
                 <p className="text-sm leading-8 text-white">
                   {address?.slice(0, 6)}...{address?.slice(-4)}{" "}
+
                 </p>
               </li>
               <li className="mt-6">
