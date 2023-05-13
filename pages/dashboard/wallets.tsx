@@ -181,10 +181,7 @@ export default function Wallets({ subtitle, title, body, text }: PageProps) {
 
           {currentPage === 1 ? (
             <>
-              <p className="mt-6 text-xl leading-8">
-                ¿Cómo funciona una wallet de criptomonedas? 🧐
-              </p>
-              <br />
+              
               <p className="mt-6 text-xl leading-8">
                 - En primer lugar <strong>La Dirección:</strong>
               </p>
