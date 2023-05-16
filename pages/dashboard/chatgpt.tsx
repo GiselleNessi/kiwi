@@ -72,10 +72,13 @@ const pages = [
   },
 ];
 
+
 export default function ChatGPT() {
   const [currentPage, setCurrentPage] = useState(0);
   const totalPages = 13; // replace with the total number of pages
   //console.log(currentPage);
+
+  const progressPercentage = ((currentPage + 1) / totalPages) * 100;
 
   //web3button
   const tokenId = 0; // the id of the NFT you want to claim
@@ -87,6 +90,7 @@ export default function ChatGPT() {
   const { data: nft, error } = useNFT(contract, "0");
 
   const { isLoggedIn, isLoading, user } = useUser();
+  
   const router = useRouter();
 
   const scrollToTop = () => {
@@ -106,7 +110,20 @@ export default function ChatGPT() {
 
   return (
     <Dashboard>
+        {/* Progress Bar */}
+        <div>
+          <div className="w-full bg-gray-200 h-1 mt-2">
+            <div
+              className="bg-green-500 h-full"
+              style={{ width: `${progressPercentage}%` }}
+            />
+          </div>
+          <p className="text-sm text-gray-500 mt-2">
+            {Math.round(progressPercentage)}% Completado
+          </p>
+        </div>
       <div className="bg-white px-6 py-6 lg:px-8">
+      
         <div className="mx-auto max-w-3xl text-base leading-7 text-gray-700">
           <p className="text-base font-semibold leading-7 text-green-500">
             {pages[currentPage]?.subtitle || ""}
@@ -1531,7 +1548,7 @@ export default function ChatGPT() {
                 scrollToTop();
               }
             }}
-            className="hover:cursor-pointer inline-flex items-center  border-transparent pr-1 pt-4 text-sm font-medium text-gray-500  hover:text-gray-700"
+            className="hover:cursor-pointer inline-flex items-center border-transparent pr-1 pt-4 text-sm font-medium text-gray-500 hover:text-gray-700"
           >
             <ArrowLongLeftIcon
               className="mr-3 h-5 w-5 text-gray-900"
@@ -1549,10 +1566,10 @@ export default function ChatGPT() {
                   setCurrentPage(pageNumber - 1);
                   scrollToTop();
                 }}
-                className={`inline-flex items-center  ${
+                className={`inline-flex items-center ${
                   currentPage === pageNumber - 1
-                    ? "text-green-600"
-                    : "border-transparent text-gray-500 hover:text-gray-700 "
+                    ? "text-green-500"
+                    : "border-transparent text-gray-500 hover:text-gray-700"
                 } px-4 pt-4 text-sm font-medium`}
               >
                 {pageNumber}
@@ -1570,10 +1587,10 @@ export default function ChatGPT() {
                     scrollToTop();
                   }
             }
-            className={`inline-flex items-center  border-transparent pl-1 pt-4 text-sm font-medium ${
+            className={`inline-flex items-center border-transparent pl-1 pt-4 text-sm font-medium ${
               currentPage === totalPages - 1
                 ? "text-gray-400 cursor-not-allowed"
-                : "text-gray-500  hover:text-gray-700 hover:cursor-pointer"
+                : "text-gray-500 hover:text-gray-700 hover:cursor-pointer"
             }`}
           >
             <ArrowLongRightIcon

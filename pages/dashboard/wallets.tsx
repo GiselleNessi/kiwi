@@ -92,6 +92,9 @@ export default function Wallets({ subtitle, title, body, text }: PageProps) {
   const totalPages = 13; // replace with the total number of pages
   //console.log(currentPage);
 
+  const progressPercentage = ((currentPage + 1) / totalPages) * 100;
+
+
   //web3button
   const tokenId = 2; // the id of the NFT you want to claim
   const quantity = 1; // how many NFTs you want to claim
@@ -124,6 +127,19 @@ export default function Wallets({ subtitle, title, body, text }: PageProps) {
 
   return (
     <Dashboard>
+        {/* Progress Bar */}
+        <div>
+          <div className="w-full bg-gray-200 h-1 mt-2">
+            <div
+              className="bg-green-500 h-full"
+              style={{ width: `${progressPercentage}%` }}
+            />
+          </div>
+          <p className="text-sm text-gray-500 mt-2">
+            {Math.round(progressPercentage)}% Completado
+          </p>
+        </div>
+        
       <div className="bg-white px-6 py-6 lg:px-8">
         <div className="mx-auto max-w-3xl text-base leading-7 text-gray-700">
           <p className="text-base font-semibold leading-7 text-green-500">
