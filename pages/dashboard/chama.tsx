@@ -415,12 +415,33 @@ export default function ChatGPT() {
               <p className="mt-6 text-xl leading-8">
                 <strong>
                   Estamos súper orgullosas que hayas participado en este curso y
-                  que aprendas de la mejor chamita con sabor caribeño. Ahora
-                  puedes mintear tu certificado aquí abajo 👇{" "}
+                  que aprendas de la mejor chamita con sabor caribeño.
                 </strong>
               </p>
 
+              <p className="mt-6 text-xl leading-8 mb-4">
+               
+               
+               Para graduarte debes mintear tu
+               certificado  el costo es de 1 MATIC de Polygon (aprox 1$).
+
+               Al mintear tu certificando estas apoyando al creador de contenido, así que asegúrate de
+               seguirla en las redes sociales y etiquétala en Twitter junto a tu nuevo certificado.
+               
+               
+             </p>
+
+             
+             <p>
+             👇
+              <br></br>
+               <strong>@uhCaribe
+</strong>
+               <br></br>
+               #Kiwitonikas 🥝
+             </p>
               <div className="mt-6 flex flex-col items-center">
+                <h1>Apoya a Chama Candela y el arte Latino</h1>
                 <div className="mb-6">
                   <ThirdwebNftMedia metadata={nft.metadata} />
                 </div>

@@ -127,19 +127,19 @@ export default function Wallets({ subtitle, title, body, text }: PageProps) {
 
   return (
     <Dashboard>
-        {/* Progress Bar */}
-        <div>
-          <div className="w-full bg-gray-200 h-1 mt-2">
-            <div
-              className="bg-green-500 h-full"
-              style={{ width: `${progressPercentage}%` }}
-            />
-          </div>
-          <p className="text-sm text-gray-500 mt-2">
-            {Math.round(progressPercentage)}% Completado
-          </p>
+      {/* Progress Bar */}
+      <div>
+        <div className="w-full bg-gray-200 h-1 mt-2">
+          <div
+            className="bg-green-500 h-full"
+            style={{ width: `${progressPercentage}%` }}
+          />
         </div>
-        
+        <p className="text-sm text-gray-500 mt-2">
+          {Math.round(progressPercentage)}% Completado
+        </p>
+      </div>
+
       <div className="bg-white px-6 py-6 lg:px-8">
         <div className="mx-auto max-w-3xl text-base leading-7 text-gray-700">
           <p className="text-base font-semibold leading-7 text-green-500">
@@ -197,7 +197,6 @@ export default function Wallets({ subtitle, title, body, text }: PageProps) {
 
           {currentPage === 1 ? (
             <>
-              
               <p className="mt-6 text-xl leading-8">
                 - En primer lugar <strong>La Dirección:</strong>
               </p>
@@ -946,13 +945,14 @@ export default function Wallets({ subtitle, title, body, text }: PageProps) {
 
           {currentPage === 12 ? (
             <>
-              <p className="mt-6 text-xl leading-8">
+              <p className="mt-6 mb-4 text-xl leading-8">
                 Para graduarte como un maestro de Wallets Digitales debes
-                reclamar tu certificado 👇 Antes de generar tu certificado debes
-                verificar que tu Wallet es la correcta y que has realizado todas
-                las tareas, de lo contrario no podrás obtener el certificado. El
-                costo del certificado es 1 MATIC #Kiwitonikas 🥝
+                mintear tu certificado el costo es de 1 MATIC de Polygon (aprox
+                1$). Al mintear tu certificando estas apoyando al creador de
+                contenido, así que asegúrate de seguirla en las redes sociales y
+                etiquétala en Twitter junto a tu nuevo certificado.
               </p>
+              <p>👇 <br></br><strong>@ms_nairobi</strong>  <br></br>#Kiwitonikas 🥝</p>
 
               <div className="mt-6 flex flex-col items-center">
                 <div className="mb-6">

@@ -110,20 +110,19 @@ export default function ChatGPT() {
 
   return (
     <Dashboard>
-        {/* Progress Bar */}
-        <div>
-          <div className="w-full bg-gray-200 h-1 mt-2">
-            <div
-              className="bg-green-500 h-full"
-              style={{ width: `${progressPercentage}%` }}
-            />
-          </div>
-          <p className="text-sm text-gray-500 mt-2">
-            {Math.round(progressPercentage)}% Completado
-          </p>
+      {/* Progress Bar */}
+      <div>
+        <div className="w-full bg-gray-200 h-1 mt-2">
+          <div
+            className="bg-green-500 h-full"
+            style={{ width: `${progressPercentage}%` }}
+          />
         </div>
+        <p className="text-sm text-gray-500 mt-2">
+          {Math.round(progressPercentage)}% Completado
+        </p>
+      </div>
       <div className="bg-white px-6 py-6 lg:px-8">
-      
         <div className="mx-auto max-w-3xl text-base leading-7 text-gray-700">
           <p className="text-base font-semibold leading-7 text-green-500">
             {pages[currentPage]?.subtitle || ""}
@@ -1496,12 +1495,24 @@ export default function ChatGPT() {
 
           {currentPage === 12 ? (
             <>
-              <p className="mt-6 text-xl leading-8">
+              <p className="mt-6 text-xl leading-8 mb-4">
+               
+               
                 Para graduarte de Ninja de prompts en ChatGPT debes mintear tu
-                certificado 👇. Antes de mintear debes verificar que tu Wallet
-                es la correcta y que has enviado todas las tareas por twitter
-                como te solicitamos en el curso, de lo contrario no podrás
-                obtener el certificado. El costo del certificado es 1 MATIC
+                certificado  el costo es de 1 MATIC de Polygon (aprox 1$).
+
+                Al mintear tu certificando estas apoyando al creador de contenido, así que asegúrate de
+                seguirla en las redes sociales y etiquétala en Twitter junto a tu nuevo certificado.
+                
+                
+              </p>
+
+              
+              <p>
+              👇
+               <br></br>
+                <strong>@Genializa_</strong>
+                <br></br>
                 #Kiwitonikas 🥝
               </p>
 

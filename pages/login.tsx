@@ -3,6 +3,8 @@ import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import { ThirdwebNftMedia, useContract, useNFT } from "@thirdweb-dev/react";
 import { ArrowUpRightIcon } from "@heroicons/react/20/solid";
+import logo from "../public/mientrastantologokiwi.png"
+import Image from "next/image";
 
 export default function Login() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -27,6 +29,15 @@ export default function Login() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <div className="pt-32 pb-12 md:pt-40 md:pb-20">
           <div className="text-center pb-12 md:pb-16">
+          <div className="flex justify-center items-center">
+          <Image
+                    src={logo}
+                    alt="Logo"
+                    width={200}
+                    height={200}
+                    className="mb-16"
+                  />
+                        </div>
             <h1
               className="text-5xl text-white md:text-6xl font-extrabold mb-4"
               data-aos="zoom-y-out"
