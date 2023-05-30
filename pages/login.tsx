@@ -3,8 +3,17 @@ import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import { ThirdwebNftMedia, useContract, useNFT } from "@thirdweb-dev/react";
 import { ArrowUpRightIcon } from "@heroicons/react/20/solid";
-import logo from "../public/mientrastantologokiwi.png"
+import logo from "../public/mientrastantologokiwi.png";
 import Image from "next/image";
+import { Dialog } from "@headlessui/react";
+import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
+
+const navigation = [
+  { name: "Product", href: "#" },
+  { name: "Features", href: "#" },
+  { name: "Marketplace", href: "#" },
+  { name: "Company", href: "#" },
+];
 
 export default function Login() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -25,81 +34,85 @@ export default function Login() {
   }, [address, router]);
 
   return (
-    <section className="relative bg-black flex flex-col h-screen justify-center items-center">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6">
-        <div className="pt-32 pb-12 md:pt-40 md:pb-20">
-          <div className="text-center pb-12 md:pb-16">
-          <div className="flex justify-center items-center">
-          <Image
-                    src={logo}
-                    alt="Logo"
-                    width={200}
-                    height={200}
-                    className="mb-16"
-                  />
-                        </div>
-            <h1
-              className="text-5xl text-white md:text-6xl font-extrabold mb-4"
-              data-aos="zoom-y-out"
-            >
-              El futuro de la educación
-            </h1>
-            <div className="max-w-3xl mx-auto">
-              <p
-                className="text-xl text-gray-400 mb-8"
-                data-aos="zoom-y-out"
-                data-aos-delay="150"
-              >
+    <>
+      <div className="bg-black">
+        <header className="absolute inset-x-0 top-0 z-50">
+          <nav
+            className="flex items-center justify-between p-6 lg:px-8"
+            aria-label="Global"
+          >
+            <div className="flex lg:flex-1">
+              <a href="#" className="-m-1.5 p-1.5">
+                <span className="sr-only">Your Company</span>
+                <Image
+                  src={logo}
+                  alt="Logo"
+                  width={100}
+                  height={100}
+                  className=""
+                />
+              </a>
+            </div>
+            
+
+          </nav>
+         
+        </header>
+        <div className="relative isolate px-6 pt-14 lg:px-8 min-h-screen" style={{ overflow: "hidden" }}>
+          <div className="mx-auto max-w-2xl py-12 sm:py-28 lg:py-26">
+            
+            <div className="text-center mt-20">
+              <h1 className="text-4xl font-bold tracking-tight text-gray-100 sm:text-6xl">
+                El futuro de la educación
+              </h1>
+              <p className="mt-6 text-lg leading-8 text-gray-100">
                 Descubre, aprende y certifícate en la blockchain 🥝
               </p>
-              <hr />
-           
-              <div className="mt-4 flex items-center justify-center gap-x-6">
+              <div className="mt-10 flex items-center justify-center gap-x-6">
                 <ConnectWallet
-                 auth={{
-                  loginOptional: false,
-                }}
+                  btnTitle="Log in"
+                  auth={{
+                    loginOptional: false,
+                  }}
                 />
+                <a
+                  href="#"
+                  className="text-sm font-semibold leading-6 text-gray-100"
+                >
+                  ¿Eres creador? <span aria-hidden="true">→</span>
+                </a>
               </div>
-              <br></br>
 
-              <>
-                {address ? (
-                  <p className="text-white">
-                    ¡Bievenidx, {address?.slice(0, 6)}...
-                    {address?.slice(-4)}!
-                  </p>
-                ) : (
-                  <p className="text-white">
-                    Porfavor conecta tu wallet y luego haz sign in para
-                    continuar.
-                  </p>
-                )}
-
-                <div className="flex text-center justify-center">
-                <h2 className="text-white mt-6 text-xl">
-                  <span className="bg-clip-text text-transparent bg-gradient-to-r from-green-500 to-teal-400">
-                  Creado por{" "}
-                    <a
-                      href="https://www.cryptonikasdao.xyz/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="underline"
-                    >
-                      Cryptonikas
-                    </a>
-                  </span>
-                </h2>
-                <ArrowUpRightIcon
-                  className="mt-7 w-5 h-5 text-white"
-                  aria-hidden="true"
-                />
+              <div className=" sm:mb-8 sm:flex sm:justify-center">
+              <div className="relative rounded-full mt-10 px-3 py-1 text-sm leading-6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
+                Creado por{" "}
+                <a href="https://www.cryptonikasdao.xyz/"
+                          target="_blank" className="font-semibold text-green-600">
+                  <span className="absolute inset-0" aria-hidden="true" />
+                  Cryptonikas
+                </a>
               </div>
-              </>
+            </div>
+
+            <div
+            className="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]"
+            aria-hidden="true"
+          >
+            <div
+              className="relative left-[calc(50%+3rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 bg-gradient-to-tr from-lime-200 to-lime-300 opacity-30 sm:left-[calc(50%+36rem)] sm:w-[72.1875rem]"
+              style={{
+                clipPath:
+                  "polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)",
+              }}
+            />
+          </div>
+          
             </div>
           </div>
+          
         </div>
       </div>
-    </section>
+    
+    </>
   );
 }
