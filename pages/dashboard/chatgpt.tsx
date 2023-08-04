@@ -1499,7 +1499,7 @@ export default function ChatGPT() {
                
                
                 Para graduarte de Ninja de prompts en ChatGPT debes mintear tu
-                certificado  el costo es de 1 MATIC de Polygon (aprox 1$).
+                certificado  el costo es de 0.0006 ETH en Optimism (aprox 1$).
 
                 Al mintear tu certificando estas apoyando al creador de contenido, así que asegúrate de
                 seguirla en las redes sociales y etiquétala en Twitter junto a tu nuevo certificado.

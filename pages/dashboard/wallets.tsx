@@ -947,7 +947,7 @@ export default function Wallets({ subtitle, title, body, text }: PageProps) {
             <>
               <p className="mt-6 mb-4 text-xl leading-8">
                 Para graduarte como un maestro de Wallets Digitales debes
-                mintear tu certificado el costo es de 1 MATIC de Polygon (aprox
+                mintear tu certificado el costo es de 0.0006 ETH en Optimism (aprox
                 1$). Al mintear tu certificando estas apoyando al creador de
                 contenido, así que asegúrate de seguirla en las redes sociales y
                 etiquétala en Twitter junto a tu nuevo certificado.

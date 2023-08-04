@@ -465,7 +465,7 @@ export default function ChatGPT() {
                       }
                       onError={() =>
                         alert(
-                          "Oops, hubo un error :( Verifica tu saldo, es posible que necesites Matic"
+                          "Oops, hubo un error :( Verifica tu saldo, es posible que necesites eth en Optimism"
                         )
                       }
                       className="mx-auto"
