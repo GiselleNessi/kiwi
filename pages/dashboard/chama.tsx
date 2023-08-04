@@ -60,7 +60,7 @@ export default function ChatGPT() {
   const quantity = 1; // how many NFTs you want to claim
 
   const { contract } = useContract(
-    "0x47DA47429F0127EDd178cc36ebDEc58874310220"
+    "0x827A9B2dE93F445f7EFBB3dd43912415c53Dcf47"
   );
   const { data: nft, error } = useNFT(contract, "1");
 
@@ -423,7 +423,7 @@ export default function ChatGPT() {
                
                
                Para graduarte debes mintear tu
-               certificado  el costo es de 1 MATIC de Polygon (aprox 1$).
+               certificado  el costo es de 0.0006 ETH en Optimism (aprox 1$).
 
                Al mintear tu certificando estas apoyando al creador de contenido, así que asegúrate de
                seguirla en las redes sociales y etiquétala en Twitter junto a tu nuevo certificado.
@@ -441,7 +441,12 @@ export default function ChatGPT() {
                #Kiwitonikas 🥝
              </p>
               <div className="mt-6 flex flex-col items-center">
-                <h1>Apoya a Chama Candela y el arte Latino</h1>
+              <p className="mt-6 text-xl leading-8">
+                <strong>
+                Apoya a Chama Candela y el arte Latino
+                </strong>
+              </p>
+                <br></br>
                 <div className="mb-6">
                   <ThirdwebNftMedia metadata={nft.metadata} />
                 </div>
@@ -450,7 +455,7 @@ export default function ChatGPT() {
                   <div className="mb-6 mt-6">
                     <Web3Button
                       contractAddress={
-                        "0x47DA47429F0127EDd178cc36ebDEc58874310220"
+                        "0x827A9B2dE93F445f7EFBB3dd43912415c53Dcf47"
                       }
                       action={(contract) =>
                         contract.erc1155.claim(tokenId, quantity)

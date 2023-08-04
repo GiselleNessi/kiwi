@@ -61,7 +61,7 @@ export async function getServerSideProps(context: {
     );
   }
 
-  const sdk = ThirdwebSDK.fromPrivateKey(privateKey, "polygon");
+  const sdk = ThirdwebSDK.fromPrivateKey(privateKey, "optimism");
 
  /*  // Check to see if the user has an NFT
   const hasNft = await checkBalance(sdk, user.address);

@@ -100,11 +100,11 @@ export default function Wallets({ subtitle, title, body, text }: PageProps) {
   const quantity = 1; // how many NFTs you want to claim
 
   const address = useAddress(); // Get the user's address
-  const { contract } = useContract(
+ /*  const { contract } = useContract(
     "0x47DA47429F0127EDd178cc36ebDEc58874310220"
   );
 
-  const { data: nft, error } = useNFT(contract, "2");
+  const { data: nft, error } = useNFT(contract, "2"); */
 
   const { logout } = useLogout();
   const { isLoggedIn, isLoading } = useUser();
@@ -123,7 +123,7 @@ export default function Wallets({ subtitle, title, body, text }: PageProps) {
     }
   }, [isLoading, isLoggedIn, router]);
 
-  if (error || !nft) return <div>Loading...</div>;
+/*   if (error || !nft) return <div>Loading...</div>; */
 
   return (
     <Dashboard>
@@ -955,12 +955,12 @@ export default function Wallets({ subtitle, title, body, text }: PageProps) {
               <p>👇 <br></br><strong>@ms_nairobi</strong>  <br></br>#Kiwitonikas 🥝</p>
 
               <div className="mt-6 flex flex-col items-center">
-                <div className="mb-6">
+                {/* <div className="mb-6">
                   <ThirdwebNftMedia metadata={nft.metadata} />
-                </div>
+                </div> */}
 
                 <div className="w-600">
-                  <div className="mb-6 mt-6">
+                 {/*  <div className="mb-6 mt-6">
                     <Web3Button
                       contractAddress={
                         "0x47DA47429F0127EDd178cc36ebDEc58874310220"
@@ -980,7 +980,7 @@ export default function Wallets({ subtitle, title, body, text }: PageProps) {
                     >
                       Certifícate
                     </Web3Button>
-                  </div>
+                  </div> */}
                 </div>
               </div>
             </>

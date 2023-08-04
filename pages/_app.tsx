@@ -4,7 +4,7 @@ import "../styles/globals.css";
 import Head from "next/head";
 import { domainName } from "../const/yourDetails";
 
-const activeChain = "polygon";
+const activeChain = "optimism";
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
